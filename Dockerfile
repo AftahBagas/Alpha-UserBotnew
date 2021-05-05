@@ -4,12 +4,12 @@ FROM liualvinas24/docker:groovy
 #
 # Clone repo and prepare working directory
 #
-RUN git clone -b Lord-Userbot https://github.com/Aftahbagas/Alpha /root/userbot
+RUN git clone -b Alpha https://github.com/AftahBagas/Alpha_ /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
 
 #Install python requirements
-RUN pip3 install -r https://raw.githubusercontent.com/Aftahbagas/Alpha/Lord-Userbot/requirements.txt
+RUN pip3 install -r https://raw.githubusercontent.com/Aftahbagas/Alpha_/Alpha/requirements.txt
 
 CMD ["python3","-m","userbot"]
