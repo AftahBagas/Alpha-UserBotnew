@@ -269,7 +269,7 @@ async def amireallyalive(alive):
         f"»»» **ᴘʏᴛʜᴏɴ**   \n   ➬ `Versi {python_version()}` \n"
         f"»»» **ᴠᴇʀsɪ ʙᴏᴛ**\n   ➬ `{BOT_VER}` \n"
         f"»»» **ᴍᴏᴅᴜʟ**    \n   ➬ `{len(modules)}` \n\n"
-        f"»»» **Repo:** [Alpha](https://github.com/Aftahbagas/Alpha)\n❃ **Grup Userbot: **[Tekan](t.me/petercord)\n❃ **Owner:** [Alfareza](t.me/KanjengIngsun)\n"
+        f"»»» **Repo:** [Alpha](https://github.com/AftahBagas/Alpha_)\n❃ **Grup Userbot: **[Tekan](t.me/petercord)\n❃ **Owner:** [Alfareza](t.me/KanjengIngsun)\n"
         f"**═══════━━━━━━━═══════**")
     if ALIVE_LOGO:
         try:
@@ -318,7 +318,7 @@ async def amireallyalive(alive):
         f"╟》 🎃  Bot Ver  :v. {BOT_VER} \n"
         f"╟》 🔮  Plugins  :{len(modules)} Plugins \n"
         f"╰─━═━═━═━═━═━═━═━═━─╯ \n"
-        f"[Repo](https://github.com/Aftahbagas/Alpha) | [Grup Support](t.me/petercord) | [Owner](t.me/Kanjengingsun)")
+        f"[Repo](https://github.com/AftahBagas/Alpha_) | [Grup Support](t.me/petercord) | [Owner](t.me/Kanjengingsun)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
