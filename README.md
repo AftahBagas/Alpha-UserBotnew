@@ -51,7 +51,7 @@ Easy way to get STRING_SESSION.
 
 Deploy to Heroku
 
-<p><a href="https://heroku.com/deploy?templatehttps://github.com/AftahBagas/Alpha_.git"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
+<p><a href="https://heroku.com/deploy?templatehttps://github.com/AftahBagas/Alpha_"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
 
 
 ## Groups Support
