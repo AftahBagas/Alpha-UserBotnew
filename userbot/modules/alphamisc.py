@@ -1027,7 +1027,7 @@ async def _(event):
     await event.edit("`Berhasil Mengembalikan Akun Anda ツ`")
 
 CMD_HELP.update({
-    "lordmisc":
+    "alphamisc":
     "`.app`\
 \nUsage: ketik `.app namaapp` Dan Dapatkan Detail Informasi App.\
 \n\n`.undlt`\
