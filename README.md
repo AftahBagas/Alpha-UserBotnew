@@ -25,15 +25,15 @@ Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/kanjengIngsun) Dari Berbagai Repo
 ```
 * **CARA DEPLOY** 🔧
 
-  > Pertama Dapatkan API_KE & API_HASH Di my.telegram.org (Wajib)
+➠ Pertama Dapatkan API_KE & API_HASH Di my.telegram.org (Wajib)
 
-  > Dapatkan String Session Di Termux (Wajib)
+➠ Dapatkan String Session Di Termux (Wajib)
 
-  > Next Tekan Tombol Deploy Dibawah
+➠ Next Tekan Tombol Deploy Dibawah
 
-  > Isi Datanya Lalu Tekan Deploy Lagi
+➠ Isi Datanya Lalu Tekan Deploy Lagi
 
-  > Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
+➠ Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
 ```
 
 
