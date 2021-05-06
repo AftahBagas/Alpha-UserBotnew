@@ -25,7 +25,7 @@ Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/kanjengIngsun) Dari Berbagai Repo
 ```
 * **CARA DEPLOY** 🔧
 
-➠ Pertama Dapatkan API_KE & API_HASH Di [My Telegram Bot](https://t.me/apiuserbutpetercord_bot)
+➠ Pertama Dapatkan API_KE & API_HASH Di My.Telegram.org (Wajib)
 
 ➠ Dapatkan String Session Di Termux (Wajib)
 
