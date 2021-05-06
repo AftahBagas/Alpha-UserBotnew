@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━┅┅┅┅┄┄┄┄┉┉ \n┣ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼━┅┅┄┄┄┄┉┉",
-    f"🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━┅┅┅┅┄┄┄┄┉┉ \n┣ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼━┅┅┄┄┄┄┉┉",
-    f"🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━┅┅┅┅┄┄┄┄┉┉ \n┣ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼━┅┅┄┄┄┄┉┉",
-    f"🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━┅┅┅┅┄┄┄┄┉┉ \n┣ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼━┅┅┄┄┄┄┉┉",
+    f"🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━┅┅┅┅┄┄┄┄┉┉ \n┃➠ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼━┅┅┄┄┄┄┉┉",
+    f"🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━┅┅┅┅┄┄┄┄┉┉ \n┃➠ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼━┅┅┄┄┄┄┉┉",
+    f"🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━┅┅┅┅┄┄┄┄┉┉ \n┃➠ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼━┅┅┄┄┄┄┉┉",
+    f"🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━┅┅┅┅┄┄┄┄┉┉ \n┃➠ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼━┅┅┄┄┄┄┉┉",
 ]
 
 
@@ -62,7 +62,7 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━━━┅┅┅┅┄┄┄┄┉┉┄┄┄┄┉┉ \n┃➠ {ALIVE_NAME} ᴀꜰᴋ ᴅᴜʟᴜ\n┃➠ ᴀʟᴀꜱᴀɴ : {AFKREASON}\n╰╼━┅┅┄┄┄┄┉┉")
+        await afk_e.edit(f"🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━━━┅┅┅┅┄┄┄┄┉┉┄ \n┃➠ {ALIVE_NAME} ᴀꜰᴋ ᴅᴜʟᴜ\n┃➠ ᴀʟᴀꜱᴀɴ : {AFKREASON}\n╰╼━┅┅┄┄┄┄┉┉")
     else:
         await afk_e.edit("🍁 𝘼𝙛𝙠 𝘿𝙪𝙡𝙪..\n╭╼━━┅┅┅┅┄┄┄┄┉┉ \n┃➠ ᴀғᴋ ᴅᴜʟᴜ ɢᴜʏs ✨ \n╰╼━┅┅┄┄┄┄┉┉")
     if user.last_name:
