@@ -27,7 +27,7 @@ Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/kanjengIngsun) Dari Berbagai Repo
 
 ➠ Pertama Dapatkan API_KE & API_HASH Di My.Telegram.org (Wajib)
 
-➠ Dapatkan String Session Di Termux (Wajib)
+➠ Dapatkan String Session Klik Tombol Dibawah
 
 ➠ Next Tekan Tombol Deploy Dibawah
 
