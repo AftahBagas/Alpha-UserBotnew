@@ -3,12 +3,12 @@
 
 
 <p align="center">
-  <a href="https://github.com/AftahBagas/Alpha/fork">
-    <img src="https://img.shields.io/github/forks/AftahBagas/Alpha?label=Fork&style=social">
+  <a href="https://github.com/AftahBagas/Alpha_/fork">
+    <img src="https://img.shields.io/github/forks/AftahBagas/Alpha_?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/AftahBagas/Alpha">
-    <img src="https://img.shields.io/github/stars/AftahBagas/Alpha?style=social">
+  <a href="https://github.com/AftahBagas/Alpha_">
+    <img src="https://img.shields.io/github/stars/AftahBagas/Alpha_?style=social">
   </a>
 </p>  
 
