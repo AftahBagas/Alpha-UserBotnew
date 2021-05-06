@@ -40,26 +40,22 @@ Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/kanjengIngsun) Dari Berbagai Repo
 ```
 * **API KEY TAMBAHAN** 🔧
 
-➠  Pertama Dapatkan API_KE & API_HASH Di my.telegram.org (Wajib)
+➠ Api Key Ocr  >  4a3571124d88957
 
-➠  Dapatkan String Session Di Termux (Wajib)
+➠ Api Key Qoutes  >  33273f18-4a0d-4a76-8d78-a16faa002375
 
-➠ 
+➠ Api Key Rem  >  dxsh728mZMDmj4ijSZCNPZig
 
-➠ Api Key Youtub > ```AIzaSyAUR8sXyLqfmG_LQm1jz3jp97mN-cqtGzo```
+➠ Api Key Youtub  >  AIzaSyAUR8sXyLqfmG_LQm1jz3jp97mN-cqtGzo
 
 ```
 
 
 
 
-## Generate String Session
+### AMBIL STRING 
 
-Easy way to get STRING_SESSION.
-
-### Run on repl.it
-
-[![Run repl.it](https://img.shields.io/badge/run-string__session.py-blue?style=for-the-badge&logo=repl.it)](https://replit.com/@ilhammansiz12/PETERCORD-1#main.py)
+[![Run repl.it](https://img.shields.io/badge/run-string__session.py-blue?style=for-the-badge&logo=repl.it)](https://replit.com/@AftahBagas/Alpha#main.py)
 
 
 
@@ -70,6 +66,6 @@ Deploy to Heroku
 
 ## Groups Support
 
-Join [Userbot Support](https://t.me/petercord) for update notifications or announcement.
+Join [Userbot Support](https://t.me/petercord) Untuk Mengetahui Update Selanjutnya.
 
 
