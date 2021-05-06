@@ -40,13 +40,13 @@ Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/kanjengIngsun) Dari Berbagai Repo
 ```
 * **API KEY TAMBAHAN** 🔧
 
-  > Pertama Dapatkan API_KE & API_HASH Di my.telegram.org (Wajib)
+➠  Pertama Dapatkan API_KE & API_HASH Di my.telegram.org (Wajib)
 
-  > Dapatkan String Session Di Termux (Wajib)
+➠  Dapatkan String Session Di Termux (Wajib)
 
-  > Next Tekan Tombol Deploy Dibawah
+➠ 
 
-Api Key Youtub > AIzaSyAUR8sXyLqfmG_LQm1jz3jp97mN-cqtGzo
+➠ Api Key Youtub > ```AIzaSyAUR8sXyLqfmG_LQm1jz3jp97mN-cqtGzo```
 
 ```
 
