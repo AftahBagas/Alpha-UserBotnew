@@ -262,14 +262,14 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**═════━━━━━━━━━━━━═════**\n"
-        f"              **〘«𝗔 𝗟 𝗣 𝗛 𝗔»〙** \n\n"
+        f"                **〘«𝗔 𝗟 𝗣 𝗛 𝗔»〙** \n\n"
         f"»»» **ᴘᴇɴɢɢᴜɴᴀ**     \n   ➬ `{DEFAULTUSER}` \n"
         f"»»» **ᴜsᴇʀɴᴀᴍᴇ** \n   ➬ `@{user.username}` \n"
         f"»»» **ᴛᴇʟᴇᴛʜᴏɴ** \n   ➬ `Versi {version.__version__}` \n"
         f"»»» **ᴘʏᴛʜᴏɴ**   \n   ➬ `Versi {python_version()}` \n"
         f"»»» **ᴠᴇʀsɪ ʙᴏᴛ**\n   ➬ `{BOT_VER}` \n"
         f"»»» **ᴍᴏᴅᴜʟ**    \n   ➬ `{len(modules)}` \n\n"
-        f"»»» **Repo:** [Alpha](https://github.com/AftahBagas/Alpha_)\n❃ **Grup Userbot: **[Tekan](t.me/petercord)\n❃ **Owner:** [Alfareza](t.me/KanjengIngsun)\n"
+        f"➠ **Repo:** [Alpha](https://github.com/AftahBagas/Alpha_)\n➠ **Grup Userbot: **[Tekan](t.me/petercord)\n➠ **Owner:** [Alfareza](t.me/KanjengIngsun)\n"
         f"**═══════━━━━━━━═══════**")
     if ALIVE_LOGO:
         try:
@@ -306,7 +306,7 @@ async def amireallyalive(alive):
     await asyncio.sleep(3)
     output = (
         f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮** \n"
-        f"**                   🔥𝗔 𝗟 𝗣 𝗛 𝗔🔥  ** \n"
+        f"**                  🔥𝗔 𝗟 𝗣 𝗛 𝗔🔥  ** \n"
         f"**ㅤㅤ  ╰─━━═━═━═━═━━─╯** \n"
         f"     ALIVE         \n"
         f"╭─━═━═━═━═━═━═━═━═━─╮ \n"
