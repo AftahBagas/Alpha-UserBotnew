@@ -53,7 +53,7 @@ Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/kanjengIngsun) Dari Berbagai Repo
 
 
 
-### AMBIL STRING 
+### KLIK TOMBOL DIBAWAH UNTUK AMBIL STRING 
 
 [![Run repl.it](https://img.shields.io/badge/run-string__session.py-blue?style=for-the-badge&logo=repl.it)](https://replit.com/@AftahBagas/Alpha#main.py)
 
