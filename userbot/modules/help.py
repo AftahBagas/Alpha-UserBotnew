@@ -13,12 +13,12 @@ modules = CMD_HELP
 
 
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
-async def help(petercord):
+async def help(alpha):
     """ For .help command,"""
     args = alpha.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
-            await petercord.edit(str(CMD_HELP[args]))
+            await alpha.edit(str(CMD_HELP[args]))
         else:
             await alpha.edit("**Maaf Alpha, Saya Tidak Punya Perintah Itu ツ**")
             await asyncio.sleep(200)
