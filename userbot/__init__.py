@@ -404,8 +404,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**🍁 Jᴜᴍʟᴀʜ Mᴏᴅᴜʟ Yᴀɴɢ Tᴇʀsᴇᴅɪᴀ Dɪ Aʟᴘʜᴀ:** `{}`\n               \n**🍁 Dᴀғᴛᴀʀ Mᴏᴅᴜʟ Uɴᴛᴜᴋ Aʟᴘʜᴀ:** \n".format(
-                        "**🌹 A ʟ ᴘ ʜ A 🌹**",
+                    text="{}\n\n**Jᴜᴍʟᴀʜ Mᴏᴅᴜʟᴇs Yᴀɴɢ Tᴇʀsᴇᴅɪᴀ Dɪ Aʟᴘʜᴀ 🍁:** `{}`\n               \n**Dᴀғᴛᴀʀ Mᴏᴅᴜʟᴇs Uɴᴛᴜᴋ Aʟᴘʜᴀ 🍁:** \n".format(
+                        "**🍁 A ʟ ᴘ ʜ A 🍁**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -453,7 +453,7 @@ with bot:
 
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
         async def close(event):
-            await event.edit("MENU CLOSED ALPHA by.Tentang Aku dan Dia")
+            await event.edit("Mᴇɴᴜ Cʟᴏsᴇᴅ Aʟᴘʜᴀ Bʏ.Tᴇɴᴛᴀɴɢ Aᴋᴜ Dᴀɴ Dɪᴀ")
             await event.delete()
 
         @tgbot.on(
