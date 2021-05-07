@@ -16,14 +16,14 @@ modules = CMD_HELP
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
 async def help(lord):
     """ For .help command,"""
-    args = lord.pattern_match.group(1).lower()
+    args = alpha.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
-            await lord.edit(str(CMD_HELP[args]))
+            await alpha.edit(str(CMD_HELP[args]))
         else:
-            await lord.edit("**Maaf Alpha, Saya Tidak Punya Perintah Itu ツ**")
+            await alpha.edit("**Maaf Alpha, Saya Tidak Punya Perintah Itu ツ**")
             await asyncio.sleep(200)
-            await lord.delete()
+            await alpha.delete()
     else:
         await alpha.edit("🍁")
         await alpha.edit("**🍁 Mᴏᴅᴜʟᴇs 1:**\n"
