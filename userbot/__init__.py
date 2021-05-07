@@ -404,8 +404,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**🍁 Jᴜᴍʟᴀʜ Mᴏᴅᴜʟ Yᴀɴɢ Tᴇʀsᴇᴅɪᴀ Dɪ Aʟᴘʜᴀ:** `{}`\n               \n**⚡ Daftar Modul Alpha:** \n".format(
-                        "**🌹 A L P H A 🌹**",
+                    text="{}\n\n**🍁 Jᴜᴍʟᴀʜ Mᴏᴅᴜʟ Yᴀɴɢ Tᴇʀsᴇᴅɪᴀ Dɪ Aʟᴘʜᴀ:** `{}`\n               \n**🍁 Dᴀғᴛᴀʀ Mᴏᴅᴜʟ Uɴᴛᴜᴋ Aʟᴘʜᴀ:** \n".format(
+                        "**🌹 A ʟ ᴘ ʜ A 🌹**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
