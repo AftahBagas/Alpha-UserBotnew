@@ -55,6 +55,6 @@ async def help(event):
                          "transform  update  download  getid  waifu  wallpaper  weather\n\n"
                          "**🍁 Mᴏᴅᴜʟᴇs 15:**\n"
                          "webupload  welcome  whois  ping  sinyal  xiaomi  zipfile")
-        await Alpha.reply("\n**Cᴏɴᴛᴏʜ:**\n**Kᴇᴛɪᴋ** `.help kata kata` **Uɴᴛᴜᴋ Iɴғᴏʀᴍᴀsɪ Pᴇʀɪɴᴛᴀʜ\n")
+        await Alpha.reply("\n**Cᴀʀᴀ Mᴇɴɢɢᴜɴᴀᴋᴀɴ,** **Cᴏɴᴛᴏʜ:**\n**Kᴇᴛɪᴋ** `.help afk` **Uɴᴛᴜᴋ Iɴғᴏʀᴍᴀsɪ Mᴏᴅᴜʟᴇs**\n**Gʀᴏᴜᴘ Sᴜᴘᴘᴏʀᴛ:** [Tᴇᴋᴀɴ](t.me/petercord)")
         await asyncio.sleep(1000)
         await Alpha.delete()
