@@ -407,20 +407,20 @@ async def koc(e):
         await e.edit("`GABUT`")
 
 
-@register(outgoing=True, pattern='^.Aku(?: |$)(.*)')
+@register(outgoing=True, pattern='^.terkadang(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Hai`")
-    sleep(2)
-    await typew.edit("`Namaku Alfareza`")
+    await typew.edit("`Terkadang`")
+    sleep(1)
+    await typew.edit("`Mencintai Seseorang`")
     sleep(1)
     await typew.edit("`Hanya Akan Membuang Waktumu`")
-    sleep(2)
-    await typew.edit("`Aku Dari Jateng Kota pati 🥰`")
-    sleep(2)
-    await typew.edit("`Salam kenal ya`")
-    sleep(2)
-    await typew.edit("`🥰🥰`")
+    sleep(1)
+    await typew.edit("`Ketika Waktumu Habis`")
+    sleep(1)
+    await typew.edit("`Beli Lagi Aja`")
+    sleep(1)
+    await typew.edit("`Bercanda`")
 # Create by myself @localheart
 
 
