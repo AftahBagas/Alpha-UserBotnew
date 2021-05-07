@@ -13,16 +13,16 @@ modules = CMD_HELP
 
 
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
-async def help(event):
+async def help(petercord):
     """ For .help command,"""
-    args = event.pattern_match.group(1).lower()
+    args = alpha.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
-            await event.edit(str(CMD_HELP[args]))
+            await petercord.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("**Maaf pengguna Alpha, Saya Tidak Punya Perintah Itu :)**")
+            await alpha.edit("**Maaf Alpha, Saya Tidak Punya Perintah Itu ツ**")
             await asyncio.sleep(200)
-            await event.delete()
+            await alpha.delete()
     else:
         await Alpha.edit("Dᴀғᴛᴀʀ Pᴇʀɪɴᴛᴀʜ Uɴᴛᴜᴋ Aʟᴘʜᴀ 🍁")
         await Alpha.edit("**🍁 Mᴏᴅᴜʟᴇs 1:**\n"
@@ -55,6 +55,6 @@ async def help(event):
                          "transform  update  download  getid  waifu  wallpaper  weather\n\n"
                          "**🍁 Mᴏᴅᴜʟᴇs 15:**\n"
                          "webupload  welcome  whois  ping  sinyal  xiaomi  zipfile")
-        await Alpha.reply("\n**Cᴀʀᴀ Mᴇɴɢɢᴜɴᴀᴋᴀɴ,** **Cᴏɴᴛᴏʜ:**\n**Kᴇᴛɪᴋ** `.help afk` **Uɴᴛᴜᴋ Iɴғᴏʀᴍᴀsɪ Mᴏᴅᴜʟᴇs**\n**Gʀᴏᴜᴘ Sᴜᴘᴘᴏʀᴛ:** [Tᴇᴋᴀɴ](t.me/petercord)")
+        await alpha.reply("\n**Cᴀʀᴀ Mᴇɴɢɢᴜɴᴀᴋᴀɴ,** **Cᴏɴᴛᴏʜ:**\n**Kᴇᴛɪᴋ** `.help afk` **Uɴᴛᴜᴋ Iɴғᴏʀᴍᴀsɪ Mᴏᴅᴜʟᴇs**\n**Gʀᴏᴜᴘ Sᴜᴘᴘᴏʀᴛ:** [Tᴇᴋᴀɴ](t.me/petercord)")
         await asyncio.sleep(1000)
-        await Alpha.delete()
+        await alpha.delete()
