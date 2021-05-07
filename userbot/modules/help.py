@@ -16,17 +16,17 @@ modules = CMD_HELP
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
 async def help(lord):
     """ For .help command,"""
-    args = alpha.pattern_match.group(1).lower()
+    args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
-            await alpha.edit(str(CMD_HELP[args]))
+            await event.edit(str(CMD_HELP[args]))
         else:
-            await alpha.edit("**Maaf Alpha, Saya Tidak Punya Perintah Itu ツ**")
+            await event.edit("**Maaf Alpha, Saya Tidak Punya Perintah Itu ツ**")
             await asyncio.sleep(200)
-            await alpha.delete()
+            await event.delete()
     else:
-        await alpha.edit("🍁")
-        await alpha.edit("**🍁 Mᴏᴅᴜʟᴇs 1:**\n"
+        await event.edit("🍁")
+        await event.edit("**🍁 Mᴏᴅᴜʟᴇs 1:**\n"
                          "`admin`  `adzan`  `afk`  `gabut`  `vip`  `animasi`  `android`  `anime`  `anti_spambot`  `aria`  `ascii`\n\n"
                          "**🍁 Mᴏᴅᴜʟᴇs 2:**\n"
                          "`blacklist`  `carbon`   `chat`  `mutechat`  `covid`  `membuat`  `deepfry`  `emojigames`\n\n"
@@ -56,6 +56,6 @@ async def help(lord):
                          "`transform`  `update`  `download`  `getid`  `waifu`  `wallpaper`  `weather`\n\n"
                          "**🍁 Mᴏᴅᴜʟᴇs 15:**\n"
                          "`webupload`  `welcome`  `whois`  `ping`  `sinyal`  `xiaomi`  `zipfile`")
-        await alpha.reply("\n**Cara Menggunakan,** **Contoh:**\n**Ketik** `.help afk` **Untuk Iinformasi Modules**\n**GROUP SUPPORT:** [TEKAN](t.me/petercord)")
+        await event.reply("\n**Cara Menggunakan,** **Contoh:**\n**Ketik** `.help afk` **Untuk Iinformasi Modules**\n**GROUP SUPPORT:** [TEKAN](t.me/petercord)")
         await asyncio.sleep(1000)
-        await alpha.delete()
+        await event.delete()
