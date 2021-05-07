@@ -55,14 +55,14 @@ async def get_user_from_id(user, event):
 async def handler(tele):
     if tele.user_joined or tele.user_added:
         try:
-            from userbot.modules.sql_helper.gmute_sql import is_gmuted
+            from userbot.modules.sql_helper.gban_sql import is_gbanned
 
             guser = await tele.get_user()
-            gmuted = is_gmuted(guser.id)
+            gbanned = is_gbanned(guser.id)
         except BaseException:
             return
-        if gmuted:
-            for i in gmuted:
+        if gbanned:
+            for i in gbanned:
                 if i.sender == str(guser.id):
                     chat = await tele.get_chat()
                     admin = chat.admin_rights
@@ -116,7 +116,7 @@ async def gben(userbot):
                 f"`Anda Tidak Bisa Melakukan Global Banned Ke Alpha Dia Adalah Pembuat Saya ヅ`"
             )
         try:
-            from userbot.modules.sql_helper.gmute_sql import gmute
+            from userbot.modules.sql_helper.gban_sql import gban
         except BaseException:
             pass
         try:
@@ -138,7 +138,7 @@ async def gben(userbot):
     else:
         await dark.edit(f"`Mohon Balas Ke Pesan Pengguna`")
     try:
-        if gmute(user.id) is False:
+        if gban(user.id) is False:
             return await dark.edit(f"**Kesalahan! Pengguna Ini Sudah Kena Perintah Global Banned.**")
     except BaseException:
         pass
@@ -180,7 +180,7 @@ async def gunben(userbot):
         if user.id == 1527507639:
             return await dark.edit("** Pengguna Tidak Bisa Terkena Perintah Ini, Karna Dia Pembuatku ヅ**")
         try:
-            from userbot.modules.sql_helper.gmute_sql import ungmute
+            from userbot.modules.sql_helper.gban_sql import ungban
         except BaseException:
             pass
         try:
@@ -202,7 +202,7 @@ async def gunben(userbot):
     else:
         await dark.edit("`Harap Balas Ke Pesan Pengguna ヅ`")
     try:
-        if ungmute(user.id) is False:
+        if ungban(user.id) is False:
             return await dark.edit("**Kesalahan! Pengguna Sedang Tidak Di Global Banned.**")
     except BaseException:
         pass
