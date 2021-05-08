@@ -42,7 +42,7 @@ async def ungmoot(un_gban):
 
     # Check if the function running under SQL mode
     try:
-        from userbot.modules.sql_helper.gban_sql import ungmute
+        pass
     except AttributeError:
         return await un_gmute.edit(NO_SQL)
 
