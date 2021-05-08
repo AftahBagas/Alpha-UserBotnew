@@ -1,4 +1,5 @@
-try:
+#Alfareza jangan dihapus woi
+
     from userbot.modules.sql_helper import SESSION, BASE
 except ImportError:
     raise AttributeError
