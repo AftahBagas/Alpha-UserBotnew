@@ -155,8 +155,13 @@ async def list_gbanned(message: Message):
     """ vies gbanned users """
     msg = ''
     async for c in GBAN_USER_BASE.find():
-        msg += ("**User** : " + str(c['firstname']) + "-> with **User ID** -> "
-                + str(c['user_id']) + " is **GBanned for** : " + str(c.get('reason')) + "\n\n")
+        msg += ("**User** : " +
+                str(c['firstname']) +
+                "-> with **User ID** -> " +
+                str(c['user_id']) +
+                " is **GBanned for** : " +
+                str(c.get('reason')) +
+                "\n\n")
     await message.edit_or_send_as_file(
         f"**--Globally Banned Users List--**\n\n{msg}" if msg else "`glist empty!`")
 
@@ -240,13 +245,17 @@ async def list_white(message: Message):
     """ list whitelist """
     msg = ''
     async for c in WHITELIST.find():
-        msg += ("**User** : " + str(c['firstname']) + "-> with **User ID** -> " +
-                str(c['user_id']) + "\n\n")
+        msg += ("**User** : " +
+                str(c['firstname']) +
+                "-> with **User ID** -> " +
+                str(c['user_id']) +
+                "\n\n")
     await message.edit_or_send_as_file(
         f"**--Whitelisted Users List--**\n\n{msg}" if msg else "`whitelist empty!`")
 
 
-@userge.on_filters(filters.group & filters.new_chat_members, group=1, check_restrict_perm=True)
+@userge.on_filters(filters.group & filters.new_chat_members,
+                   group=1, check_restrict_perm=True)
 async def gban_at_entry(message: Message):
     """ handle gbans """
     chat_id = message.chat.id
