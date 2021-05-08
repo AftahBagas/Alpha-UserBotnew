@@ -1,9 +1,9 @@
 FROM biansepang/weebproject:buster
 
 # Dockerfile
-# Alpha
+# KING
 # Dockerfile
-RUN git clone -b Alpha_ https://github.com/AftahBagas/Alpha_ /root/userbot
+RUN git clone -b King-Userbot https://github.com/AftahBagas/Alpha_ /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
