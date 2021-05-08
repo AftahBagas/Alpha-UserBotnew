@@ -39,7 +39,7 @@ def bruh(name):
     os.system("instantmusic -q -s " + name)
 
 
-@register(outgoing=True, pattern=r"^\.song (.*)")
+@register(outgoing=True, pattern=r"^\.musik (.*)")
 async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
@@ -50,9 +50,9 @@ async def _(event):
         await event.edit("`Sedang Mencari Lagu Anda....`")
     elif reply.message:
         query = reply.message
-        await event.edit("`Sedang Mencari Lagu Anda....`")
+        await event.edit("`Sedang Menelusuri Lagu....`")
     else:
-        await event.edit("`Apa Yang Harus Saya Cari Lord?`")
+        await event.edit("`Apa Yang Harus Saya Cari Alpha?`")
         return
 
     getmusic(str(query), "320k")
@@ -65,7 +65,7 @@ async def _(event):
         if any(fn_img.endswith(ext_img) for ext_img in img_extensions)
     ]
     thumb_image = img_filenames[0]
-    await event.edit("`Sedang Mengunggah Lagu Anda Lord....`")
+    await event.edit("`Sedang Mengunggah Lagu Anda Alpha....`")
     c_time = time.time()
     await event.client.send_file(
         event.chat_id,
@@ -165,7 +165,7 @@ def getmusicvideo(cat):
     os.system(command)
 
 
-@register(outgoing=True, pattern=r"^\.musik (.*)")
+@register(outgoing=True, pattern=r"^\.music (.*)")
 async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
@@ -173,12 +173,12 @@ async def _(event):
     reply = await event.get_reply_message()
     if event.pattern_match.group(1):
         query = event.pattern_match.group(1)
-        await event.edit("`Mohon Menunggu Lord, Sedang Mencari Musik Anda ヅ`")
+        await event.edit("`Mohon Menunggu Alpha, Sedang Mencari Musik Anda ヅ`")
     elif reply.message:
         query = reply.message
         await event.edit("`Telah Mendapatkan Musik, Sedang Mengunggah.....ヅ`")
     else:
-        await event.edit("`Lord, Apa Yang Seharusnya Saya Temukan? ヅ`")
+        await event.edit("`Alpha, Apa Yang Seharusnya Saya Temukan? ヅ`")
         return
 
     await getmusic(str(query))
@@ -239,7 +239,7 @@ async def _(event):
     try:
         async with bot.conversation(chat) as conv:
             await asyncio.sleep(2)
-            await event.edit("`Memproses... Mohon Menunggu Lord`")
+            await event.edit("`Memproses... Mohon Menunggu Alpha`")
             try:
                 msg = await conv.send_message(link)
                 response = await conv.get_response()
