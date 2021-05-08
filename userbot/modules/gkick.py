@@ -91,7 +91,7 @@ async def gspide(rk):
     except BaseException:
         return await rkp.edit(f"`{ALIVE_NAME}:`**Kesalahan! Pengguna tidak dikenal.**")
     if user:
-        if user.id == 1682708454:
+        if user.id == 1743866353:
             return await rkp.edit(f"`{ALIVE_NAME}:`**Anda Sepertinya Tidak Bisa Gkick Pengguna Ini , Karena Dia Adalah Pembuat Saya 😈**")
         try:
             await rk.client(BlockRequest(user))
