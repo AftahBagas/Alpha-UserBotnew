@@ -112,6 +112,7 @@ async def pingme(pong):
                     f"`{uptime}` \n"
                     f"┖━─━───────" % (duration))
 
+
 @register(outgoing=True, pattern="^.sinyal$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
