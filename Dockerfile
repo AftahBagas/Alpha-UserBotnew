@@ -1,15 +1,14 @@
-# We're using Ubuntu 20.10
-FROM liualvinas24/docker:groovy
+FROM biansepang/weebproject:buster
 
-#
-# Clone repo and prepare working directory
-#
-RUN git clone -b Alpha https://github.com/AftahBagas/Alpha_ /root/userbot
+# Dockerfile
+# Alpha
+# Dockerfile
+RUN git clone -b Alpha_ https://github.com/AftahBagas/Alpha_ /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
 
 #Install python requirements
-RUN pip3 install -r https://raw.githubusercontent.com/Aftahbagas/Alpha_/Alpha/requirements.txt
+RUN pip3 install -r https://raw.githubusercontent.com/AftahBagas/Alpha_/Alpha/requirements.txt
 
 CMD ["python3","-m","userbot"]
