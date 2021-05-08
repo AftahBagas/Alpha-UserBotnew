@@ -1,5 +1,12 @@
 
 
+# Ported by X_ImFine
+# Mukalu Kek Kontol
+# Yang Ubah Anak Tolol
+# Apis tydack pro
+# Feri pro
+# Abdul pro
+
 from telethon.tl.types import (
     MessageEntityMentionName)
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
@@ -22,7 +29,7 @@ async def get_user_from_event(event):
         if user.isnumeric():
             user = int(user)
         if not user:
-            await event.edit(f"`{ALIVE_NAME}`: ** Pass the user's username, id or reply!**")
+            await event.edit(f"`{ALIVE_NAME}`: ** Harus Mereply Dengan Username Pengguna!**")
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
@@ -34,7 +41,7 @@ async def get_user_from_event(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("Failed \n **Error**\n", str(err))
+            return await event.edit("Gagal \n **Error**\n", str(err))
     return user_obj, extra
 
 
@@ -60,11 +67,11 @@ async def gspide(rk):
     sender = await lazy.get_sender()
     me = await lazy.client.get_me()
     if not sender.id == me.id:
-        rkp = await lazy.reply("`processing...`")
+        rkp = await lazy.reply("`Memproses Gkick...`")
     else:
-        rkp = await lazy.edit("`processing...`")
+        rkp = await lazy.edit("`Memproses Gkick...`")
     me = await rk.client.get_me()
-    await rkp.edit(f"`{ALIVE_NAME}:` **Requesting  to gkick user!**")
+    await rkp.edit(f"`{ALIVE_NAME}:` **Meminta untuk mengkick pengguna!**")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await rk.get_chat()
@@ -82,10 +89,10 @@ async def gspide(rk):
         if not reason:
             reason = 'Private'
     except BaseException:
-        return await rkp.edit(f"`{ALIVE_NAME}:`**Error! Unknown user.**")
+        return await rkp.edit(f"`{ALIVE_NAME}:`**Kesalahan! Pengguna tidak dikenal.**")
     if user:
-        if user.id == 1411273575:
-            return await rkp.edit(f"`{ALIVE_NAME}:`**HEY THAT'S MY DEV**")
+        if user.id == 1682708454:
+            return await rkp.edit(f"`{ALIVE_NAME}:`**Anda Sepertinya Tidak Bisa Gkick Pengguna Ini , Karena Dia Adalah Pembuat Saya 😈**")
         try:
             await rk.client(BlockRequest(user))
             await rk.client(UnblockRequest(user))
@@ -97,14 +104,15 @@ async def gspide(rk):
                 await rk.client.edit_permissions(i, user, view_messages=False)
                 await rk.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await rkp.edit(f"`{ALIVE_NAME}:` **Requesting  to gkicking user!\nGkicked {a} chats.....**")
+                await rkp.edit(f"`{ALIVE_NAME}:` **Meminta untuk mengkick pengguna!\nGkicked {a} chat.....**")
 
             except BaseException:
                 b += 1
     else:
-        await rkp.edit(f"`{ALIVE_NAME}:` **Reply to a user !! **")
+        await rkp.edit(f"`{ALIVE_NAME}:` **Balas ke pengguna !! **")
 
-    return await rkp.edit(f"`{ALIVE_NAME}:` **GKicked [{user.first_name}](tg://user?id={user.id}) in {a} chat(s) **")
+    return await rkp.edit(f"`{ALIVE_NAME}:` **GKicked [{user.first_name}](tg://user?id={user.id}) dalam {a} chat(s) **")
+
 
 CMD_HELP.update({
     "gkick": "\
