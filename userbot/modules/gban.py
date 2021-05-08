@@ -102,7 +102,7 @@ async def gspide(rk):
     else:
         await rkp.edit(f"`{ALIVE_NAME}:` **Balas ke pengguna !! **")
 
-    return await rkp.edit(f"`{ALIVE_NAME}:` **GKanned [{user.first_name}](tg://user?id={user.id}) dalam {a} chat(s) **")
+    return await rkp.edit(f"`{ALIVE_NAME}:` **GBanned [{user.first_name}](tg://user?id={user.id}) dalam {a} chat(s) **")
 
 
 CMD_HELP.update({
