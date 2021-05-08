@@ -1,30 +1,29 @@
 
 
 
-import random
-
 from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
 
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
+
 @register(outgoing=True, pattern=r"^\.frog (.*)")
 async def honkasays(event):
-    wai = await event.edit("`Sedang Memprosess!!!`")
+    await event.edit("`Sedang Memprosess!!!`")
     text = event.pattern_match.group(1)
     if not text:
         return await event.edit("`Beri Aku Bebeberapa Teks, Contoh .prog test`")
     try:
         if not text.endswith("."):
             text = text + "."
-        if len(text)<=9:
+        if len(text) <= 9:
             results = await bot.inline_query("honka_says_bot", text)
             await results[2].click(
                 event.chat_id,
                 silent=True,
                 hide_via=True,
             )
-        elif len(text)>=14:
+        elif len(text) >= 14:
             results = await bot.inline_query("honka_says_bot", text)
             await results[0].click(
                 event.chat_id,
@@ -45,5 +44,6 @@ async def honkasays(event):
         await event.edit("Maaf Alpha, saya tidak bisa mengirim stiker ke sini !!")
 
 
-CMD_HELP.update({"frog": "**Modules:** __Frog__\n\n**Perintah:** `.frog <teks>`\
+CMD_HELP.update(
+    {"frog": "**Modules:** __Frog__\n\n**Perintah:** `.frog <teks>`\
     \n**Penjelasan:** Mengirim sebuah animasi sticker kodok."})
