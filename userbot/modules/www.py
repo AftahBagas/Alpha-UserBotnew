@@ -94,21 +94,21 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**A|**")
-    await pong.edit("**AL|**")
-    await pong.edit("**ALP|**")
-    await pong.edit("**ALPH|**")
-    await pong.edit("**ALPHA|**")
-    await pong.edit("**..**")
-    await pong.edit("**....**")
-    await pong.edit("**.......**")
+    await pong.edit("**🕛**")
+    await pong.edit("**🕐**")
+    await pong.edit("**🕑**")
+    await pong.edit("**🕒**")
+    await pong.edit("**🕓**")
+    await pong.edit("**🕔**")
+    await pong.edit("**🕕**")
     await pong.edit("**PING**")
+    await pong.edit("**⚡**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"╭〔 **𝙋𝙞𝙣𝙜 𝘼𝙡𝙥𝙝𝙖** 〕🍁\n"
-                    f"├➠  __Ping:__ "
+    await pong.edit(f"┍《 **𝘼 𝙇 𝙋 𝙃 𝘼** 》\n"
+                    f"┢➠  __Ping:__ "
                     f"`%sms` \n"
-                    f"╰➠ __Uptime:__ "
+                    f"┕➠ __Uptime:__ "
                     f"`{uptime}` \n" % (duration))
 
 
