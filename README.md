@@ -33,7 +33,7 @@ Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/kanjengIngsun) Dari Berbagai Repo
 
 ➠ Isi Datanya Lalu Tekan Deploy Lagi
 
-➠ Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
+➠ Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy 
 ```
 
 
