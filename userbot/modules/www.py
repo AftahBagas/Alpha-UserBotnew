@@ -53,9 +53,9 @@ async def pingme(pong):
     await pong.edit("**.PING**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**⚡ PING** "
+    await pong.edit(f"**🍁 PING** "
                     f"\n  ➟ `%sms` \n"
-                    f"**⚡ PENGGUNA** "
+                    f"**🍁 PENGGUNA** "
                     f"\n  ➟ `{ALIVE_NAME}` \n" % (duration))
 
 
@@ -94,21 +94,21 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**➠**")
-    await pong.edit("**.➠**")
-    await pong.edit("**..➠**")
-    await pong.edit("**...➠**")
-    await pong.edit("**....➠**")
-    await pong.edit("**.....➠**")
-    await pong.edit("**......➠**")
-    await pong.edit("**⚡**")
+    await pong.edit("**A|**")
+    await pong.edit("**AL|**")
+    await pong.edit("**ALP|**")
+    await pong.edit("**ALPH|**")
+    await pong.edit("**ALPHA|**")
+    await pong.edit("**..**")
+    await pong.edit("**....**")
+    await pong.edit("**.......**")
     await pong.edit("**PING**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"┏━《 **𝗔 𝗟 𝗣 𝗛 𝗔** 》━\n"
-                    f"┣➠  __Ping:__ "
+    await pong.edit(f"╭〔 **𝙋𝙞𝙣𝙜 𝘼𝙡𝙥𝙝𝙖** 〕🍁\n"
+                    f"├➠  __Ping:__ "
                     f"`%sms` \n"
-                    f"┗➠ __Uptime:__ "
+                    f"╰➠ __Uptime:__ "
                     f"`{uptime}` \n" % (duration))
 
 
@@ -126,12 +126,12 @@ async def pingme(pong):
     await pong.edit("**100% ██████████**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"- 𝗔 𝗟 𝗣 𝗛 𝗔 -\n"
-                    f"**• ꜱɪɴʏᴀʟ  :** "
+    await pong.edit(f"- 𝙎𝙞𝙣𝙮𝙖𝙡 𝘼𝙡𝙥𝙝𝙖 -\n"
+                    f"**⇒ ꜱɪɴʏᴀʟ  :** "
                     f"`%sms` \n"
-                    f"**• ᴏɴʟɪɴᴇ  :** "
+                    f"**⇒ ᴏɴʟɪɴᴇ  :** "
                     f"`{uptime}` \n"
-                    f"**• ᴏᴡɴᴇʀ  :** `{ALIVE_NAME}`" % (duration))
+                    f"**⇒ ᴏᴡɴᴇʀ  :** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.speed$")
@@ -194,4 +194,4 @@ CMD_HELP.update(
 CMD_HELP.update(
     {"sinyal": "**Modules:** `Sinyal`\
     \n\n**• Perintah :** `.sinyal`\
-    \n  ➠ **Penjelasan :** __Untuk melihat sinyal bot__"})
+    \n  • **Penjelasan :** __Untuk melihat sinyal bot__"})
