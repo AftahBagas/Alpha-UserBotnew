@@ -1,6 +1,6 @@
 for i in gbanned:
-        if i.sender == str(moot.sender_id):
-            await moot.delete()
+    if i.sender == str(moot.sender_id):
+        await moot.delete()
 
 
 @register(outgoing=True, pattern=r"^\.ungban(?: |$)(.*)")
