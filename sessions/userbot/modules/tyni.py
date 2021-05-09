@@ -93,4 +93,5 @@ async def _(event):
 CMD_HELP.update({
     "tyni":
     "`.tyni`\
-    \nUsage: memperkecil setiker.\
+    \nUsage: memperkecil setiker."
+})
