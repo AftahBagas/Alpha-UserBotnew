@@ -5,7 +5,6 @@ from telethon import events
 import asyncio
 
 
-
 @register(outgoing=True, pattern='^.mantan(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -506,8 +505,6 @@ CMD_HELP.update({
     \nUsage: apa kabarmu sayang.\
     \n\n`.sayang`\
     \nUsage: untuk jadi buaya.\
-    \n\n`.terkadang`\
-    \nUsage: Auk dah iseng doang.\
     \n\n`buaya`\
     \nUsage:contoh inisial buaya.\
     \n\n`melamar`\
