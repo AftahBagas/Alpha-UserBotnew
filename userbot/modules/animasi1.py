@@ -1,20 +1,19 @@
-#Module Punya Si @Pocongonlen
-#https://github.com/poocong/Pocong-Userbot
+# Module Punya Si @Pocongonlen
+# https://github.com/poocong/Pocong-Userbot
 #
-#Mau Maling Kah? 
-#Silahkan Maling Aja Xixixi
-#Gak Usah Sungkan
+# Mau Maling Kah?
+# Silahkan Maling Aja Xixixi
+# Gak Usah Sungkan
 
 from time import sleep
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 from userbot.events import register
-from telethon import events
-import asyncio
 
-#Sengaja Bikin Banyak Banyak Credit Nya
-#P o c o n g - U s e r b o t
-#Tapi Kalo Mau Maling Mah Silakan
-#Enjoy
+# Sengaja Bikin Banyak Banyak Credit Nya
+# P o c o n g - U s e r b o t
+# Tapi Kalo Mau Maling Mah Silakan
+# Enjoy
+
 
 @register(outgoing=True, pattern='^.hai(?: |$)(.*)')
 async def typewriter(typew):
@@ -29,8 +28,8 @@ async def typewriter(typew):
     await typew.edit("gasukaa😫")
     sleep(1)
     await typew.edit("__GELAYY__🤮")
-    
-   
+
+
 @register(outgoing=True, pattern='^.kntl(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -39,7 +38,7 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("se**KONT0L** **K0NTOL** nya si **K0NTOL**")
     sleep(1)
-    await typew.edit("lebih **KONTOL** lagi")              
+    await typew.edit("lebih **KONTOL** lagi")
     sleep(1)
     await typew.edit("kalian")
     await typew.edit("kalian **K**")
@@ -64,8 +63,8 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("pantes **NORAK**")
 
-    
-@register(outgoing=True, pattern='^.jawa(?: |$)(.*)') 
+
+@register(outgoing=True, pattern='^.jawa(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -100,7 +99,8 @@ async def typewriter(typew):
     await typew.edit("Tidak Seperti Yang Lain")
     sleep(1)
     await typew.edit("Bersama Jawa Membangun Negri")
-    
+
+
 @register(outgoing=True, pattern='^.erpe(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -122,8 +122,8 @@ async def typewriter(typew):
     await typew.edit("Canda **BURIK**")
     sleep(1)
     await typew.edit("Lari Ada Plastik KePanasan")
-    
-    
+
+
 @register(outgoing=True, pattern='^.lopu(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -145,7 +145,8 @@ async def typewriter(typew):
     await typew.edit("`Aku Sayang Kamu`")
     sleep(1)
     await typew.edit("`I LOVE YOU 💞`")
-    
+
+
 @register(outgoing=True, pattern='^.hujan(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -203,7 +204,8 @@ async def typewriter(typew):
     await typew.edit("`Kenapa Ya Gw Coli Tadi😔`")
     sleep(1)
     await typew.edit("`Dah la besok besok ga mau lagi`")
-    
+
+
 @register(outgoing=True, pattern='^.ange(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -212,17 +214,17 @@ async def typewriter(typew):
     await typew.edit("`Ange😫`")
     sleep(1)
     await typew.edit("`Ayukkk Ewean Ayanggg🤤`")
-    
-    
+
+
 @register(outgoing=True, pattern='^.dahlah(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**`Ayo Menyerah`**")
     sleep(2)
     await typew.edit("**`Ngapain Semangat`**")
-                     
-    
-@register(outgoing=True, pattern='^.repobot(?: |$)(.*)')  
+
+
+@register(outgoing=True, pattern='^.repobot(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -230,10 +232,10 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("**🔥𝙋𝙤𝙘𝙤𝙣𝙜 - 𝙐𝙨𝙚𝙧𝙗𝙤𝙩🔥**\n\n [𝚂𝚎𝚗𝚝𝚞𝚑 𝙰𝚔𝚞 𝙱𝚎𝚋](https://github.com/poocong/Pocong-Userbot)\n 𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠👻")
 
-#P o c o n g - U s e r b o t
-#Ini Tercipta Hasil Gabut Doang
-#Jadi Ga Usah Bacot Ngentod
-    
+# P o c o n g - U s e r b o t
+# Ini Tercipta Hasil Gabut Doang
+# Jadi Ga Usah Bacot Ngentod
+
 CMD_HELP.update({
     "animasi1":
     "•𝐒𝐲𝐧𝐭𝐚𝐱: .hai\
@@ -254,6 +256,6 @@ CMD_HELP.update({
     \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Jawa Pride Ni Bos.**\
     \n\n•𝐒𝐲𝐧𝐭𝐚𝐱: .erpe\
     \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Buat Nyindir Nak Rp Yg Goblok.**"
-    
-    
+
+
 })
