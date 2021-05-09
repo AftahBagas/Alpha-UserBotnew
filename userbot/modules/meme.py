@@ -1,8 +1,8 @@
 import asyncio
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="^\:/$"))
-@bot.on(sudo_cmd(pattern="^\:/$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="^\\:/$"))
+@bot.on(sudo_cmd(pattern="^\\:/$", allow_sudo=True))
 async def kek(keks):
     keks = await edit_or_reply(keks, ":\\")
     uio = ["/", "\\"]
@@ -12,8 +12,8 @@ async def kek(keks):
         await keks.edit(txt)
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="^\-_-$"))
-@bot.on(sudo_cmd(pattern="^\-_-$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="^\\-_-$"))
+@bot.on(sudo_cmd(pattern="^\\-_-$", allow_sudo=True))
 async def lol(lel):
     lel = await edit_or_reply(lel, "-__-")
     okay = "-__-"
@@ -23,8 +23,8 @@ async def lol(lel):
         await lel.edit(okay)
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="^\;_;$"))
-@bot.on(sudo_cmd(pattern="^\;_;$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="^\\;_;$"))
+@bot.on(sudo_cmd(pattern="^\\;_;$", allow_sudo=True))
 async def fun(e):
     e = await edit_or_reply(e, ";__;")
     t = ";__;"
@@ -63,8 +63,8 @@ async def typewriter(typew):
         await asyncio.sleep(sleep_time)
 
 
-@bot.on(admin_cmd(pattern="repeat (\d*) (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="repeat (\d*) (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="repeat (\\d*) (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="repeat (\\d*) (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
