@@ -350,7 +350,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {} 🔥".format("🔥", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {} 🌹".format("🌹", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
@@ -364,13 +364,13 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "<-Pʀᴇᴠɪᴏᴜs", data="{}_prev({})".format(prefix, modulo_page)
+                    "<- Pʀᴇᴠɪᴏᴜs", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
                     '-Cʟᴏsᴇ-', b'close'
                 ),
                 custom.Button.inline(
-                    "Nᴇxᴛ->", data="{}_next({})".format(prefix, modulo_page)
+                    "Nᴇxᴛ ->", data="{}_next({})".format(prefix, modulo_page)
                 ),
             )
         ]
@@ -405,8 +405,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**Mᴇɴᴜ Hᴇʟᴘ Oғ Aʟᴘʜᴀ**\n               \n**Pʟᴜɢɪɴs~** `{}` \n".format(
-                        "**A ʟ ᴘ ʜ ᴀ**",
+                    text="{}\n\n**Mᴇɴᴜ Hᴇʟᴘ Oғ Aʟᴘʜᴀ Usᴇʀʙᴏᴛ**\n               \n**Pʟᴜɢɪɴs ~** `{}` \n".format(
+                        "**Aʟᴘʜᴀ Usᴇʀʙᴏᴛ**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -414,14 +414,14 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan A L P H A ",
+                    "Bantuan Aʟᴘʜᴀ ",
                     text="Dᴀғᴛᴀʀ Mᴏᴅᴜʟ Dɪ Aʟᴘʜᴀ",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    "**A L P H A**",
-                    text="""**Anda Bisa Membuat Alpha Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Alphauserbot)""",
+                    "**Aʟᴘʜᴀ**",
+                    text="""**Anda Bisa Membuat Alpha Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Petercord)""",
                     buttons=[
                         [
                             custom.Button.url(
@@ -453,9 +453,12 @@ with bot:
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
-        async def close(event):
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == bot.uid:
             await event.edit("Mᴇɴᴜ Tᴇʟᴀʜ Dɪᴛᴜᴛᴜᴘ")
-            await event.delete()
+            else:
+                reply_pop_up_alert = f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
