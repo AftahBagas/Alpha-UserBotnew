@@ -350,7 +350,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {} 🍁".format("🍁", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {} 🔥".format("🔥", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
@@ -364,13 +364,13 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "⇐", data="{}_prev({})".format(prefix, modulo_page)
+                    "<-Pʀᴇᴠɪᴏᴜs", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    '✖', b'close'
+                    '-Cʟᴏsᴇ-', b'close'
                 ),
                 custom.Button.inline(
-                    "⇒", data="{}_next({})".format(prefix, modulo_page)
+                    "Nᴇxᴛ->", data="{}_next({})".format(prefix, modulo_page)
                 ),
             )
         ]
@@ -405,8 +405,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**Jᴜᴍʟᴀʜ Mᴏᴅᴜʟᴇs Yᴀɴɢ Tᴇʀsᴇᴅɪᴀ Dɪ Aʟᴘʜᴀ 🍁:** `{}`\n               \n**Dᴀғᴛᴀʀ Mᴏᴅᴜʟᴇs Uɴᴛᴜᴋ Aʟᴘʜᴀ 🍁:** \n".format(
-                        "**🍁 A ʟ ᴘ ʜ A 🍁**",
+                    text="{}\n\n**Mᴇɴᴜ Hᴇʟᴘ Oғ Aʟᴘʜᴀ**\n               \n**Pʟᴜɢɪɴs~** `{}` \n".format(
+                        "**A ʟ ᴘ ʜ ᴀ**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -454,7 +454,7 @@ with bot:
 
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
         async def close(event):
-            await event.edit("Mᴇɴᴜ Cʟᴏsᴇᴅ Aʟᴘʜᴀ Bʏ.Tᴇɴᴛᴀɴɢ Aᴋᴜ Dᴀɴ Dɪᴀ")
+            await event.edit("Mᴇɴᴜ Tᴇʟᴀʜ Dɪᴛᴜᴛᴜᴘ")
             await event.delete()
 
         @tgbot.on(
