@@ -454,7 +454,7 @@ with bot:
 
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
         async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == bot.uid:
+            if event.query.user_id == uid:
                 await event.edit("Mᴇɴᴜ Tᴇʟᴀʜ Dɪᴛᴜᴛᴜᴘ")
             else:
                 reply_pop_up_alert = f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
