@@ -255,13 +255,13 @@ async def amireallyalive(alive):
 
 @register(outgoing=True, pattern=r"^\.(?:xalive|xon)\s?(.)?")
 async def amireallyalive(alive):
-    await bot.get_me()
+    user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**The Alpha Userbot...** \n"
-        f"** ㅤㅤ**\n"
+        f"\n"
         f"**Hey, I am alive.**\n"
-        f"** ㅤㅤ**\n"
+        f"\n"
         f"┏━━━━━━━━━━━━━━━━━━━━━━━\n"
         f"┣**Pemilik** - `{DEFAULTUSER}` \n"
         f"┣**Versi** - `{BOT_VER}` \n"
