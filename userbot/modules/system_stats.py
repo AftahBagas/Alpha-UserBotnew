@@ -261,12 +261,12 @@ async def amireallyalive(alive):
         f"**The Alpha Userbot...**\n\n"
         f"**Hey, I am alive.\n\n"
         f"┏━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"┣ **Pemilik** -
-        f"┣ **Versi** -
-        f"┣ **UpTime** -
-        f"┣ **Python** -
-        f"┣ **Telethon** -
-        f"┣ **Branch** -
+        f"┣ ** Pemilik ** -
+        f"┣ ** Versi ** -
+        f"┣ ** UpTime ** -
+        f"┣ ** Python ** -
+        f"┣ ** Telethon ** -
+        f"┣ ** Branch ** -
         f"┗━━━━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
