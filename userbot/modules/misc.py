@@ -122,7 +122,7 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "• **ALPHA USERBOT** •\n\n",
         "• Repo - [Click Here](https://github.com/AftahBagas/Alpha_)\n",
-        "• Support - @TeamSquadUserbotSupport",
+        "• Support - [Click Here](https://t.me/TeamSquadUserbotSupport)",
     )
 
 
