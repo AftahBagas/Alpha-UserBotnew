@@ -220,18 +220,18 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern=r"^\.(?:alpha|alphaon)\s?(.)?")
 async def amireallyalive(alive):
-    await bot.get_me()
+    user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**The Alpha Userbot...**\n\n"
         f"**Hey, I am alive.\n\n"
         f"┏━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"┣**Pemilik** - `{DEFAULTUSER}` \n"
-        f"┣**Versi** - `{BOT_VER}` \n"
-        f"┣**UpTime** - `{uptime}` \n"
-        f"┣**Python** - `Ver {python_version()}` \n"
-        f"┣**Telethon** - `{version.__version__}` \n"
-        f"┣**Branch** - `{UPSTREAM_REPO_BRANCH}` \n"
+        f"┣**Pemilik** - 
+        f"┣**Versi** - 
+        f"┣**UpTime** - 
+        f"┣**Python** - 
+        f"┣**Telethon** - 
+        f"┣**Branch** -
         f"┗━━━━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
@@ -255,18 +255,18 @@ async def amireallyalive(alive):
 
 @register(outgoing=True, pattern=r"^\.(?:xalive|xon)\s?(.)?")
 async def amireallyalive(alive):
-    await bot.get_me()
+    user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**The Alpha Userbot...**\n\n"
         f"**Hey, I am alive.\n\n"
         f"┏━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"┣**Pemilik** - `{DEFAULTUSER}` \n"
-        f"┣**Versi** - `{BOT_VER}` \n"
-        f"┣**UpTime** - `{uptime}` \n"
-        f"┣**Python** - `Ver {python_version()}` \n"
-        f"┣**Telethon** - `{version.__version__}` \n"
-        f"┣**Branch** - `{UPSTREAM_REPO_BRANCH}` \n"
+        f"┣**Pemilik** - 
+        f"┣**Versi** - 
+        f"┣**UpTime** - 
+        f"┣**Python** - 
+        f"┣**Telethon** -
+        f"┣**Branch** - 
         f"┗━━━━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
