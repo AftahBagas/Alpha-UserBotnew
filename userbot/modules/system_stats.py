@@ -220,21 +220,19 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern=r"^\.(?:alpha|alphaon)\s?(.)?")
 async def amireallyalive(alive):
-    await bot.get_me()
+    user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**The Alpha Userbot...** \n"
-        f"** ㅤㅤ**\n"
-        f"**Hey, I am alive.**\n"
-        f"** ㅤㅤ**\n"
-        f"┏━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"┣**Pemilik** - `{DEFAULTUSER}` \n"
-        f"┣**Versi** - `{BOT_VER}` \n"
-        f"┣**UpTime** - `{uptime}` \n"
-        f"┣**Python** - `Ver {python_version()}` \n"
-        f"┣**Telethon** - `{version.__version__}` \n"
-        f"┣**Branch** - `{UPSTREAM_REPO_BRANCH}` \n"
-        f"┗━━━━━━━━━━━━━━━━━━━━━━━")
+        f"**═════━━━━━━━━━━━━═════**\n"
+        f"                **〘 A L P H A 〙** \n\n"
+        f"» **Pengguna**     \n   > `{DEFAULTUSER}` \n"
+        f"» **Username** \n   > `@{user.username}` \n"
+        f"» **Telethon** \n   > `Versi {version.__version__}` \n"
+        f"» **Python**   \n   > `Versi {python_version()}` \n"
+        f"» **Versi**\n   > `{BOT_VER}` \n"
+        f"» **Modul**    \n   > `{len(modules)}` \n\n"
+        f"➠ **Repo:** [Alpha](https://github.com/AftahBagas/Alpha_)\n➠ **Grup Userbot: **[Tekan](t.me/petercord)\n➠ **Owner:** [Alfareza](t.me/KanjengIngsun)\n"
+        f"**═══════━━━━━━━═══════**")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -260,16 +258,18 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**═════━━━━━━━━━━━━═════**\n"
-        f"                **〘«𝗔 𝗟 𝗣 𝗛 𝗔»〙** \n\n"
-        f"»»» **ᴘᴇɴɢɢᴜɴᴀ**     \n   ➬ `{DEFAULTUSER}` \n"
-        f"»»» **ᴜsᴇʀɴᴀᴍᴇ** \n   ➬ `@{user.username}` \n"
-        f"»»» **ᴛᴇʟᴇᴛʜᴏɴ** \n   ➬ `Versi {version.__version__}` \n"
-        f"»»» **ᴘʏᴛʜᴏɴ**   \n   ➬ `Versi {python_version()}` \n"
-        f"»»» **ᴠᴇʀsɪ ʙᴏᴛ**\n   ➬ `{BOT_VER}` \n"
-        f"»»» **ᴍᴏᴅᴜʟ**    \n   ➬ `{len(modules)}` \n\n"
-        f"➠ **Repo:** [Alpha](https://github.com/AftahBagas/Alpha_)\n➠ **Grup Userbot: **[Tekan](t.me/petercord)\n➠ **Owner:** [Alfareza](t.me/KanjengIngsun)\n"
-        f"**═══════━━━━━━━═══════**")
+        f"**The Alpha Userbot...** \n"
+        f"** ㅤㅤ**\n"
+        f"**Hey, I am alive.**\n"
+        f"** ㅤㅤ**\n"
+        f"┏━━━━━━━━━━━━━━━━━━━━━━━\n"
+        f"┣**Pemilik** - `{DEFAULTUSER}` \n"
+        f"┣**Versi** - `{BOT_VER}` \n"
+        f"┣**UpTime** - `{uptime}` \n"
+        f"┣**Python** - `Ver {python_version()}` \n"
+        f"┣**Telethon** - `{version.__version__}` \n"
+        f"┣**Branch** - `{UPSTREAM_REPO_BRANCH}` \n"
+        f"┗━━━━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
