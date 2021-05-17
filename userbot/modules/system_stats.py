@@ -228,7 +228,7 @@ async def amireallyalive(alive):
         f"┏━━━━━━━━━━━━━━━━━━━━━━━\n"
         f"┣**Pemilik** - `{DEFAULTUSER}` \n"
         f"┣**Versi** - `{BOT_VER}` \n"
-        f"┣**UpTime** - `{uptime}` \n
+        f"┣** UpTime ** - `{uptime}` \n
         f"┣**Python** - `Ver {python_version()}` \n"
         f"┣**Telethon** - `{version.__version__}` \n"
         f"┣**Branch** - `{UPSTREAM_REPO_BRANCH}` \n"
