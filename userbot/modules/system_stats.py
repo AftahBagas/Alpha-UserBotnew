@@ -220,7 +220,6 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern=r"^\.(?:alpha|alphaon)\s?(.)?")
 async def amireallyalive(alive):
-    await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**The Alpha Userbot...** \n"
