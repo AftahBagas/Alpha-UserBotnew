@@ -223,19 +223,18 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**🔥𝗔 𝗟 𝗣 𝗛 𝗔🔥** \n"
-        f"\n__**WELCOME TO ALIVE**__\n"
-        f"**══════════════════════**\n"
-        f"**🎃 Owner** \n"
-        f" ➩ : `{DEFAULTUSER}` \n"
-        f"**💳 Username** \n"
-        f" ➩ : `@{user.username}` \n"
-        f"╔═══════════════════════\n"
-        f"╟[•⚙️ `Telethon :`Ver {version.__version__} \n"
-        f"╟[•🐍 `Python   :`Ver {python_version()} \n"
-        f"╟[•👾 `Bot Ver  :`{BOT_VER} \n"
-        f"╟[•📂 `Modules  :`{len(modules)} \n"
-        f"╚═══════════════════════")
+        f"**The Alpha Userbot...** \n"
+        f"\n** ㅤㅤ**\n"
+        f"\n**Hey, I am alive.**\n"
+        f"\n** ㅤㅤ**\n"
+        f"┏━━━━━━━━━━━━━━━━━━━━━━━\n"
+        f"┣**Pemilik** - `{DEFAULTUSER}` \n"
+        f"┣**Versi** - `{BOT_VER}` \n"
+        f"┣**UpTime** - `{uptime}`" % (duration)` \n
+        f"┣**Python** - `Ver {python_version()}` \n"
+        f"┣**Telethon** - `{version.__version__}` \n"
+        f"┣**Branch** - `{UPSTREAM_REPO_BRANCH}` \n"
+        f"┗━━━━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
