@@ -220,13 +220,13 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern=r"^\.(?:alpha|alphaon)\s?(.)?")
 async def amireallyalive(alive):
-    await bot.get_me()
+    user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**The Alpha Userbot...** \n"
-        f"\n** ㅤㅤ**\n"
-        f"\n**Hey, I am alive.**\n"
-        f"\n** ㅤㅤ**\n"
+        f"** ㅤㅤ**\n"
+        f"**Hey, I am alive.**\n"
+        f"** ㅤㅤ**\n"
         f"┏━━━━━━━━━━━━━━━━━━━━━━━\n"
         f"┣**Pemilik** - `{DEFAULTUSER}` \n"
         f"┣**Versi** - `{BOT_VER}` \n"
