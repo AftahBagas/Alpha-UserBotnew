@@ -129,7 +129,7 @@ async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
     """
-    await dyno.edit("`Mendapatkan Informasi Dyno Heroku Anda ヅ`")
+    await dyno.edit("`Mencari Informasi Dyno Heroku ヅ`")
     useragent = (
         'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
         'AppleWebKit/537.36 (KHTML, like Gecko) '
