@@ -220,20 +220,22 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern=r"^\.(?:alpha|alphaon)\s?(.)?")
 async def amireallyalive(alive):
-    user - await bot.get_me()
+    user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
+    await alive.edit("`I'M ALIVE!`")
+    await alive.edit("⚡")
     output = (
-        f"**The Alpha Userbot...** \n\n"
+        f" **The Alpha Userbot...** \n"
+        f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
         f"**Hey, I am alive** \n\n"
-        f"┏━━━━━━━━━━━━━━━━━━━━ \n"
-        f"┣ Owner    - {DEFAULTUSER} \n"
-        f"┣ Username - @{user.username} \n"
-        f"┣ Telethon - v. {version.__version__} \n"
-        f"┣ Python   - v. {python_version()} \n"
-        f"┣ Branch   - {UPSTREAM_REPO_BRANCH} \n"
-        f"┣ Bot Ver  - v. {BOT_VER} \n"
-        f"┣ Plugins  - {len(modules)} Plugins \n"
-        f"┗━━━━━━━━━━━━━━━━━━━━")
+        f"┏━━━━━━━━━━━━━━━━━━━\n"
+        f"┣ **Pengguna -**{DEAFULTUSER} \n"
+        f"┣ **Username -**@{user.username} \n"
+        f"┣ **Telethon -**Ver {version.__version__} \n"
+        f"┣ **Python   -**Ver {python_version()} \n"
+        f"┣ **Bot Ver  -**{BOT_VER} \n"
+        f"┣ **Modules  -**{len(modules)} Modules \n"
+        f"┗━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
