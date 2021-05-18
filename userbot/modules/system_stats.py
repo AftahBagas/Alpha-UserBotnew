@@ -225,14 +225,18 @@ async def amireallyalive(alive):
     await alive.edit("`I'M ALIVE!`")
     await alive.edit("⚡")
     output = (
-        f"**The Alpha Alive...\n"
-        f"┏━━━━━━━━━━━━━━━━━━━\n"
-        f"┣ **Pengguna -**{DEAFULTUSER} \n"
-        f"┣ **Username -**@{user.username} \n"
-        f"┣ **Telethon -**Ver {version.__version__} \n"
-        f"┣ **Python   -**Ver {python_version()} \n"
-        f"┣ **Bot Ver  -**{BOT_VER} \n"
-        f"┣ **Modules  -**{len(modules)} Modules \n"
+        f"**╭─────────────╮** \n"
+        f"**The Alpha Userbot  ** \n"
+        f"**╰─────────────╯** \n"
+        f" Hey, I am alive         \n"
+        f"┏━━━━━━━━━━━━━━━━━━━ \n"
+        f"┣ ✘ Owner    -{DEFAULTUSER} \n"
+        f"┣ ✘ Username -@{user.username} \n"
+        f"┣ ✘ Telethon -v. {version.__version__} \n"
+        f"┣ ✘ Python   -v. {python_version()} \n"
+        f"┣ ✘ Branch   -{UPSTREAM_REPO_BRANCH} \n"
+        f"┣ ✘ Bot Ver  -v. {BOT_VER} \n"
+        f"┣ ✘ Plugins  -{len(modules)} Plugins \n"
         f"┗━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
