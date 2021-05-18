@@ -422,7 +422,7 @@ with bot:
             else:
                 result = builder.article(
                     "**Aʟᴘʜᴀ**",
-                    text="""**Buat ⚡𝘼𝙡𝙥𝙝𝙖⚡ Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Petercord)""",
+                    text="""**Buat ⚡𝘼𝙡𝙥𝙝𝙖⚡ Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/teamsquaduserbotsupport)""",
                     buttons=[
                         [
                             custom.Button.url(
