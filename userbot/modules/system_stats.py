@@ -226,12 +226,13 @@ async def amireallyalive(alive):
         f"**The Alpha Userbot...**\n\n"
         f"**Hey, I am alive.\n\n"
         f"┏━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"┣**Pemilik** - `{DEFAULTUSER}` \n"
-        f"┣**Versi** - `{BOT_VER}` \n"
-        f"┣**Mesin** - `{uname.machine}`\n"
-        f"┣**Python** - `Ver {python_version()}` \n"
-        f"┣**Telethon** - `{version.__version__}` \n"
-        f"┣**Branch** - `{UPSTREAM_REPO_BRANCH}` \n"
+        f"┣ Owner     -{DEFAULTUSER} \n"
+        f"┣ Username -@{user.username} \n"
+        f"┣ Telethon -v. {version.__version__} \n"
+        f"┣ Python   -v. {python_version()} \n"
+        f"┣ Branch   -{UPSTREAM_REPO_BRANCH} \n"
+        f"┣ Bot Ver  -v. {BOT_VER} \n"
+        f"┣ Plugins  -{len(modules)} Plugins \n"
         f"┗━━━━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
