@@ -225,10 +225,7 @@ async def amireallyalive(alive):
     await alive.edit("`I'M ALIVE!`")
     await alive.edit("⚡")
     output = (
-        f"**The Alpha Userbot...** \n"
-        f".         \n"
-        f"**Hey, I am alive** \n"
-        f".        \n"
+        f"**The Alpha Alive...\n"
         f"┏━━━━━━━━━━━━━━━━━━━\n"
         f"┣ **Pengguna -**{DEAFULTUSER} \n"
         f"┣ **Username -**@{user.username} \n"
@@ -263,7 +260,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**═════━━━━━━━━━━━━═════**\n"
-        f"                **〘 A L P H A 〙** \n\n"
+        f"                  **〘 A L P H A 〙** \n\n"
         f"» **Pengguna**     \n   > `{DEFAULTUSER}` \n"
         f"» **Username** \n   > `@{user.username}` \n"
         f"» **Telethon** \n   > `Versi {version.__version__}` \n"
