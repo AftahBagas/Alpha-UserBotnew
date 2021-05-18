@@ -233,7 +233,7 @@ async def amireallyalive(alive):
         f"┣ Branch   - {UPSTREAM_REPO_BRANCH} \n"
         f"┣ Bot Ver  - v. {BOT_VER} \n"
         f"┣ Plugins  - {len(modules)} Plugins \n"
-        f"┗━━━━━━━━━━━━━━━━━━━━ \n"
+        f"┗━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
             logo=ALIVE_LOGO
