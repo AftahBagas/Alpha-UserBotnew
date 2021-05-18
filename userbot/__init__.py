@@ -421,7 +421,7 @@ with bot:
             else:
                 result = builder.article(
                     "**Aʟᴘʜᴀ**",
-                    text="""**Anda Bisa Membuat Alpha Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Petercord)""",
+                    text="**Aʟᴘʜᴀ Usᴇʀʙᴏᴛ**\n**Bᴜᴀᴛ Usᴇʀʙᴏᴛ Aɴᴅᴀ Sᴇɴᴅɪʀɪ Dᴇɴɢᴀɴ**", [Tekan Disini](t.me/teamsquaduserbotsupport)""",
                     buttons=[
                         [
                             custom.Button.url(
@@ -429,7 +429,10 @@ with bot:
                                 "https://github.com/AftahBagas/Alpha_.git"),
                             custom.Button.url(
                                 "Pemilik Repo",
-                                "t.me/Kanjengingsun")],
+                                "t.me/kanjengingsun"),
+                            custom.Button.url(
+                                "Group Support",
+                                "t.me/teamsquaduserbotsupport")],
                     ],
                     link_preview=False,
                 )
