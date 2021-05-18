@@ -226,7 +226,7 @@ async def amireallyalive(alive):
     await alive.edit("⚡")
     output = (
         f"**╭───────────** \n"
-        f"**The Alpha Userbot  ** \n"
+        f"**The Alpha Userbot...  ** \n"
         f"**╰───────────** \n"
         f"**Hey, I am alive     ** \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
