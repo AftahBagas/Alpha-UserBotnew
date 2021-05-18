@@ -236,9 +236,9 @@ async def amireallyalive(alive):
         f"┗━━━━━━━━━━━━━━━━━━━━ \n"
     if ALIVE_LOGO:
         try:
-            logo = ALIVE_LOGO
+            logo=ALIVE_LOGO
             await alive.delete()
-            msg = await bot.send_file(alive.chat_id, logo, caption=output)
+            msg=await bot.send_file(alive.chat_id, logo, caption=output)
             await asyncio.sleep(200)
             await msg.delete()
         except BaseException:
@@ -254,11 +254,11 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:xalive|xon)\s?(.)?")
+@ register(outgoing=True, pattern=r"^\.(?:xalive|xon)\s?(.)?")
 async def amireallyalive(alive):
-    user = await bot.get_me()
+    user=await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    output = (
+    output=(
         f"**═════━━━━━━━━━━━━═════**\n"
         f"                **〘 A L P H A 〙** \n\n"
         f"» **Pengguna**     \n   > `{DEFAULTUSER}` \n"
@@ -271,9 +271,9 @@ async def amireallyalive(alive):
         f"**═══════━━━━━━━═══════**")
     if ALIVE_LOGO:
         try:
-            logo = ALIVE_LOGO
+            logo=ALIVE_LOGO
             await alive.delete()
-            msg = await bot.send_file(alive.chat_id, logo, caption=output)
+            msg=await bot.send_file(alive.chat_id, logo, caption=output)
             await asyncio.sleep(200)
             await msg.delete()
         except BaseException:
@@ -289,9 +289,9 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
+@ register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
 async def amireallyalive(alive):
-    user = await bot.get_me()
+    user=await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     await alive.edit("𝗔")
     await alive.edit("𝗔𝗟")
@@ -302,7 +302,7 @@ async def amireallyalive(alive):
     await alive.edit("🔥𝗔𝗟𝗣𝗛𝗔🔥")
     await alive.edit("🔥")
     await asyncio.sleep(3)
-    output = (
+    output=(
         f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮** \n"
         f"**                  🔥𝗔 𝗟 𝗣 𝗛 𝗔🔥  ** \n"
         f"**ㅤㅤ  ╰─━━═━═━═━═━━─╯** \n"
@@ -319,9 +319,9 @@ async def amireallyalive(alive):
         f"[Repo](https://github.com/AftahBagas/Alpha_) | [Grup Support](t.me/petercord) | [Owner](t.me/Kanjengingsun)")
     if ALIVE_LOGO:
         try:
-            logo = ALIVE_LOGO
+            logo=ALIVE_LOGO
             await alive.delete()
-            msg = await bot.send_file(alive.chat_id, logo, caption=output)
+            msg=await bot.send_file(alive.chat_id, logo, caption=output)
             await asyncio.sleep(500)
             await msg.delete()
         except BaseException:
@@ -337,22 +337,22 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.aliveu")
+@ register(outgoing=True, pattern=r"^\.aliveu")
 async def amireallyaliveuser(username):
-    message = username.text
-    output = ".aliveu [new user without brackets] nor can it be empty"
+    message=username.text
+    output=".aliveu [new user without brackets] nor can it be empty"
     if message != ".aliveu" and message[7:8] == " ":
-        newuser = message[8:]
+        newuser=message[8:]
         global DEFAULTUSER
-        DEFAULTUSER = newuser
-        output = "Successfully changed user to " + newuser + "!"
+        DEFAULTUSER=newuser
+        output="Successfully changed user to " + newuser + "!"
     await username.edit("`" f"{output}" "`")
 
 
-@register(outgoing=True, pattern=r"^\.resetalive$")
+@ register(outgoing=True, pattern=r"^\.resetalive$")
 async def amireallyalivereset(ureset):
     global DEFAULTUSER
-    DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+    DEFAULTUSER=str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Successfully reset user for alive!" "`")
 
 
