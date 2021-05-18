@@ -179,9 +179,15 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "**Iɴғᴏʀᴍᴀsɪ Dʏɴᴏ {app.name}**\n"
-                f"• `Pᴇɴɢɢᴜɴᴀᴀɴ Dʏɴᴏ` - **{AppHours} Jᴀᴍ - {AppMinutes} Mᴇɴɪᴛ  -  {AppPercentage}%**"\n
-                f"• `Sɪsᴀ Dʏɴᴏ Bᴜʟᴀɴ Iɴɪ`- **{hours} Jᴀᴍ - {minutes} Mᴇɴɪᴛ  -  {percentage}%**"
+                f"✘ **Dʏɴᴏ** : {ALIVE_NAME}\n┏◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛┓ \n"
+                f" ☻ **Pᴇᴍᴀᴋᴀɪᴀɴ Dʏɴᴏ {app.name} :**\n"
+                f"• **Pᴇᴍᴀᴋᴀɪᴀɴ** :  `{AppHours}` **Jam** - `{AppMinutes}` **Menit**\n"
+                f"• **Pᴇʀsᴇɴ** : `{AppPercentage}`**%**\n"
+                f"•◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛• \n"
+                f" ☻ **Sɪsᴀ Dʏɴᴏ Bᴜʟᴀɴ Iɴɪ :**\n"
+                f"• **Sɪsᴀ** :  `{hours}` **Jam** - `{minutes}` **Menit**\n"
+                f"• **Pᴇʀsᴇɴ** :  `{percentage}`**%**\n"
+                f"┗◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛┛ \n"
             )
             await asyncio.sleep(20)
             await event.delete()
