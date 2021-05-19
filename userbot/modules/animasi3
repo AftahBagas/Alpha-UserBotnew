@@ -56,7 +56,7 @@ async def typewriter(typew):
 
 
 CMD_HELP.update({
-    "animasi2":
+    "animasi3":
     "`.idiot`\
     \nUsage : u're idiot xixi\
     \n\n`.bacod`\
