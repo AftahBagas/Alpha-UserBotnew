@@ -1,0 +1,66 @@
+from time import sleep
+from userbot import CMD_HELP
+from userbot.events import register
+
+
+@register(outgoing=True, pattern='^.bacod(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(2)
+    await typew.edit("`gak usah banyak omong`")
+    sleep(2)
+    await typew.edit("`diem woi diem`")
+    sleep(1)
+    await typew.edit("`nah gitu diem`")
+
+# Create by myself @localheart
+
+
+@register(outgoing=True, pattern='^.idiot(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("\n╭╮╱╱╭╮"
+                     "\n┃╰╮╭╯┃"
+                     "\n╰╮╰╯╭┻━┳╮╭╮"
+                     "\n╱╰╮╭┫╭╮┃┃┃┃"
+                     "\n╱╱┃┃┃╰╯┃╰╯┃"
+                     "\n╱╱╰╯╰━━┻━━╯"
+                     "\nㅤㅤㅤ"
+                     "\n╭━━━╮"
+                     "\n┃╭━╮┃"
+                     "\n┃┃╱┃┣━┳━━╮"
+                     "\n┃╰━╯┃╭┫┃━┫"
+                     "\n┃╭━╮┃┃┃┃━┫"
+                     "\n╰╯╱╰┻╯╰━━╯"
+                     "\nㅤㅤㅤ"
+                     "\n╭━━━╮╱╭╮╱╱╱╭╮"
+                     "\n┃╭━━╯╱┃┃╱╱╭╯╰╮"
+                     "\n┃╰━━┳━╯┣┳━┻╮╭╯"
+                     "\n┃╭━━┫╭╮┣┫╭╮┃┃"
+                     "\n┃╰━━┫╰╯┃┃╰╯┃╰╮"
+                     "\n╰━━━┻━━┻┻━━┻━╯"
+                     "\nㅤㅤㅤ"
+                     "\n╭━╮╱╭╮"
+                     "\n┃┃╰╮┃┃"
+                     "\n┃╭╮╰╯┣━━╮"
+                     "\n┃┃╰╮┃┃╭╮┃"
+                     "\n┃┃╱┃┃┃╰╯┃"
+                     "\n╰╯╱╰━┻━━╯"
+                     "\nㅤㅤㅤ"
+                     "\n╭━━━╮╱╱╱╱╱╭╮╱╭╮"
+                     "\n╰╮╭╮┃╱╱╱╱╱┃┃╭╯╰╮"
+                     "\n╱┃┃┃┣━━┳╮╭┫╰┻╮╭╯"
+                     "\n╱┃┃┃┃╭╮┃┃┃┃╭╮┃┃"
+                     "\n╭╯╰╯┃╰╯┃╰╯┃╰╯┃╰╮"
+                     "\n╰━━━┻━━┻━━┻━━┻━╯")
+
+
+CMD_HELP.update({
+    "animasi2":
+    "`.idiot`\
+    \nUsage : u're idiot xixi\
+    \n\n`.bacod`\
+    \nUsage : cek aja sendiri.\
+    \n\n`kosong`\
+    \nUsage : Tunggu update selanjutnya kawan."
+})
