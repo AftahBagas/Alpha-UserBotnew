@@ -273,8 +273,8 @@ async def amireallyalive(alive):
         f"▕» **Versi**       ⁃ `{BOT_VER}` \n"
         f"▕» **Modul**       ⁃ `{len(modules)}` \n"
         f"▕═════━━━━━━━━━━━━═════\n"
-        f"▕ **Repo:** [Alpha](https://github.com/AftahBagas/Alpha_)| **Grup Userbot: **[Tekan](t.me/teamsquaduserbotsupport)| **Owner:** [Alfareza](t.me/KanjengIngsun)\n"
-        f"▕═══════━━━━━━━═══════")
+        f"▕ **Repo:** [Alpha](https://github.com/AftahBagas/Alpha_)\n" **Grup Userbot: **[Tekan](t.me/teamsquaduserbotsupport)\n" **Owner:** [Alfareza](t.me/KanjengIngsun)\n"
+        f"▕═════━━━━━━━━━━━━═════")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
