@@ -263,16 +263,18 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**═════━━━━━━━━━━━━═════**\n"
-        f"                  **〘 A L P H A 〙** \n\n"
-        f"» **Pengguna**     \n   > `{DEFAULTUSER}` \n"
-        f"» **Username** \n   > `@{user.username}` \n"
-        f"» **Telethon** \n   > `Versi {version.__version__}` \n"
-        f"» **Python**   \n   > `Versi {python_version()}` \n"
-        f"» **Versi**\n   > `{BOT_VER}` \n"
-        f"» **Modul**    \n   > `{len(modules)}` \n\n"
-        f"➠ **Repo:** [Alpha](https://github.com/AftahBagas/Alpha_)\n➠ **Grup Userbot: **[Tekan](t.me/teamsquaduserbotsupport)\n➠ **Owner:** [Alfareza](t.me/KanjengIngsun)\n"
-        f"**═══════━━━━━━━═══════**")
+        f"▕═════━━━━━━━━━━━━═════\n"
+        f"▕  **〘 A L P H A 〙** \n"
+        f"▕═════━━━━━━━━━━━━═════\n"
+        f"▕» **Pengguna**    ⁃ `{DEFAULTUSER}` \n"
+        f"▕» **Username**    ⁃ `@{user.username}` \n"
+        f"▕» **Telethon**    ⁃ `Versi {version.__version__}` \n"
+        f"▕» **Python**      ⁃ `Versi {python_version()}` \n"
+        f"▕» **Versi**       ⁃ `{BOT_VER}` \n"
+        f"▕» **Modul**       ⁃ `{len(modules)}` \n"
+        f"▕═════━━━━━━━━━━━━═════\n"
+        f"▕ **Repo:** [Alpha](https://github.com/AftahBagas/Alpha_)| **Grup Userbot: **[Tekan](t.me/teamsquaduserbotsupport)| **Owner:** [Alfareza](t.me/KanjengIngsun)\n"
+        f"▕═══════━━━━━━━═══════")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
