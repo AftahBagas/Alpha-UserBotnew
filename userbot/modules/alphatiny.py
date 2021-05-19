@@ -17,7 +17,7 @@ async def ultiny(event):
     if not (reply and (reply.media)):
         await event.edit("`alpha, Mohon Balas Ke Sticker`")
         return
-    xx = await event.edit("`Memproses Tiny....`")
+    xx = await event.edit("`Memperkecil Media....`")
     ik = await bot.download_media(reply)
     im1 = Image.open("alphaUserbot/alphauserbot.png")
     if ik.endswith(".tgs"):
