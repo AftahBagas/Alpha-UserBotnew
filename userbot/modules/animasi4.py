@@ -117,7 +117,7 @@ async def typewriter(typew):
     await typew.edit("`🥵`")
 
 
-@register(outgoing=True, pattern='^.alphabot(?: |$)(.*)')
+@register(outgoing=True, pattern='^.alfabot(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Userbot ?`")
@@ -153,7 +153,7 @@ CMD_HELP.update({
     \nUsage: **siklus player tele\
     \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .bacot\
     \nUsage: **cek aja**\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .alphabot\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .alfabot\
     \nUsage: **cek aja sendiri**\
     \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .pesawat\
     \nUsage: **pesawat oleng**\
