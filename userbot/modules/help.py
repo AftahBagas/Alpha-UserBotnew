@@ -20,7 +20,7 @@ async def help(event):
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("**Module Yg Lu Cari Gada Gblk**")
+            await event.edit("**Alpha User Modul Yang Anda Cari Sepertinya Tidak Ada**")
             await asyncio.sleep(200)
             await event.delete()
     else:
