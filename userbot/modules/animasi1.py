@@ -224,7 +224,7 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("🤖")
     sleep(2)
-    await typew.edit("**𝘼𝙡𝙥𝙝𝙖 𝙐𝙨𝙚𝙧𝙗𝙤𝙩 🔥**\n\n [Tekan sini](https://github.com/AftahBagas/Alpha_)\n 𝙏𝙝𝙖𝙣𝙠𝙨 𝙁𝙤𝙧 𝙐𝙨𝙞𝙣𝙜🍁")
+    await typew.edit("**⌬ 𝘈𝘭𝘱𝘩𝘢 𝘜𝘴𝘦𝘳𝘣𝘰𝘵 ⌬**\n\n [𝚂𝚎𝚗𝚝𝚞𝚑 𝙰𝚔𝚞 𝙱𝚎𝚋](https://pornhub.com)\n 𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠")
 
 # Ini Tercipta Hasil Gabut Doang
 
