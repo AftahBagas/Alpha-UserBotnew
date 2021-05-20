@@ -27,16 +27,13 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    f"◄┈─╼━━━━━━━━━━━━━━━╾─┈╮\n"
-    "ㅤ  “`Selamat Datang Di Room Chat`.”\n"
-    "╭┈─╼━━━━━━━━━━━━━━━╾─┈╯\n"
-    "│❗𝘿𝙄𝙇𝘼𝙍𝘼𝙉𝙂 𝙈𝙀𝙇𝘼𝙆𝙐𝙆𝘼𝙉 𝙎𝙋𝘼𝙈❗\n│\n"
-    f"Tunggu {DEFAULTUSER} Menerima Pesan Anda │\n"
-    "╰┈──────────────────┈─➤\n"
-    "┎━─━─━─━─━──━─━──━─━─━┒\n"
-    "┣[○› **PESAN OTOMATIS**\n"
-    f"┣[○› **BY** 🔥 ALPHA 🔥\n"
-    "┖━─━━─━─━─━─━─━─━─━━─━┚")
+    f"╔══════ ⁃⌬⁃ ══════╗\n     𝙍𝙤𝙤𝙢 𝘾𝙝𝙖𝙩 __{DEFAULTUSER}__    \n╚══════ ⁃⌬⁃ ══════╝  \n"
+    f"⌬ __Halo kawan , saya bot yang menjaga room chat {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
+    "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
+    f"⌬**DILARANG SPAM !!** \n"
+    "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
+    f"⌬ **Pengguna** : {DEFAULTUSER}\n"
+    f"⌬ **By** ⚡️𝘼𝙡𝙥𝙝𝙖⚡️\n")
 # =================================================================
 
 
@@ -92,10 +89,10 @@ async def permitpm(event):
             else:
                 COUNT_PM[event.chat_id] = COUNT_PM[event.chat_id] + 1
 
-            if COUNT_PM[event.chat_id] > 5:
+            if COUNT_PM[event.chat_id] > 3:
                 await event.respond(
                     "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
-                    "`Ke Room Chat Alpha ツ`"
+                    "`Ke Room Chat King`"
                 )
 
                 try:
@@ -105,9 +102,9 @@ async def permitpm(event):
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            "Alpha, Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Bot!",
+                            "Alpha User, Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Bot!",
                         )
-                    return LOGS.info("CountPM wen't rarted boi")
+                    return LOGS.info("CountPM tidak dibunyikan king")
 
                 await event.client(BlockRequest(event.chat_id))
                 await event.client(ReportSpamRequest(peer=event.chat_id))
@@ -234,9 +231,9 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
+        return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima`")
 
-    await apprvpm.edit(f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima ツ`")
+    await apprvpm.edit(f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima`")
     await apprvpm.delete(getmsg)
     await message.delete()
 
@@ -330,7 +327,7 @@ async def unblockpm(unblock):
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
-        return await cust_msg.edit("**Alpha Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`")
+        return await cust_msg.edit("**King Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`")
     try:
         import userbot.modules.sql_helper.globals as sql
     except AttributeError:
@@ -381,15 +378,16 @@ async def add_pmsg(cust_msg):
             )
         else:
             await cust_msg.edit(
-                "*Anda Belum Menyetel Pesan PM*\n"
+                "**Anda Belum Menyetel Pesan PM**\n"
                 f"Masih Menggunakan Pesan PM Default: \n\n`{DEF_UNAPPROVED_MSG}`"
             )
 
-# Ported by Alvin/@liualvinas
-# Lord Userbot
 
 
-@register(incoming=True, disable_edited=True, disable_errors=True)
+@register(incoming=True,
+          disable_edited=True,
+          disable_errors=True,
+          from_users=(1743866353))
 async def permitpm(event):
     if event.fwd_from:
         return
@@ -401,6 +399,8 @@ async def permitpm(event):
             await borg.send_message(
                 chats, "**Menerima Pesan!, Pengguna Terdeteksi Adalah Alfareza**"
             )
+
+
 
 CMD_HELP.update(
     {
