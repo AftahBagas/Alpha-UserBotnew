@@ -89,13 +89,13 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "bin": "**Plugin : **`bin`\
-        \n\n  •  **Syntax :** `.bin`\
-        \n  •  **Function : **Untuk mencari info bin cc.\
-        \n\n  •  **Syntax :** `.vbv`\
-        \n  •  **Function : **Checker Card Credit VBV (Verif By Visa).\
-        \n\n  •  **Syntax :** `.iban`\
-        \n  •  **Function : **Mencari Info Card Iban.\
+        "bin": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `bin`\
+        \n\n  •  🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.bin`\
+        \n  •  **Usage : Untuk mencari info bin cc.\
+        \n\n  •  🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.vbv`\
+        \n  •  **Usage : **Checker Card Credit VBV (Verif By Visa).\
+        \n\n  •  🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.iban`\
+        \n  •  **Usage : **Mencari Info Card Iban.\
     "
     }
 )
