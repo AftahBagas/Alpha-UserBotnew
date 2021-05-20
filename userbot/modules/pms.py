@@ -383,7 +383,6 @@ async def add_pmsg(cust_msg):
             )
 
 
-
 @register(incoming=True,
           disable_edited=True,
           disable_errors=True,
@@ -399,7 +398,6 @@ async def permitpm(event):
             await borg.send_message(
                 chats, "**Menerima Pesan!, Pengguna Terdeteksi Adalah Alfareza**"
             )
-
 
 
 CMD_HELP.update(
