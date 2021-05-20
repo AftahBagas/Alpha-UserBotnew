@@ -89,7 +89,7 @@ async def typewriter(typew):
     await typew.edit("`dan gak jadi terbang🙂`")
 
 
-@register(outgoing=True, pattern='^.hujan(?: |$)(.*)')
+@register(outgoing=True, pattern='^.emot(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`😀`")
