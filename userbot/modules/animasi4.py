@@ -47,7 +47,7 @@ async def typewriter(typew):
     await typew.edit("gajelas anjir")
 
 
-@register(outgoing=True, pattern='^.link(?: |$)(.*)')
+@register(outgoing=True, pattern='^.linkk(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -161,7 +161,7 @@ CMD_HELP.update({
     \nUsage: **jenis jenis emot**\
     \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .kabar\
     \nUsage: **Cek Aja dh sndri**\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .link\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .linkk\
     \nUsage: **kshsjwkhsgshsj.**"
 
 
