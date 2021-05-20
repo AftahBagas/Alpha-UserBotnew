@@ -15,7 +15,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern='^.hai(?: |$)(.*)')
+@register(outgoing=True, pattern='^.hai1(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n┻┳|―-∩`"
@@ -49,7 +49,7 @@ CMD_HELP.update({
     \nUsage: alive bot.\
     \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙`.sadboy2`\
     \nUsage: hiks\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙`.hai` ; `.gabung`\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙`.hai1` ; `.gabung`\
     \nUsage: coba aja.\
     \n\n`kosong`\
     \nUsage: tunggu update selanjutnya.\
