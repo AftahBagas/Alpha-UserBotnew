@@ -146,7 +146,7 @@ async def typewriter(typew):
 # Ini Tercipta Hasil Gabut Doang
 
 CMD_HELP.update({
-    "animasi1":
+    "animasi4":
     "🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .masuk\
     \nUsage: **cek aja males jelasin**\
     \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .tele\
