@@ -228,7 +228,7 @@ async def amireallyalive(alive):
         f"**╭───────────** \n"
         f"**The Alpha Userbot...  ** \n"
         f"**╰───────────** \n"
-        f"**Hey, I am alive     ** \n"
+        f"**{ALPHA_TEKS_KUSTOM}     ** \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
         f"┣ Owner    - `{DEFAULTUSER}` \n"
         f"┣ Username - `@{user.username}` \n"
