@@ -1,25 +1,25 @@
-# alpha Userbot
+# Port By LiuAlvinas/Alvin For Lord Userbot From Ulttoid
+# Thanks Ultroid
+# Dont Remove
 
-
-# bismilah
+# Fakeghost
 
 from PIL import Image
+
 import os
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
-# bismilah
 
-
-@register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
-async def ultiny(event):
+@register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
+async def _(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await event.edit("`alpha, Mohon Balas Ke Sticker`")
+        await event.edit("`Mohon Balas Ke Sticker`")
         return
-    xx = await event.edit("`Memperkecil Media....`")
+    await event.edit("`Memperkecil Media...`")
     ik = await bot.download_media(reply)
-    im1 = Image.open("Userbot/alphauserbot.png")
+    im1 = Image.open("userbot/poconguserbot.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
@@ -79,11 +79,12 @@ async def ultiny(event):
         file = "o.webp"
         os.remove("k.png")
     await event.client.send_file(event.chat_id, file, reply_to=event.reply_to_msg_id)
-    await xx.delete()
+    await event.delete()
     os.remove(file)
     os.remove(ik)
 
-# bismilah
+#Yang Baca Hode
+# P o c o n g - U s e r b o t
 
-CMD_HELP.update({"tiny": "`.tiny`\
-    \nPenjelasan: Untuk Memperkecil Sticker."})
+CMD_HELP.update({"tiny": "⚡𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tiny`\
+    \nUsage: Untuk Memperkecil Sticker."}) 
