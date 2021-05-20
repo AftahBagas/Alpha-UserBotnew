@@ -83,8 +83,8 @@ async def _(event):
     os.remove(file)
     os.remove(ik)
 
-#Yang Baca Hode
+# Yang Baca Hode
 # P o c o n g - U s e r b o t
 
 CMD_HELP.update({"tiny": "⚡𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tiny`\
-    \nUsage: Untuk Memperkecil Sticker."}) 
+    \nUsage: Untuk Memperkecil Sticker."})
