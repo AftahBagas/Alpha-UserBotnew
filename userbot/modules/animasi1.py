@@ -1,6 +1,3 @@
-# Module Punya Si @Pocongonlen
-# https://github.com/poocong/Pocong-Userbot
-#
 # Mau Maling Kah?
 # Silahkan Maling Aja Xixixi
 # Gak Usah Sungkan
@@ -9,9 +6,6 @@ from time import sleep
 from userbot import CMD_HELP
 from userbot.events import register
 
-# Sengaja Bikin Banyak Banyak Credit Nya
-# P o c o n g - U s e r b o t
-# Tapi Kalo Mau Maling Mah Silakan
 # Enjoy
 
 
@@ -230,32 +224,30 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("🤖")
     sleep(2)
-    await typew.edit("**𝘼𝙡𝙥𝙝𝙖 𝙐𝙨𝙚𝙧𝙗𝙤𝙩 🔥**\n\n [𝚂𝚎𝚗𝚝𝚞𝚑 𝙰𝚔𝚞 𝙱𝚎𝚋](https://github.com/poocong/Pocong-Userbot)\n 𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠👻")
+    await typew.edit("**𝘼𝙡𝙥𝙝𝙖 𝙐𝙨𝙚𝙧𝙗𝙤𝙩 🔥**\n\n [Tekan sini](https://github.com/AftahBagas/Alpha_)\n 𝙏𝙝𝙖𝙣𝙠𝙨 𝙁𝙤𝙧 𝙐𝙨𝙞𝙣𝙜🍁")
 
-# P o c o n g - U s e r b o t
 # Ini Tercipta Hasil Gabut Doang
-# Jadi Ga Usah Bacot Ngentod
 
 CMD_HELP.update({
     "animasi1":
-    "•𝐒𝐲𝐧𝐭𝐚𝐱: .hai\
-    \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Cosplay Nissa Sablon**\
-    \n\n•𝐒𝐲𝐧𝐭𝐚𝐱: .kntl\
-    \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Cek Aja dh\
-    \n\n•𝐒𝐲𝐧𝐭𝐚𝐱: .alay\
-    \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Lumayanlah Buat Nyindir**\
-    \n\n•𝐒𝐲𝐧𝐭𝐚𝐱: .ange\
-    \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Ketik Ini Kalo Lu Lagi Sange**\
-    \n\n•𝐒𝐲𝐧𝐭𝐚𝐱: .lopu\
-    \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Nyatakan Cinta Ke Cewe Orng**\
-    \n\n•𝐒𝐲𝐧𝐭𝐚𝐱: .hujan\
-    \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Penyesalan Seorang Laki-laki Yang Diulangin Terus Menerus**\
-    \n\n•𝐒𝐲𝐧𝐭𝐚𝐱: .dahlah\
-    \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Cek Aja dh sndri**\
-    \n\n•𝐒𝐲𝐧𝐭𝐚𝐱: .jawa\
-    \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Jawa Pride Ni Bos.**\
-    \n\n•𝐒𝐲𝐧𝐭𝐚𝐱: .erpe\
-    \n•𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧: **Buat Nyindir Nak Rp Yg Goblok.**"
+    "🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .hai\
+    \nUsage: **Cosplay Nissa Sablon**\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .kntl\
+    \nUsage: **Cek Aja dh\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .alay\
+    \nUsage: **Lumayanlah Buat Nyindir**\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .ange\
+    \nUsage: **Ketik Ini Kalo Lu Lagi Sange**\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .lopu\
+    \nUsage: **Nyatakan Cinta Ke Cewe Orng**\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .hujan\
+    \nUsage: **Penyesalan Seorang Laki-laki Yang Diulangin Terus Menerus**\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .dahlah\
+    \nUsage: **Cek Aja dh sndri**\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .jawa\
+    \nUsage: **Jawa Pride Ni Bos.**\
+    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .erpe\
+    \nUsage: **Buat Nyindir Nak Rp Yg Goblok.**"
 
 
 })
