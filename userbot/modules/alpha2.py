@@ -138,7 +138,7 @@ async def typewriter(typew):
                      "`\n />🌹 *Ini Buat Kamu`")
     sleep(2)
     await typew.edit("`\n(\\_/)`"
-                     "`\n((◡‿◡)`"
+                     "`\n(◡‿◡)`"
                      "`\n🥀<\\  *Gajadi Layu`")
 # Alpinnnn Gans
 
