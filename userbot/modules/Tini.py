@@ -22,7 +22,7 @@ async def ultiny(event):
         return
     xx = await event.edit("`Memproses Tiny....`")
     ik = await bot.download_media(reply)
-    im1 = Image.open("AlphaUserbot/Alphauserbot.png")
+    im1 = Image.open("AlphaUserbot/alphauserbot.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
