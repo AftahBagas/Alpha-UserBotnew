@@ -109,12 +109,34 @@ async def pingme(pong):
     await pong.edit("**⚡**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"┍《 **𝘼 𝙇 𝙋 𝙃 𝘼** 》━─\n"
+    await pong.edit((f"┍《 **𝘼 𝙇 𝙋 𝙃 𝘼** 》━─\n"
                     f"┟➠  __Ping:__ "
                     f"`%sms` \n"
                     f"┞➠ __Uptime:__ "
                     f"`{uptime}` \n"
                     f"╰━─━───────" % (duration))
+
+
+@register(outgoing=True, pattern="^.zping$")
+async def pingme(pong):
+    """ For .ping command, ping the userbot from any chat.  """
+    uptime = await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    await pong.edit("**①**")
+    await pong.edit("**②**")
+    await pong.edit("**③**")
+    await pong.edit("**④**")
+    await pong.edit("**⑤**")
+    await pong.edit("**⑥**")
+    await pong.edit("**⑦**")
+    await pong.edit("**⑧**")
+    await pong.edit("**⑨**")
+    await pong.edit("**⑩**")
+    await pong.edit("**Ping**")
+    await pong.edit("**⚡**")
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    await pong.editf"**Pong!!**\n**⚡Ping __%sms__\n****⏱️Bot Uptime** : {uptime}\n**🤵Bot Of** : {ALIVE_NAME}" % (duration))
 
 
 @register(outgoing=True, pattern="^.sinyal$")
@@ -142,7 +164,7 @@ async def pingme(pong):
 @register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
-    await spd.edit("`Menjalankan Tes Kecepatan Tinggi...🚀`")
+    await spd.edit("`Mengecek kecepatan download`")
     test = Speedtest()
 
     test.get_best_server()
@@ -151,19 +173,19 @@ async def speedtst(spd):
     test.results.share()
     result = test.results.dict()
 
-    await spd.edit("**Hasil Tes:\n**"
-                   "𖤓 **Dimulai Pada:** "
+    await spd.edit("**Kecepatan Jaringan:\n**"
+                   "𖣘 **Dimulai Pada :** "
                    f"`{result['timestamp']}` \n"
                    f" **━━━━━━━━━━━━━━━━━**\n\n"
-                   "𖤓 **Download:** "
+                   "𖣘 **Download:** "
                    f"`{speed_convert(result['download'])}` \n"
-                   "𖤓 **Upload:** "
+                   "𖣘 **Upload:** "
                    f"`{speed_convert(result['upload'])}` \n"
-                   "𖤓 **Ping:** "
+                   "𖣘 **Signal:** "
                    f"`{result['ping']}` \n"
-                   "𖤓 **ISP:** "
+                   "𖣘 **Isp:** "
                    f"`{result['client']['isp']}` \n"
-                   "𖤓 **BOT:** `Alpha`")
+                   "𖣘 **Bot:** ⚡𝘼𝙡𝙥𝙝𝙖⚡")
 
 
 def speed_convert(size):
@@ -189,7 +211,7 @@ async def pingme(pong):
     await pong.edit("✧ **Pong!**\n`%sms`" % (duration))
 
 CMD_HELP.update(
-    {"ping": "`.ping` ; `.lping` ; `.xping` ; `.sping`\
+    {"ping": "`.ping` ; `.lping` ; `.xping` ; `.zping` ; `.sping`\
     \nUsage: Untuk menunjukkan ping bot.\
     \n\n`.speed`\
     \nUsage: Untuk menunjukkan kecepatan.\
