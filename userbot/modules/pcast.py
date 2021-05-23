@@ -23,7 +23,6 @@ async def gucast(event):
     await kk.edit(f"Berhasil Mengirim Pesan Ke `{done}` obrolan, kesalahan dalam `{er}` obrolan(s)")
 
 
-
 CMD_HELP.update(
     {
         "broadcast": "🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: `.gcast`\
