@@ -13,7 +13,7 @@ async def gcast(event):
         return await event.edit("`Berikan Saya Text Untuk Di Broadcast`")
     tt = event.text
     msg = tt[6:]
-    kk = await event.edit("`• 📢 Global Broadcast Di Prosess Cok...`")
+    kk = await event.edit("`• Global Broadcast Di Prosess...`")
     er = 0
     done = 0
     async for x in bot.iter_dialogs():
@@ -24,7 +24,7 @@ async def gcast(event):
                 await bot.send_message(chat, msg)
             except BaseException:
                 er += 1
-    await kk.edit(f"**╭╼━━━━━━━━━━━━━━━━╮** Broadcast Terkirim Ke =** `{done}` **Grup, Broadcast Gagal Terkirim =** `{er}`**Grup**╰╼━━━━━━━━━━━━━━━━╯**")
+    await kk.edit(f"** Broadcast Terkirim Ke =** `{done}` **Grup, Broadcast Gagal Terkirim =** `{er}`**Grup**")
 
 
 CMD_HELP.update(
