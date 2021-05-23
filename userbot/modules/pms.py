@@ -131,7 +131,7 @@ async def auto_accept(event):
     self_user = await event.client.get_me()
     if (
         event.is_private
-        and event.chat_id != 777000
+        and event.chat_id != 888000
         and event.chat_id != self_user.id
         and not (await event.get_sender()).bot
     ):
