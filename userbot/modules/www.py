@@ -152,18 +152,18 @@ async def speedtst(spd):
     result = test.results.dict()
 
     await spd.edit("**Hasil Tes:\n**"
-                   "𖤓 **Dimulai Pada:** "
+                   "⌬ **Dimulai Pada:** "
                    f"`{result['timestamp']}` \n"
                    f" **━━━━━━━━━━━━━━━━━**\n\n"
-                   "𖤓 **Download:** "
+                   "⌬ **Download:** "
                    f"`{speed_convert(result['download'])}` \n"
-                   "𖤓 **Upload:** "
+                   "⌬ **Upload:** "
                    f"`{speed_convert(result['upload'])}` \n"
-                   "𖤓 **Ping:** "
+                   "⌬ **Ping:** "
                    f"`{result['ping']}` \n"
-                   "𖤓 **ISP:** "
+                   "⌬ **ISP:** "
                    f"`{result['client']['isp']}` \n"
-                   "𖤓 **BOT:** `Alpha`")
+                   "⌬ **BOT:** `Alpha`")
 
 
 def speed_convert(size):
