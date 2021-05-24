@@ -1,4 +1,3 @@
-
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
@@ -55,12 +54,10 @@ async def pingme(pong):
     await pong.edit("**■■■■■ 100%**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"┍《 **𝘼 𝙇 𝙋 𝙃 𝘼** 》━─\n"
-                    f"➥  __Ping:__ "
-                    f"`%sms` \n"
-                    f"➥ __Uptime:__ "
-                    f"`{uptime}` \n"
-                    f"╰━─━───────" % (duration))
+    await pong.edit(f"**Pong!!** "
+                    f"\n➥`%sms` \n"
+                    f"**Bot of** "
+                    f"\n➥`{ALIVE_NAME}` \n" % (duration))
 
 
 @register(outgoing=True, pattern="^.lping$")
@@ -155,18 +152,18 @@ async def speedtst(spd):
     result = test.results.dict()
 
     await spd.edit("**Hasil Tes:\n**"
-                   "𖣘︎ **Dimulai Pada:** "
+                   "𖤓 **Dimulai Pada:** "
                    f"`{result['timestamp']}` \n"
                    f" **━━━━━━━━━━━━━━━━━**\n\n"
-                   "𖣘︎ **Download:** "
+                   "𖤓 **Download:** "
                    f"`{speed_convert(result['download'])}` \n"
-                   "𖣘︎ **Upload:** "
+                   "𖤓 **Upload:** "
                    f"`{speed_convert(result['upload'])}` \n"
-                   "𖣘︎ **Ping:** "
+                   "𖤓 **Ping:** "
                    f"`{result['ping']}` \n"
-                   "𖣘︎ **ISP:** "
+                   "𖤓 **ISP:** "
                    f"`{result['client']['isp']}` \n"
-                   "𖣘︎ **BOT:** `Alpha`")
+                   "𖤓 **BOT:** `Alpha`")
 
 
 def speed_convert(size):
