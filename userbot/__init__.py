@@ -395,23 +395,23 @@ with bot:
                 await event.reply(f"""👋🏻 Halo Kamu Yang disana
 Saya adalah bot assistant dari {ALIVE_NAME}
         """,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🤵 Pemilik Repo", url="https://t.me/kanjengingsun"
-                    ),
-                    InlineKeyboardButton(
-                        "👾 Repo", url="https://github.com/Aftahbagas/Alpha_.git"
-                    )
-                ],[ 
-                    InlineKeyboardButton(
-                        "👥 Group Support", url="http://t.me/teamsquaduserbotsupport"
-                    )]
-            ]
-        ),
-     disable_web_page_preview=True
-    )
+                                  reply_markup=InlineKeyboardMarkup(
+                                      [
+                                          [
+                                              InlineKeyboardButton(
+                                                  "🤵 Pemilik Repo", url="https://t.me/kanjengingsun"
+                                              ),
+                                              InlineKeyboardButton(
+                                                  "👾 Repo", url="https://github.com/Aftahbagas/Alpha_.git"
+                                              )
+                                          ], [
+                                              InlineKeyboardButton(
+                                                  "👥 Group Support", url="http://t.me/teamsquaduserbotsupport"
+                                              )]
+                                      ]
+                                  ),
+                                  disable_web_page_preview=True
+                                  )
             else:
                 await event.reply(f"`Hai {ALIVE_NAME}\n\nApa Kabarmu?`")
 
