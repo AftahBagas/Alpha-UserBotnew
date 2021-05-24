@@ -63,7 +63,6 @@ async def pingme(pong):
                     f"**🤵Pengguna  :** `{ALIVE_NAME}`" % (duration))
 
 
-
 @register(outgoing=True, pattern="^.lping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
