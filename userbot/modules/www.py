@@ -117,27 +117,28 @@ async def pingme(pong):
                      f"╰━─━───────" % (duration))
 
 
-                    @ register(outgoing=True, pattern="^.zping$")
-                    async def pingme(pong):
-                    """ For .ping command, ping the userbot from any chat.  """
-                    uptime=await get_readable_time((time.time() - StartTime))
-                    start=datetime.now()
-                    await pong.edit("**①**")
-                    await pong.edit("**②**")
-                    await pong.edit("**③**")
-                    await pong.edit("**④**")
-                    await pong.edit("**⑤**")
-                    await pong.edit("**⑥**")
-                    await pong.edit("**⑦**")
-                    await pong.edit("**⑧**")
-                    await pong.edit("**⑨**")
-                    await pong.edit("**⑩**")
-                    await pong.edit("**Ping**")
-                    await pong.edit("**⚡**")
-                    end=datetime.now()
-                    duration=(end - start).microseconds / 1000
-                    await pong.editf"**Pong!!**\n**⚡Ping __%sms__\n****⏱️Bot Uptime** : {uptime}\n**🤵Bot Of** : {ALIVE_NAME}" % (duration))
-
+@register(outgoing=True, pattern="^.zping$")
+async def pingme(pong):
+    """ For .ping command, ping the userbot from any chat.  """
+    uptime=await get_readable_time((time.time() - StartTime))
+    start=datetime.now()
+    await pong.edit("**①**")
+    await pong.edit("**②**")
+    await pong.edit("**③**")
+    await pong.edit("**④**")
+    await pong.edit("**⑤**")
+    await pong.edit("**⑥**")
+    await pong.edit("**⑦**")
+    await pong.edit("**⑧**")
+    await pong.edit("**⑨**")
+    await pong.edit("**⑩**")
+    await pong.edit("**Ping**")
+    await pong.edit("**⚡**")
+    end=datetime.now()
+    duration=(end - start).microseconds / 1000
+    await pong.editf"**Pong!!**\n**⚡Ping __%sms__\n****⏱️Bot Uptime** : {uptime}\n**🤵Bot Of** : {ALIVE_NAME}" % (duration))
+                 
+                    
 
 @register(outgoing=True, pattern="^.sinyal$")
 async def pingme(pong):
