@@ -1,3 +1,8 @@
+#yang nyolong mati
+#by Alfareza @kanjengingsun
+#alpha userbot
+
+
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
