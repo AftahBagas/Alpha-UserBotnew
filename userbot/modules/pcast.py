@@ -1,6 +1,6 @@
-#yang nyolong mati
-#by Alfareza @kanjengingsun
-#alpha userbot
+# yang nyolong mati
+# by Alfareza @kanjengingsun
+# alpha userbot
 
 
 from userbot.events import register
