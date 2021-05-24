@@ -3,9 +3,9 @@
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
-#Don't Remove
-#Hai Kanger!!
-#Pasti Mo Maling Xixixi
+# Don't Remove
+# Hai Kanger!!
+# Pasti Mo Maling Xixixi
 """ Userbot module which contains afk-related commands """
 import asyncio
 from datetime import datetime
@@ -67,7 +67,7 @@ async def mention_afk(mention):
             afk_str = f"`{int(seconds)}s` ago"
 
         is_bot = False
-        if (sender := await mention.get_sender()) :
+        if (sender := await mention.get_sender()):
             is_bot = sender.bot
             if is_bot:
                 return  # ignore bot
@@ -108,9 +108,10 @@ async def mention_afk(mention):
                 USERS[chat_title] += 1
         COUNT_MSG += 1
 
-#Hi , Mau Maling Ya??        
-#Xixixixi
-#P o c o n g - U s e r b o t
+# Hi , Mau Maling Ya??
+# Xixixixi
+# P o c o n g - U s e r b o t
+
 
 @register(incoming=True, disable_errors=True)
 async def afk_on_pm(sender):
@@ -221,11 +222,12 @@ async def set_afk(afk_e):
     ISAFK = True
     afk_time = datetime.now()
     raise StopPropagation
-    
-#Pocong - Userbot
-#Ciee Hapus Credit
-#Maling Aja Gapapa
-#Port by @Pocongonlen
+
+# Pocong - Userbot
+# Ciee Hapus Credit
+# Maling Aja Gapapa
+# Port by @Pocongonlen
+
 
 @register(outgoing=True, pattern=r"^\.unoff(?: |$)(.*)", disable_errors=True)
 async def type_afk_is_not_true(notafk):
@@ -289,7 +291,7 @@ async def type_afk_is_not_true(notafk):
 
 CMD_HELP.update(
     {
-        "off":"🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥:` .offl`"
+        "off": "🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥:` .offl`"
         "\nUsage: Menetapkan Anda sebagai afk. Balas kepada siapa saja yang memberi tag/PM's "
         "Anda, memberi tahu mereka bahwa Anda AFK(karena)."
         "\n\n🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥:` .unoff`"
