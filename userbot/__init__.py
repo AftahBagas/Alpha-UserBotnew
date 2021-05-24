@@ -392,7 +392,26 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("Alpha, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/Aftahbagas/Alpha_.git)")
+                await event.reply(f"""👋🏻 Halo Kamu Yang disana
+Saya adalah bot assistant dari {ALIVE_NAME}
+        """,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "🤵 Pemilik Repo", url="https://t.me/kanjengingsun"
+                    ),
+                    InlineKeyboardButton(
+                        "👾 Repo", url="https://github.com/Aftahbagas/Alpha_.git"
+                    )
+                ],[ 
+                    InlineKeyboardButton(
+                        "👥 Group Support", url="http://t.me/teamsquaduserbotsupport"
+                    )]
+            ]
+        ),
+     disable_web_page_preview=True
+    )
             else:
                 await event.reply(f"`Hai {ALIVE_NAME}\n\nApa Kabarmu?`")
 
