@@ -118,11 +118,11 @@ async def pingme(pong):
                     f"╰━─━───────" % (duration))
 
 
-@register(outgoing=True, pattern="^.sinyal$")
+@ register(outgoing=True, pattern="^.sinyal$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
-    uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
+    uptime=await get_readable_time((time.time() - StartTime))
+    start=datetime.now()
     await pong.edit("`Mengecek Sinyal...`")
     await pong.edit("**0% ▒▒▒▒▒▒▒▒▒▒**")
     await pong.edit("**20% ██▒▒▒▒▒▒▒▒**")
@@ -130,8 +130,8 @@ async def pingme(pong):
     await pong.edit("**60% ██████▒▒▒▒**")
     await pong.edit("**80% ████████▒▒**")
     await pong.edit("**100% ██████████**")
-    end = datetime.now()
-    duration = (end - start).microseconds / 1000
+    end=datetime.now()
+    duration=(end - start).microseconds / 1000
     await pong.edit(f"《 𝙎𝙞𝙣𝙮𝙖𝙡 𝘼𝙡𝙥𝙝𝙖 》\n"
                     f"**➥ Sinyal  :** "
                     f"`%sms` \n"
@@ -140,17 +140,17 @@ async def pingme(pong):
                     f"**➥ Owner  :** `{ALIVE_NAME}`" % (duration))
 
 
-@register(outgoing=True, pattern="^.speed$")
+@ register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
     await spd.edit("`Mengecek kecepatan download`")
-    test = Speedtest()
+    test=Speedtest()
 
     test.get_best_server()
     test.download()
     test.upload()
     test.results.share()
-    result = test.results.dict()
+    result=test.results.dict()
 
     await spd.edit("**Kecepatan Jaringan:\n**"
                    "𖣘 **Dimulai Pada :** "
@@ -171,22 +171,22 @@ def speed_convert(size):
     """
     Hi human, you can't read bytes?
     """
-    power = 2**10
-    zero = 0
-    units = {0: '', 1: 'Kb/s', 2: 'Mb/s', 3: 'Gb/s', 4: 'Tb/s'}
+    power=2**10
+    zero=0
+    units={0: '', 1: 'Kb/s', 2: 'Mb/s', 3: 'Gb/s', 4: 'Tb/s'}
     while size > power:
         size /= power
         zero += 1
     return f"{round(size, 2)} {units[zero]}"
 
 
-@register(outgoing=True, pattern="^.pong$")
+@ register(outgoing=True, pattern="^.pong$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
-    start = datetime.now()
+    start=datetime.now()
     await pong.edit("`Pong.....🔨`")
-    end = datetime.now()
-    duration = (end - start).microseconds / 9000
+    end=datetime.now()
+    duration=(end - start).microseconds / 9000
     await pong.edit("✧ **Pong!**\n`%sms`" % (duration))
 
 CMD_HELP.update(
