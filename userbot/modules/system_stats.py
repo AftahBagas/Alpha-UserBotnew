@@ -225,17 +225,17 @@ async def amireallyalive(alive):
     await alive.edit("`I'M ALIVE!`")
     await alive.edit("⚡")
     output = (
-        f"**╭───────────** \n"
-        f"**The Alpha Userbot...  ** \n"
-        f"**╰───────────** \n"
-        f"**Hey, I am alive     ** \n"
+        f"**╭── ─ ─ ─ ─ ─ ** \n"
+        f"**__The Alpha Userbot...__  ** \n"
+        f"**╰── ─ ─ ─ ─ ─ ** \n"
+        f"**__Hey, I am alive__     ** \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
-        f"┣ Owner    - `{DEFAULTUSER}` \n"
-        f"┣ Telethon - `v. {version.__version__}` \n"
-        f"┣ Python   - `v. {python_version()}` \n"
-        f"┣ Branch   - `{UPSTREAM_REPO_BRANCH}` \n"
-        f"┣ Bot Ver  - `v. 7.0` \n"
-        f"┣ Plugins  - `{len(modules)} Plugins` \n"
+        f"┣ Owner    = `{DEFAULTUSER}` \n"
+        f"┣ Telethon = `v. {version.__version__}` \n"
+        f"┣ Python   = `v. {python_version()}` \n"
+        f"┣ Branch   = `{UPSTREAM_REPO_BRANCH}` \n"
+        f"┣ Bot Ver  = `v. 7.0` \n"
+        f"┣ Plugins  = `{len(modules)} Plugins` \n"
         f"┗━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
@@ -262,18 +262,18 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"▕═════━━━━━━━━━━━━═════\n"
-        f"▕  **〘 A L P H A 〙** \n"
-        f"▕═════━━━━━━━━━━━━═════\n"
-        f"▕» **Pengguna**    ⁃ `{DEFAULTUSER}` \n"
-        f"▕» **Username**    ⁃ @{user.username} \n"
-        f"▕» **Telethon**    ⁃ `Versi {version.__version__}` \n"
-        f"▕» **Python**      ⁃ `Versi {python_version()}` \n"
-        f"▕» **Versi**       ⁃ `7.0` \n"
-        f"▕» **Modul**       ⁃ `{len(modules)}` \n"
-        f"▕═════━━━━━━━━━━━━═════\n"
+        f"┏═════━━━━━━━━━━━━═════\n"
+        f"▕ \n"**__ALPHA USERBOT__**\n"
+        f"┗═════━━━━━━━━━━━━═════\n"
+        f" ➥ **Pengguna**    ⁃ `{DEFAULTUSER}` \n"
+        f" ➥ **Username**    ⁃ @{user.username} \n"
+        f" ➥ **Telethon**    ⁃ `Versi {version.__version__}` \n"
+        f" ➥ **Python**      ⁃ `Versi {python_version()}` \n"
+        f" ➥ **Versi**       ⁃ `7.0` \n"
+        f" ➥ **Modul**       ⁃ `{len(modules)}` \n"
+        f"┏═════━━━━━━━━━━━━═════\n"
         f"▕ [Repo](https://github.com/AftahBagas/Alpha_) | [Grup Support](t.me/teamsquaduserbotsupport) | [Owner](t.me/Kanjengingsun)\n"
-        f"▕═════━━━━━━━━━━━━═════")
+        f"┗═════━━━━━━━━━━━━═════")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -298,30 +298,35 @@ async def amireallyalive(alive):
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("𝗔")
-    await alive.edit("𝗔𝗟")
-    await alive.edit("𝗔𝗟𝗣")
-    await alive.edit("𝗔𝗟𝗣𝗛")
-    await alive.edit("𝗔𝗟𝗣𝗛𝗔")
-    await alive.edit("𝗔𝗟𝗣𝗛𝗔🔥")
-    await alive.edit("🔥𝗔𝗟𝗣𝗛𝗔🔥")
-    await alive.edit("🔥")
+    await alive.edit("①")
+    await alive.edit("②")
+    await alive.edit("③")
+    await alive.edit("④")
+    await alive.edit("⑤")
+    await alive.edit("⑥")
+    await alive.edit("⑦")
+    await alive.edit("⑧")
+    await alive.edit("⑨")
+    await alive.edit("⑩")
+    await alive.edit("⚡")
     await asyncio.sleep(3)
     output = (
-        f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮** \n"
-        f"**                  🔥𝗔 𝗟 𝗣 𝗛 𝗔🔥  ** \n"
-        f"**ㅤㅤ  ╰─━━═━═━═━═━━─╯** \n"
-        f"     I am alive.....         \n"
-        f"╭─━═━═━═━═━═━═━═━═━─╮ \n"
-        f"╟》 👑  Owner     :`{DEFAULTUSER}` \n"
-        f"╟》 💳 Username :@{user.username} \n"
-        f"╟》 ⚙️  Telethon :`v. {version.__version__}` \n"
-        f"╟》 🐍  Python   :`v. {python_version()}` \n"
-        f"╟》 🥽  Branch   :`{UPSTREAM_REPO_BRANCH}` \n"
-        f"╟》 🎃  Bot Ver  :`v. 7.0` \n"
-        f"╟》 🔮  Plugins  :`{len(modules)} Plugins` \n"
-        f"╰─━═━═━═━═━═━═━═━═━─╯ \n"
-        f"[Repo](https://github.com/AftahBagas/Alpha_) | [Grup Support](t.me/teamsquaduserbotsupport) | [Owner](t.me/Kanjengingsun)")
+        f"**ㅤㅤ  ╭─━━━━━━━━━━━─╮** \n"
+        f"**                  😈𝗔 𝗟 𝗣 𝗛 𝗔😈  ** \n"
+        f"**ㅤㅤ  ╰─━━━━━━━━━━━─╯** \n"
+        f" **Kalo Dia Bisa Ngapain Aku enggak ㋡**         \n"
+        f"┏━━━━━━━━━━━━━━━━━━━ \n"
+        f"╟ ➦ 👑 **Owner**    = `{DEFAULTUSER}` \n"
+        f"╟ ➦ 💳 **Username** = @{user.username} \n"
+        f"╟ ➦ ⚙️ **Telethon** = `v. {version.__version__}` \n"
+        f"╟ ➦ 🐍 **Python**   = `v. {python_version()}` \n"
+        f"╟ ➦ 🥽 **Branch**   = `{UPSTREAM_REPO_BRANCH}` \n"
+        f"╟ ➦ 🎃 **Bot Ver**  = `v. 7.0` \n"
+        f"╟ ➦ 🔮 **Plugins**  = `{len(modules)} Plugins` \n"
+        f"┗━━━━━━━━━━━━━━━━━━━ \n"
+        f"┏━━━━━━━━━━━━━━━━━━━ \n"
+        f"[Repo](https://github.com/AftahBagas/Alpha_) | [GRUP SUPPORT](https://t.me/TeamSquadUserbotSupport) | [Owner](t.me/@kanjengingsun)\n"
+        f"┗━━━━━━━━━━━━━━━━━━━ ")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
