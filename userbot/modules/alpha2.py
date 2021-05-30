@@ -74,10 +74,8 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "animasialpha":
-    "`.noh` ; `.hoh` ; `.ownerr`\
+    "`.noh` ; `.hoh`\
     \nUsage: cobain.\
     \n\n`.pe`\
     \nUsage: spam gajelas.\
-    \n\n`.ceritacintaa` ; `.canda`\
-    \nUsage: liat sendiri"
 })
