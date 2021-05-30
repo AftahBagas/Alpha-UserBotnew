@@ -37,18 +37,6 @@ Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/kanjengIngsun) Dari Berbagai Repo
 ```
 
 
-```
-* **API KEY TAMBAHAN** 🔧
-
-➠ Api Key Ocr  >  4a3571124d88957
-
-➠ Api Key Qoutes  >  33273f18-4a0d-4a76-8d78-a16faa002375
-
-➠ Api Key Rem  >  dxsh728mZMDmj4ijSZCNPZig
-
-➠ Api Key Youtub  >  AIzaSyAUR8sXyLqfmG_LQm1jz3jp97mN-cqtGzo
-
-```
 
 
 
