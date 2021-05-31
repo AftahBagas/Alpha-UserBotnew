@@ -6,10 +6,15 @@
 """ Userbot help command """
 
 import asyncio
-from userbot import CMD_HELP
+from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
+from platform import uname
 
 modules = CMD_HELP
+
+# ================= CONSTANT =================
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+# ============================================
 
 
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
@@ -20,7 +25,7 @@ async def help(event):
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("**Alpha User Modul Yang Anda Cari Sepertinya Tidak Ada**")
+            await event.edit("**`User Alpha, Command Yang Anda Cari Tidak Ditemukan 😔`**")
             await asyncio.sleep(200)
             await event.delete()
     else:
@@ -28,7 +33,7 @@ async def help(event):
         for i in CMD_HELP:
             string += "`" + str(i)
             string += "`\t ⌬  "
-        await event.edit("**⚙️ Alpha Userbot ⚙️**\n\n"
+        await event.edit("**😈 Alpha Userbot 😈**\n\n"
                          f"**◉ Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n**◉ Mᴏᴅᴜʟᴇꜱ : {len(modules)}**\n\n"
                          "**• Mᴀɪɴ Mᴇɴᴜ :**\n"
                          f"◉ {string}◉\n\n")
