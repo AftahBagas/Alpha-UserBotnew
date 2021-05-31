@@ -54,10 +54,9 @@ async def pingme(pong):
     await pong.edit("**■■■■■ 100%**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**Pong!!** "
-                    f"\n➥`%sms` \n"
-                    f"**Bot of** "
-                    f"\n➥`{ALIVE_NAME}` \n" % (duration))
+    await pong.edit(f"❕**PONG**\n"
+                    f"➥ **__Ping__** `%sms` \n"
+                    f"➥ **__Bot Of__** [{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
 
 
 @register(outgoing=True, pattern="^.lping$")
@@ -87,10 +86,10 @@ async def pingme(pong):
     start = datetime.now()
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**Pong!!** "
-                    f"`%sms` \n"
-                    f"**Uptime - ** "
-                    f"`{uptime}`" % (duration))
+    await pong.edit(f"**Pong!!**\n"
+                    f"**Ping** •`%sms` \n"
+                    f"**Uptime** •"
+                    f" `{uptime}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.ping$")
