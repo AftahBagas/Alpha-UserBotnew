@@ -325,7 +325,7 @@ async def amireallyalive(alive):
         f"╟ ➦ 🔮 **Plugins**  = `{len(modules)} Plugins` \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
-        f"[Repo](https://github.com/AftahBagas/Alpha_) | [GRUP SUPPORT](https://t.me/TeamSquadUserbotSupport) | [Owner](t.me/@kanjengingsun)\n"
+        f"[Repo](https://github.com/AftahBagas/Alpha_) | [Group Support](https://t.me/TeamSquadUserbotSupport) | [Owner](t.me/kanjengingsun)\n"
         f"┗━━━━━━━━━━━━━━━━━━━ ")
     if ALIVE_LOGO:
         try:
