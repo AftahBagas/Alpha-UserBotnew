@@ -15,3 +15,13 @@ async def get_admin(show):
     except ChatAdminRequiredError as err:
         mentions += " " + str(err) + "\n"
     await show.edit(mentions, parse_mode="html")
+
+
+
+
+CMD_HELP.update(
+    {
+        "adminwk": ">`.admin`"
+        "\nUsage: mengejek admin di group 🙈"
+    }
+)
