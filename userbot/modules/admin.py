@@ -585,14 +585,14 @@ async def rm_deletedacc(show):
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
-    mentions = f"<b>❊ Daftar Admin Grup {title}:</b> \n"
+    mentions = f"<b>👮 List Daftar Admin Group {title}:</b> \n"
     try:
         async for user in show.client.iter_participants(
             show.chat_id, filter=ChannelParticipantsAdmins
         ):
             if not user.deleted:
                 link = f'<a href="tg://user?id={user.id}">{user.first_name}</a>'
-                mentions += f"\n➤ {link}"
+                mentions += f"\n➥ {link}"
             else:
                 mentions += f"\nAkun Terhapus <code>{user.id}</code>"
     except ChatAdminRequiredError as err:
