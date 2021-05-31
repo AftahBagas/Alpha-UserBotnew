@@ -1,4 +1,3 @@
-from time import sleep
 from userbot import CMD_HELP
 from userbot.events import register
 
@@ -20,8 +19,6 @@ async def get_admin(show):
     except ChatAdminRequiredError as err:
         mentions += " " + str(err) + "\n"
     await show.edit(mentions, parse_mode="html")
-
-
 
 
 CMD_HELP.update(
