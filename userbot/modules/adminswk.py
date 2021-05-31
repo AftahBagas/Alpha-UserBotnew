@@ -1,3 +1,9 @@
+from time import sleep
+from userbot import CMD_HELP
+from userbot.events import register
+
+
+
 @register(outgoing=True, pattern=r"^\.admin$")
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
