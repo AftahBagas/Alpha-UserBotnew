@@ -77,5 +77,5 @@ CMD_HELP.update({
     "`.noh` ; `.hoh`\
     \nUsage: cobain.\
     \n\n`.pe`\
-    \nUsage: spam gajelas.\
+    \nUsage: spam gajelas."
 })
