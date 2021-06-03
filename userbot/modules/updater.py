@@ -27,7 +27,7 @@ async def gen_chlog(repo, diff):
     ch_log = ''
     d_form = "%d/%m/%y"
     for c in repo.iter_commits(diff):
-        ch_log += f'•[{c.committed_datetime.strftime(d_form)}]: {c.summary} <{c.author}>\n'
+        ch_log += f'🔨 [{c.committed_datetime.strftime(d_form)}]: {c.summary} <{c.author}>\n'
     return ch_log
 
 
@@ -115,9 +115,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('**✱ Alpha** `Berhasil Di Update!`')
+    await event.edit('**⚙️ Alpha** `Berhasil Di Update!`')
     await asyncio.sleep(1)
-    await event.edit('**✱ Alpha** `Di Restart....`')
+    await event.edit('**⚙️ Alpha** `Di Restart....`')
     await asyncio.sleep(1)
     await event.edit('`Mohon Menunggu Beberapa Detik ツ`')
     await asyncio.sleep(10)
@@ -188,13 +188,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n**❈ Alpha Sudah Versi Terbaru**\n')
+            f'\n**⚙️ Alpha Sudah Versi Terbaru**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**❈ Pembaruan Untuk Alpha [{ac_br}]:\n\n❈ Pembaruan:**\n`{changelog}`'
+        changelog_str = f'**⚙️ Pembaruan Untuk Alpha [{ac_br}]:\n\n📝 Pembaruan 📝:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -208,17 +208,17 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update Alpha**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari Alpha.__')
+        return await event.respond('**Perintah Untuk Update ⚡Alpha⚡**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari Alpha.__')
 
     if force_update:
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('`❊ Proses Update, Loading....1%`')
+        await event.edit('`✻ Proses Update, Loading....1%`')
         await event.edit('`❊ Proses Update, Loading....20%`')
-        await event.edit('`❊ Proses Update, Loading....35%`')
+        await event.edit('`✻ Proses Update, Loading....35%`')
         await event.edit('`❊ Proses Update, Loading....77%`')
-        await event.edit('`❊ Proses Update, Updating...90%`')
+        await event.edit('`✻ Proses Update, Updating...90%`')
         await event.edit('`❊ Proses Update, Mohon Menunggu....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
