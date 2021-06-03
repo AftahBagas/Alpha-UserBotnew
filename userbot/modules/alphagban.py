@@ -1,7 +1,5 @@
 
-# Ported By Koala / @ManusiaRakitann From Dark Cobra # Thanks
-# Based On Plugins
-# Lord Userbot
+# alfareza
 
 from telethon.events import ChatAction
 from userbot import ALIVE_NAME, CMD_HELP, bot
