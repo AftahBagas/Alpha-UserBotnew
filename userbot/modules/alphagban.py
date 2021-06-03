@@ -142,7 +142,7 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**◊ Perintah:** `{ALIVE_NAME}`\n**◊ Pengguna:** [{user.first_name}](tg://user?id={user.id})\n**◊ Tindakan:** `Global Banned`"
+        f"**😈GBanned😈**\n➦ **Perintah:** `{ALIVE_NAME}`\n**➦ Manusia Meresahkan:** [{user.first_name}](tg://user?id={user.id})\n**➦ Aksi:** `Global Banned`"
     )
 
 
@@ -206,7 +206,7 @@ async def gunben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**◊ Perintah:** `{ALIVE_NAME}`\n**◊ Pengguna:** [{user.first_name}](tg://user?id={user.id})\n**◊ Tindakan:** `Membatalkan Global Banned`"
+        f"**😁UNGBanned😁**\n➦ **Perintah:** `{ALIVE_NAME}`\n**➦ Manusia Tobat:** [{user.first_name}](tg://user?id={user.id})\n**➦ Aksi:** `Membatalkan Global Banned`"
     )
 
 
