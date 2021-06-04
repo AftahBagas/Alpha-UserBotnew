@@ -159,9 +159,9 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**☛**Alpha Versi:** \n "
+            "**🧃**Alpha Versi:** \n "
             f"{verout}"
-            "\n**☛**Revisi:**\n "
+            "\n**🧃**Revisi:**\n "
             f"{revout}"
         )
     else:
@@ -228,7 +228,7 @@ async def amireallyalive(alive):
         f"**╭── ─ ─ ─ ─ ─ ** \n"
         f"**__The Alpha Userbot...__  ** \n"
         f"**╰── ─ ─ ─ ─ ─ ** \n"
-        f"**__Hey, I am alive__     ** \n"
+        f"**__{ALPHA_KUSTOM_TEKS}__     ** \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
         f"┣ Owner    = `{DEFAULTUSER}` \n"
         f"┣ Telethon = `v. {version.__version__}` \n"
