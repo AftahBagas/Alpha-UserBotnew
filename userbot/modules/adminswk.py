@@ -31,7 +31,7 @@ async def get_admin(show):
 
 CMD_HELP.update(
     {
-        "adminwk": ">`.admin`"
-        "\nUsage: mengejek admin di group 🙈"
+        "adminwk": "📚 **Cmd** : `.admin`"
+        "\n📄 **Descriptions** : mengejek admin di group 🙈"
     }
 )
