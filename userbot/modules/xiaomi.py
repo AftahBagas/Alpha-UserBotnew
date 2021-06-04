@@ -193,19 +193,19 @@ async def _(event):
 CMD_HELP.update({
     "xiaomi":
     "For Xiaomeme devices only!\
-\n\n`.firmware` (codename)\
-     \nUsage : Get lastest Firmware\
-\n\n`.pb` (codename)\
-     \nUsage : Get latest PitchBlack Recovery\
-\n\n`.specs` (codename)\
-     \nUsage : Get quick spec information about device\
-\n\n`.fastboot` (codename)\
-     \nUsage : Get latest fastboot MIUI\
-\n\n`.recovery` (codename)\
-     \nUsage : Get latest recovery MIUI\
-\n\n`.eu` (codename)\
-    \nUsage: Get latest xiaomi.eu rom\
-\n\n`.vendor` (codename)\
-    \nUsage: fetches latest vendor\
-\n\n`.of` (codename)\
-     \nUsage : Get latest ORangeFox Recovery"})
+\n\n📚 **Cmd** : `.firmware` (codename)\
+     \n📄 **Descriptions** : Get lastest Firmware\
+\n\n📚 **Cmd** : `.pb` (codename)\
+     \n📄 **Descriptions** : Get latest PitchBlack Recovery\
+\n\n📚 **Cmd** : `.specs` (codename)\
+     \n📄 **Descriptions** : Get quick spec information about device\
+\n\n📚 **Cmd** : `.fastboot` (codename)\
+     \n📄 **Descriptions** : Get latest fastboot MIUI\
+\n\n📚 **Cmd** : `.recovery` (codename)\
+     \n📄 **Descriptions** : Get latest recovery MIUI\
+\n\n📚 **Cmd** : `.eu` (codename)\
+    \n📄 **Descriptions** : Get latest xiaomi.eu rom\
+\n\n📚 **Cmd** : `.vendor` (codename)\
+    \n📄 **Descriptions** : fetches latest vendor\
+\n\n📚 **Cmd** : `.of` (codename)\
+     \n📄 **Descriptions** : Get latest ORangeFox Recovery"})
