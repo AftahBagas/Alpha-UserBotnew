@@ -149,7 +149,7 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
 # untuk perintah .alpha
-ALPHA_TEKS_KUSTOM = os.environ.get("ALPHA_TEKS_KUSTOM", None)
+ALPHA_KUSTOM_TEKS = os.environ.get("ALPHA_KUSTOM_TEKS", "Hey I am Alive.")
 
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
