@@ -16,11 +16,11 @@
   "env": {
     "API_KEY": {
       "description": "Dapatkan Api Key di web my.telegram.org.",
-      "required": true
+      "wajib": true
     },
     "API_HASH": {
       "description": "Dapatkan Api Hash Di Web my.telegram.org.",
-      "required": true
+      "wajib": true
     },
      "STRING_SESSION": {
       "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya @Kanjengingsun di telegram",
