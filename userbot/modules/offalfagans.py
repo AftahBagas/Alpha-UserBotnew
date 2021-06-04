@@ -103,10 +103,10 @@ async def on_afk(event):
         msg = None
         if reason:
             message_to_reply = (
-                f"𝘾𝙝𝙖𝙩 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n"
+                f"❕ 𝘾𝙝𝙖𝙩 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n"
                 f"**▸ Karena :** `{reason}`\n╰╼═════════╾")
         else:
-            message_to_reply = f"𝘾𝙝𝙖𝙩 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾"
+            message_to_reply = f"❕ 𝘾𝙝𝙖𝙩 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾"
         try:
             if pic.endswith((".tgs", ".webp")):
                 msg = await event.reply(file=pic)
@@ -169,26 +169,26 @@ async def _(event):
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
-                        event.chat_id, f"👾 𝘾𝙝𝙖𝙩 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾"
+                        event.chat_id, f"❕ 𝘾𝙝𝙖𝙩 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾"
                     )
                 else:
                     await bot.send_message(
-                        event.chat_id, f"👾 𝘾𝙝𝙖𝙩 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾", file=pic
+                        event.chat_id, f"❕ 𝘾𝙝𝙖𝙩 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾", file=pic
                     )
             except BaseException:
                 await bot.send_message(
-                    event.chat_id, f"👾 𝘾𝙝𝙖𝙩 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾"
+                    event.chat_id, f"❕ 𝘾𝙝𝙖𝙩 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾"
                 )
         else:
             try:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
-                        event.chat_id, f"**⚡ Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off\n╰╼═════════╾**"
+                        event.chat_id, f"**❕ Saya Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off\n╰╼═════════╾**"
                     )
                 else:
                     await bot.send_message(
-                        event.chat_id, f"**⚡ Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾", file=pic
+                        event.chat_id, f"**❕ Saya Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾", file=pic
                     )
             except BaseException:
                 await bot.send_message(event.chat_id, f"**Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾")
@@ -198,32 +198,32 @@ async def _(event):
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
                     await bot.send_message(
-                        BOTLOG_CHATID, f"**⚡ Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾"
+                        BOTLOG_CHATID, f"**❕ Saya Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾"
                     )
                 else:
                     await bot.send_message(
-                        BOTLOG_CHATID, f"**⚡ Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾", file=pic
+                        BOTLOG_CHATID, f"**❕ Saya Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾", file=pic
                     )
             elif reason:
                 await bot.send_message(
-                    BOTLOG_CHATID, f"\n**⚡ Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾"
+                    BOTLOG_CHATID, f"\n**❕ Saya Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n**▸ Karena :** `{reason}`\n╰╼═════════╾"
                 )
             elif pic:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
-                    await bot.send_message(BOTLOG_CHATID, f"**⚡ Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾")
+                    await bot.send_message(BOTLOG_CHATID, f"**❕ Saya Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾")
                 else:
-                    await bot.send_message(BOTLOG_CHATID, f"**⚡ Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾", file=pic)
+                    await bot.send_message(BOTLOG_CHATID, f"**❕ Saya Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾", file=pic)
             else:
-                await bot.send_message(BOTLOG_CHATID, f"**⚡ Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾")
+                await bot.send_message(BOTLOG_CHATID, f"**❕ Saya Offline**\n╭╼══════════════╾\n**▸ {ALIVE_NAME} Sedang Off**\n╰╼═════════╾")
         except Exception as e:
             BOTLOG_CHATIDger.warn(str(e))
 
 
 CMD_HELP.update({
     "off":
-    "`.off` [Alasan]\
-\nUsage: Sama Seperti AFK, Lakukan ketika ingin OFF.\nSiapapun Yang Balas, Tag, Atau Chat Kamu \
+    "📚 **Cmd** : `.off` [Alasan]\
+\n📄 **Descriptions** : Sama Seperti AFK, Lakukan ketika ingin OFF.\nSiapapun Yang Balas, Tag, Atau Chat Kamu \
 Mereka Akan Tau Alasan Kamu OFF.\n\nOFF Bisa Dilakukan Dan Dibatalkan Dimanapun.\
 "
 })
