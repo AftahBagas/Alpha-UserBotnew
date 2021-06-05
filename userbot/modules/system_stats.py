@@ -228,7 +228,7 @@ async def amireallyalive(alive):
         f"**╭── ─ ─ ─ ─ ─ ** \n"
         f"**__The Alpha Userbot...__  ** \n"
         f"**╰── ─ ─ ─ ─ ─ ** \n"
-        f"**__{ALPHA_KUSTOM_TEKS}__     ** \n"
+        f"**__I Am Alive__     ** \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
         f"┣ Owner    = `{DEFAULTUSER}` \n"
         f"┣ Telethon = `v. {version.__version__}` \n"
@@ -368,20 +368,20 @@ async def amireallyalivereset(ureset):
 
 CMD_HELP.update({
     "system":
-    "`.sysd`\
-\nUsage: Shows system information using neofetch.\
-\n\n`.botver`\
-\nUsage: Shows the userbot version.\
-\n\n`.pip` <module(s)>\
-\nUsage: Does a search of pip modules(s).\
-\n\n`.start`\
-\nUsage: Type .start to see whether your bot is working or not.\
-\n\n`.aliveu` <text>\
-\nUsage: Changes the 'user' in alive to the text you want.\
-\n\n`.resetalive`\
-\nUsage: Resets the user to default.\
-\n\n`.db`\
-\nUsage:Shows database related info.\
-\n\n.`.spc`\
-\nUsage:Show system specification."
+    "📚 **Cmd** : `.sysd`\
+\n📄 **Descriptions** : Shows system information using neofetch.\
+\n\n📚 **Cmd** : `.botver`\
+\n📄 **Descriptions** : Shows the userbot version.\
+\n\n📚 **Cmd** : `.pip` <module(s)>\
+\n📄 **Descriptions** : Does a search of pip modules(s).\
+\n\n📚 **Cmd** : `.start`\
+\n📄 **Descriptions** : Type .start to see whether your bot is working or not.\
+\n\n📚 **Cmd** : `.aliveu` <text>\
+\n📄 **Descriptions** : Changes the 'user' in alive to the text you want.\
+\n\n📚 **Cmd** : `.resetalive`\
+\n📄 **Descriptions** : Resets the user to default.\
+\n\n📚 **Cmd** : `.db`\
+\n📄 **Descriptions** : Shows database related info.\
+\n\n📚 **Cmd** : `.spc`\
+\n📄 **Descriptions** : Show system specification."
 })
