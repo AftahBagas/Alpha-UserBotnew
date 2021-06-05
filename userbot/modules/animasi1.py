@@ -230,24 +230,24 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "animasi1":
-    "🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: .hai\
-    \nUsage: **Cosplay Nissa Sablon**\
-    \n\n🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: .kntl\
-    \nUsage: **Cek Aja dh\
-    \n\n🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: .alay\
-    \nUsage: **Lumayanlah Buat Nyindir**\
-    \n\n🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: .ange\
-    \nUsage: **Ketik Ini Kalo Lu Lagi Sange**\
-    \n\n🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: .lopu\
-    \nUsage: **Nyatakan Cinta Ke Cewe Orng**\
-    \n\n🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: .hujan\
-    \nUsage: **Penyesalan Seorang Laki-laki Yang Diulangin Terus Menerus**\
-    \n\n🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: .dahlah\
-    \nUsage: **Cek Aja dh sndri**\
-    \n\n🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: .jawa\
-    \nUsage: **Jawa Pride Ni Bos.**\
-    \n\n🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: .erpe\
-    \nUsage: **Buat Nyindir Nak Rp Yg Goblok.**"
+    "📚 **Cmd** : .hai\
+    \n📄 **Descriptions** : `Cosplay Nissa Sablon`\
+    \n\n📚 **Cmd** : .kntl\
+    \n📄 **Descriptions** : `Cek Aja dh`\
+    \n\n📚 **Cmd** : .alay\
+    \n📄 **Descriptions** : `Lumayanlah Buat Nyindir`\
+    \n\n📚 **Cmd** : .ange\
+    \n📄 **Descriptions** : `Ketik Ini Kalo Lu Lagi Sange`\
+    \n\n📚 **Cmd** : .lopu\
+    \n📄 **Descriptions** : `Nyatakan Cinta Ke Cewe Orng`\
+    \n\n📚 **Cmd** : .hujan\
+    \n📄 **Descriptions** : `Penyesalan Seorang Laki-laki Yang Diulangin Terus Menerus`\
+    \n\n📚 **Cmd** : .dahlah\
+    \n📄 **Descriptions** : `Cek Aja dh sndri`\
+    \n\n📚 **Cmd** : .jawa\
+    \n📄 **Descriptions** : `Jawa Pride Ni Bos.`\
+    \n\n📚 **Cmd** : .erpe\
+    \n📄 **Descriptions** : `Buat Nyindir Nak Rp Yg Goblok.`"
 
 
 })
