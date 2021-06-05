@@ -129,7 +129,7 @@ async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
     """
-    await dyno.edit("`Mencari Informasi Dyno Heroku ヅ`")
+    await dyno.edit("`Mengambil Informasi Dyno Heroku ヅ`")
     useragent = (
         'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
         'AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -150,7 +150,7 @@ async def dyno_usage(dyno):
                     f"`{r.reason}`",
                     reply_to=dyno.id
                 )
-                await dyno.edit("`Tidak Bisa Mendapatkan Informasi Dyno ヅ`")
+                await dyno.edit("`Tidak Bisa Mendapatkan Informasi Dyno ㋡`")
                 return False
             result = await r.json()
             quota = result['account_quota']
@@ -214,14 +214,14 @@ async def _(dyno):
     return os.remove("logs.txt")
 
 
-CMD_HELP.update({"heroku": ">.`usage`"
-                 "\nUsage: Check Dyno Heroku"
-                 "\n\n>`.set var <NEW VAR> <VALUE>`"
-                 "\nUsage: Tambahkan Variabel Baru Atau Memperbarui Variabel"
+CMD_HELP.update({"heroku": "📚 **Cmd** : .`usage`"
+                 "\n📄 **Descriptions** : Check Dyno Heroku"
+                 "\n\n📚 **Cmd** : `.set var <NEW VAR> <VALUE>`"
+                 "\n📄 **Descriptions** : Tambahkan Variabel Baru Atau Memperbarui Variabel"
                  "\nSetelah Menyetel Variabel Lord-Userbot Akan Di Restart."
-                 "\n\n>`.get var or .get var <VAR>`"
-                 "\nUsage: Dapatkan Variabel Yang Ada, Gunakan Hanya Di Grup Privasi Anda!"
+                 "\n\n📚 **Cmd** : `.get var or .get var <VAR>`"
+                 "\n📄 **Descriptions** : Dapatkan Variabel Yang Ada, Gunakan Hanya Di Grup Privasi Anda!"
                  "\nIni Mengembalikan Semua Informasi Pribadi Anda, Harap berhati-hati."
-                 "\n\n>`.del var <VAR>`"
-                 "\nUsage: Menghapus Variabel Yang Ada"
+                 "\n\n📚 **Cmd** : `.del var <VAR>`"
+                 "\n📄 **Descriptions** : Menghapus Variabel Yang Ada"
                  "\nSetelah Menghapus Variabel Bot Akan Di Restart."})
