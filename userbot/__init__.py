@@ -408,8 +408,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**Alpha Userbot 😈**\n\n**📚 Plugins** `{}`\n".format(
-                        "**❕HELP INLINE MENU ❕**",
+                    text="{}\n**Alpha Userbot 😈**\n\n**📚  `{}` **Plugins**\n".format(
+                        "**❕HELP INLINE MENU❕**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -424,7 +424,7 @@ with bot:
             else:
                 result = builder.article(
                     "**Alpha**",
-                    text="""**Jadi User ⚔️__Alpha__⚔️ Dengan Cara:** [Tekan Disini](t.me/teamsquaduserbotsupport)""",
+                    text="""**Siapkan Userbotmu Sendiri Dengan Cara:** [Tekan Disini](t.me/teamsquaduserbotsupport)""",
                     buttons=[
                         [
                             custom.Button.url(
