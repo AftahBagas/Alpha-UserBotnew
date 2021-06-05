@@ -45,14 +45,10 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "alpha":
-    "🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙`.alpha`\
-    \nUsage: alive bot.\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙`.sadboy`\
-    \nUsage: hiks\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙`.punten` ; `.pantau`\
-    \nUsage: coba aja.\
-    \n\n`kosong`\
-    \nUsage: tunggu update selanjutnya.\
-    \n\n`kosong`\
-    \nUsage: tunggu update selanjutnya."
+    "📚 **Cmd** : `.alpha`\
+    \n📄 **Descriptions** : alive bot.\
+    \n\n📚 **Cmd** : `.sadboy`\
+    \n📄 **Descriptions** : hiks\
+    \n\n📚 **Cmd** : `.punten` ; `.pantau`\
+    \n📄 **Descriptions** : coba aja."
 })
