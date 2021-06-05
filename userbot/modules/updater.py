@@ -208,18 +208,18 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update ⚡Alpha⚡**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari Alpha.__')
+        return await event.respond('❕**Perintah Untuk Update**\n**Alpha Userbot**\n\n 📚 **Cmd** : `.update now`\n 📚 **Cmd** : `.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari Alpha.__')
 
     if force_update:
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('`✻ Proses Update, Loading....1%`')
-        await event.edit('`❊ Proses Update, Loading....20%`')
-        await event.edit('`✻ Proses Update, Loading....35%`')
-        await event.edit('`❊ Proses Update, Loading....77%`')
-        await event.edit('`✻ Proses Update, Updating...90%`')
-        await event.edit('`❊ Proses Update, Mohon Menunggu....100%`')
+        await event.edit('`✻ Processing....1%`')
+        await event.edit('`❊ Processing....20%`')
+        await event.edit('`✻ Processing....35%`')
+        await event.edit('`❊ Processing....77%`')
+        await event.edit('`✻ Processing....90%`')
+        await event.edit('`❊ Processing....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
@@ -233,10 +233,10 @@ async def upstream(event):
 
 CMD_HELP.update({
     'update':
-    ".update"
-    "\nUsage: Untuk Melihat Pembaruan Terbaru Alpha."
-    "\n\n.update now"
-    "\nUsage: Memperbarui Alpha."
-    "\n\n.update deploy"
-    "\nUsage: Memperbarui Alpha Dengan Cara Deploy Ulang."
+    "📚 **Cmd** : .update"
+    "\n📄 **Descriptions** : Untuk Melihat Pembaruan Terbaru Alpha."
+    "\n\n📚 **Cmd** : .update now"
+    "\n📄 **Descriptions** : Memperbarui Alpha."
+    "\n\n📚 **Cmd** : .update deploy"
+    "\n📄 **Cmd** : Memperbarui Alpha Dengan Cara Deploy Ulang."
 })
