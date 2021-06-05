@@ -121,12 +121,10 @@ async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
         "╭‒─‒──────────‒─‒╮\n"
-        "│        ʀᴇᴘᴏ ᴜsᴇʀʙᴏᴛ\n"
-        "│       [⚡Alpha⚡](https://github.com/AftahBagas/alpha_)\n"
-        "├‒─‒──────────‒─‒╯\n"
-        "│🤵 **ᴏᴡɴᴇʀ :** [Alfareza](t.me/kanjengingsun)\n"
+        "│  ʀᴇᴘᴏ ᴜsᴇʀʙᴏᴛ\n"
+        "│  [Alpha](https://github.com/AftahBagas/alpha_)\n"
         "╰‒─‒──────────‒─‒╯\n"
-        "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/AftahBagas/Alpha_/blob/Alpha/LICENSE)"
+        "🤵 **ᴏᴡɴᴇʀ :** [Alfareza](t.me/kanjengingsun)"
     )
 
 
@@ -273,28 +271,28 @@ async def scam(results, lim):
 
 
 CMD_HELP.update({
-    "random":
-    ">`.random <item1> <item2> ... <itemN>`\
-    \nUsage: Get a random item from the list of items.",
-    "sleep":
-    ">`.sleep <seconds>`\
-    \nUsage: Let yours snooze for a few seconds.",
-    "shutdown":
-    ">`.shutdown`\
-    \nUsage: Shutdown bot",
-    "repo":
-    ">`.repo`\
-    \nUsage: Github Repo of this bot",
-    "readme":
-    ">`.readme`\
-    \nUsage: Provide links to setup the userbot and it's modules.",
-    "repeat":
-    ">`.repeat <no> <text>`\
-    \nUsage: Repeats the text for a number of times. Don't confuse this with spam tho.",
-    "restart":
-    ">`.restart`\
-    \nUsage: Restarts the bot !!",
-    "raw":
-    ">`.raw`\
-    \nUsage: Get detailed JSON-like formatted data about replied message."
+    "📚 **Plugins** random":
+    "📚 **Cmd** : `.random <item1> <item2> ... <itemN>`\
+    \n📄 **Descriptions** : Get a random item from the list of items.",
+    "📚 **plugins** sleep":
+    "📚 **Cmd** : `.sleep <seconds>`\
+    \n📄 **Descriptions** : Let yours snooze for a few seconds.",
+    "📚 **Plugins** shutdown":
+    "📚 **Cmd** : `.shutdown`\
+    \n📄 **Descriptions** : Shutdown bot",
+    "📚 **Plugins** repo":
+    "📚 **Cmd** : `.repo`\
+    \n📄 **Descriptions** : Github Repo of this bot",
+    "📚 **Plugins** readme":
+    "📚 **Cmd** : `.readme`\
+    \n📄 **Descriptions** : Provide links to setup the userbot and it's modules.",
+    "📚 **Cmd** repeat":
+    "📚 **Cmd** : `.repeat <no> <text>`\
+    \n📄 **Descriptions** : Repeats the text for a number of times. Don't confuse this with spam tho.",
+    "📚 **Plugins** restart":
+    "📚 **Cmd** : `.restart`\
+    \n📄 **Descriptions** : Restarts the bot !!",
+    "📚 **Plugins** raw":
+    "📚 **Cmd** : `.raw`\
+    \n📄 **Descriptions** : Get detailed JSON-like formatted data about replied message."
 })
