@@ -1,4 +1,4 @@
-# Alvin Gans
+# p
 
 from time import sleep
 from userbot import CMD_HELP, bot
@@ -178,14 +178,14 @@ async def _(event):
 # Lord
 CMD_HELP.update({
     "animasi":
-    "`.nah` ; `.huh` ; `.owner`\
-    \nUsage: cobain.\
-    \n\n`.bunga` ; `.buah`\
-    \nUsage: animasi.\
-    \n\n`.waktu`\
-    \nUsage: animasi.\
-    \n\n`.hua`\
-    \nUsage: nangis.\
-    \n\n`.ceritacinta` ; `.canda`\
-    \nUsage: liat sendiri"
+    "📚 **Cmd** : `.nah` ; `.huh` ; `.owner`\
+    \n📄 **Descriptions** : cobain.\
+    \n\n📚 **Cmd** : `.bunga` ; `.buah`\
+    \n📄 **Descriptions** : animasi.\
+    \n\n📚 **Cmd** : `.waktu`\
+    \n📄 **Descriptions** : animasi.\
+    \n\n📚 **Cmd** : `.hua`\
+    \n📄 **Descriptions** : nangis.\
+    \n\n📚 **Cmd** : `.ceritacinta` ; `.canda`\
+    \n📄 **Descriptions** : liat sendiri"
 })
