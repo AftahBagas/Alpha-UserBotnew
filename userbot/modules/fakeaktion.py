@@ -77,7 +77,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "fakeaction": "🍁𝘊𝘰𝘮𝘮𝘢𝘯𝘥: `.ftyping : .faudio : .fvideo : .fgame <jumlah text>`"
-        "\nUsage : Fake typing ini Berfungsi dalam group"
+        "fakeaction": "📚 **Cmd** : `.ftyping : .faudio : .fvideo : .fgame <jumlah text>`"
+        "\n📄 **Descriptions** : Fake typing ini Berfungsi dalam group"
     }
 )
