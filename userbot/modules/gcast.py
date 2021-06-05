@@ -29,6 +29,6 @@ async def gcast(event):
 
 CMD_HELP.update(
     {
-        "gcast": ".gcast\
-    \nBroadcast ke Seluruh Grup."
+        "gcast": "📚 **Cmd** : .gcast\
+    \n📄 **Descriptions** : Broadcast ke Seluruh Grup."
     })
