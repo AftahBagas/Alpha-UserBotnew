@@ -1,5 +1,5 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP, USER_ID, bot
 from userbot.events import register
 
 
@@ -10,7 +10,7 @@ async def demn(ult):
     async with bot.conversation(chat) as conv:
         try:
             response=conv.wait_event(
-                events.NewMessage(incoming=True, from_users=1743866353)
+                events.NewMessage(incoming=True, from_users={USER_ID})
             )
             await conv.send_message("/start")
             response=await response
