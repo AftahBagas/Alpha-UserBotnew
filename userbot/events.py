@@ -1,11 +1,7 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
+# Alfareza
 #
 """ Userbot module for managing events.
  One of the main components of the userbot. """
-
 
 import sys
 from asyncio import create_subprocess_shell as asyncsubshell
@@ -97,11 +93,11 @@ def register(**args):
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-                    text = "**Lord-Userbot ERROR**\n"
-                    link = "Silahkan chat: @liualvinas"
+                    text = "**Alpha Userbot ERROR**\n"
+                    link = "Silahkan chat: @KanjengIngsun"
                     text += "Untuk melaporkan kesalahan"
-                    text += f"- tinggal teruskan pesan ini {link}.\n"
-                    text += "Alvin Siap Membantu Kamu\n"
+                    text += f"tinggal teruskan pesan ini {link}.\n"
+                    text += "Reza Siap Membantu Kamu\n"
 
                     ftext = "========== DISCLAIMER =========="
                     ftext += "\nThis file uploaded ONLY here,"
