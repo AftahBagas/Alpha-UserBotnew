@@ -1,3 +1,7 @@
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5526470.gif" width="680" height="103" alt="A L P H A" /></a>
+
+
+
 <p align="center">
     <img alt="ALPHA VERSION" src="https://img.shields.io/badge/ALPHA%20VERSION-4.+-brightgreen"/>
     <img alt="BUILD IN" src="https://img.shields.io/badge/BUILD%20-Last Day-brightgreen"/>
@@ -11,7 +15,6 @@
 
 
 
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5526470.gif" width="680" height="103" alt="A L P H A" /></a>
 
 
 
