@@ -1,7 +1,7 @@
 """ Userbot module salken for deafult user"""
 
 from asyncio import sleep
-from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, USER_AGE
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, ALIVE_NAME, USER_AGE, COUNTRY
 from datetime import datetime
 from telethon import functions
 from emoji import emojize
@@ -14,15 +14,22 @@ from telethon.errors import (
     ChannelPrivateError,
     ChannelPublicGroupNaError)
 from telethon.utils import get_input_location
+from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
 from userbot.events import register
+from userbot.modules.admin import get_user_from_event
+from telethon.utils import pack_bot_file_id
+
+
 
 
 @register(outgoing=True, pattern="^.salken$")
 async def salken(salken):
     """ Basically it's .kickme command """
     await salken.edit(f"`Halo Namaku {ALIVE_NAME}`")
-    await asyncio.sleep(3)
-    await salken.edit(f"` {USER_AGE} Telah Meninggalkan Group...`")
+    await asyncio.sleep(2)
+    await salken.edit(f"`Umurku {USER_AGE}`")
+    await asyncio.sleep(2)
+    await salken.edit(f"`Tinggal Di {COUNTRY} Salam Kenal :)`")
     await salken.client.kick_participant(leave.chat_id, 'me')
 
 
