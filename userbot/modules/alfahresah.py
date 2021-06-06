@@ -1,17 +1,18 @@
+import asyncio
 from time import sleep
 from userbot.events import register
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern='^.salken(?: |$)(.*)')
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    sleep(3)
-    await typew.edit("Hai Perkenalkan Namaku `{ALIVE_NAME}`")
-    sleep(3)
-    await typew.edit("`Umurku {USER_AGE} Tahun`")
-    sleep(1)
-    await typew.edit("`Tinggal Di {COUNTRY}, Salam Kenal:)`")
+@ register(outgoing=True, pattern=r"^\.(?:salken)\s?(.)?")
+async def amireallysalken(salken):
+    user = await bot.get_me()
+    await get_readable_time((time.time() - StartTime))
+    await salken.edit("Halo Namaku {ALIVE_NAME}")
+    await asyncio.sleep(2)
+    await salken.edit("Umurku {USER_AGE} Tahun")
+    await asyncio.sleep(2)
+    await salken.edit("Tinggal Di {COUNTRY} Salam Kenal :)")
 
 
 CMD_HELP.update({
