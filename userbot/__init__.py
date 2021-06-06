@@ -228,6 +228,9 @@ CMD_HELP = {}
 # Quotes API Token
 QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
 
+# Wolfram Alpha API
+WOLFRAM_ID = os.environ.get("WOLFRAM_ID") or None
+
 # Deezloader
 DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", None)
 
