@@ -59,7 +59,7 @@ async def mention_afk(mention):
             afk_str = f"`{int(seconds)}s` ago"
 
         is_bot = False
-        if (sender := await mention.get_sender()) :
+        if (sender := await mention.get_sender()):
             is_bot = sender.bot
             if is_bot:
                 return  # ignore bot
@@ -210,7 +210,7 @@ async def set_afk(afk_e):
     ISAFK = True
     afk_time = datetime.now()
     raise StopPropagation
-    
+
 
 @register(outgoing=True, pattern=r"^\.unoff(?: |$)(.*)", disable_errors=True)
 async def type_afk_is_not_true(notafk):
@@ -268,13 +268,8 @@ async def type_afk_is_not_true(notafk):
         USERS = {}
         AFKREASON = None
 
-CMD_HELP.update(
-    {
-        "offlock":
-        "\n\n📚 **Cmd** :` .offlock`"
-        "\n📄 **Descriptions** : Menetapkan Anda sebagai afk. Balas kepada siapa saja yang memberi tag/PM's "
-        "Anda, memberi tahu mereka bahwa Anda AFK(karena)."
-        "\n\n📚 **Cmd** :` .unoff`"
-        "\n📄 **Descriptions** : Mematikan mode AFK anda"
-    }
-)
+CMD_HELP.update({"offlock": "\n\n📚 **Cmd** :` .offlock`"
+                 "\n📄 **Descriptions** : Menetapkan Anda sebagai afk. Balas kepada siapa saja yang memberi tag/PM's "
+                 "Anda, memberi tahu mereka bahwa Anda AFK(karena)."
+                 "\n\n📚 **Cmd** :` .unoff`"
+                 "\n📄 **Descriptions** : Mematikan mode AFK anda"})
