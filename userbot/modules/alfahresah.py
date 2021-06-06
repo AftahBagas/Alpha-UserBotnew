@@ -1,4 +1,4 @@
-""" Userbot module containing userid, chatid and log commands"""
+""" Userbot module salken for deafult user"""
 
 from asyncio import sleep
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, ALIVE_NAME
@@ -20,85 +20,6 @@ from userbot.modules.admin import get_user_from_event
 from telethon.utils import pack_bot_file_id
 
 
-@register(outgoing=True, pattern="^.id(?: |$)(.*)")
-async def _(event):
-    if event.fwd_from:
-        return
-    if event.reply_to_msg_id:
-        await event.get_input_chat()
-        r_msg = await event.get_reply_message()
-        if r_msg.media:
-            bot_api_file_id = pack_bot_file_id(r_msg.media)
-            await event.edit("ID Grup: `{}`\nID Dari Pengguna : `{}`\nID Bot File API: `{}`".format(str(event.chat_id), str(r_msg.from_id), bot_api_file_id))
-        else:
-            await event.edit("ID Grup: `{}`\nID Dari Pengguna : `{}`".format(str(event.chat_id), str(r_msg.from_id)))
-    else:
-        await event.edit("ID Grup: `{}`".format(str(event.chat_id)))
-
-
-@register(outgoing=True, pattern="^.link(?: |$)(.*)")
-async def permalink(mention):
-    """ For .link command, generates a link to the user's PM with a custom text. """
-    user, custom = await get_user_from_event(mention)
-    if not user:
-        return
-    if custom:
-        await mention.edit(f"[{custom}](tg://user?id={user.id})")
-    else:
-        tag = user.first_name.replace("\u2060",
-                                      "") if user.first_name else user.username
-        await mention.edit(f"[{tag}](tg://user?id={user.id})")
-
-
-@register(outgoing=True, pattern="^.getbot(?: |$)(.*)")
-async def _(event):
-    if event.fwd_from:
-        return
-    mentions = "**Bot Di Channel Ini:** \n"
-    input_str = event.pattern_match.group(1)
-    to_write_chat = await event.get_input_chat()
-    chat = None
-    if not input_str:
-        chat = to_write_chat
-    else:
-        mentions = "Bot Dalam {} Channel: \n".format(input_str)
-        try:
-            chat = await bot.get_entity(input_str)
-        except Exception as e:
-            await event.edit(str(e))
-            return None
-    try:
-        async for x in bot.iter_participants(chat, filter=ChannelParticipantsBots):
-            if isinstance(x.participant, ChannelParticipantAdmin):
-                mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(
-                    x.first_name, x.id, x.id)
-            else:
-                mentions += "\n [{}](tg://user?id={}) `{}`".format(
-                    x.first_name, x.id, x.id)
-    except Exception as e:
-        mentions += " " + str(e) + "\n"
-    await event.edit(mentions)
-
-
-@register(outgoing=True, pattern=r"^.logit(?: |$)([\s\S]*)")
-async def log(log_text):
-    """ For .log command, forwards a message or the command argument to the bot logs group """
-    if BOTLOG:
-        if log_text.reply_to_msg_id:
-            reply_msg = await log_text.get_reply_message()
-            await reply_msg.forward_to(BOTLOG_CHATID)
-        elif log_text.pattern_match.group(1):
-            user = f"#LOG\n ID Obrolan: {log_text.chat_id}\n\n"
-            textx = user + log_text.pattern_match.group(1)
-            await bot.send_message(BOTLOG_CHATID, textx)
-        else:
-            await log_text.edit("`Apa Yang Harus Saya Log?`")
-            return
-        await log_text.edit("`Logged Berhasil!`")
-    else:
-        await log_text.edit("`Fitur Ini Mengharuskan Loging Diaktifkan!`")
-    await sleep(2)
-    await log_text.delete()
 
 
 @register(outgoing=True, pattern="^.kickme$")
