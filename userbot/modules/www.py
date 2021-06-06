@@ -54,11 +54,10 @@ async def pingme(pong):
     await pong.edit("**■■■■■ 100%**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**Alpha!!**\n"
-                    f"• **Pingger:** "
-                    f"`%sms` \n"
-                    f"• **Waktu Hidup:** "
-                    f"`{uptime}` \n" % (duration))
+    await pong.edit(f"**Pong!!** "
+                    f"\n📡 Ping : `%sms` \n"
+                    f"**🤖 Bot of** "
+                    f"\n➥`{ALIVE_NAME}` \n" % (duration))
 
 
 @ register(outgoing=True, pattern="^.lping$")
@@ -191,14 +190,14 @@ async def pingme(pong):
     await pong.edit("✧ **Pong!**\n`%sms`" % (duration))
 
 CMD_HELP.update(
-    {"ping": "`.ping` ; `.lping` ; `.xping` ; `.sping`\
-    \nUsage: Untuk menunjukkan ping bot.\
-    \n\n`.speed`\
-    \nUsage: Untuk menunjukkan kecepatan.\
-    \n\n`.pong`\
-    \nUsage: sama kaya perintah ping."
+    {"ping": "📚 **Cmd** : `.ping` ; `.lping` ; `.xping` ; `.sping`\
+    \n📄 **Descriptions** : Untuk menunjukkan ping bot.\
+    \n\n📚 **Cmd** : `.speed`\
+    \n📄 **Descriptions** : Untuk menunjukkan kecepatan.\
+    \n\n📚 **Cmd** : `.pong`\
+    \n📄 **Descriptions** : sama kaya perintah ping."
      })
 CMD_HELP.update(
-    {"sinyal": "**Modules:** `Sinyal`\
-    \n\n**• Perintah :** `.sinyal`\
-    \n  • **Penjelasan :** __Untuk melihat sinyal bot__"})
+    {"sinyal": "📚 **Plugins** : `Sinyal`\
+    \n\n📚 **Cmd** : `.sinyal`\
+    \n📄 **Descriptions** : __Untuk melihat sinyal bot__"})
