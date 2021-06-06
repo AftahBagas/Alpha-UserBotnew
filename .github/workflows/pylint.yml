@@ -26,7 +26,7 @@ jobs:
       # commit changes
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: 'pylint: auto fixes'
+          commit_message: 'auto back: code format'
           commit_options: '--no-verify --signoff'
           repository: .
           commit_user_name: AftahBagas
