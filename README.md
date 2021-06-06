@@ -3,17 +3,17 @@
 
 
 <p align="center">
-  <a href="https://github.com/AftahBagas/Alpha_/fork">
-    <img src="https://img.shields.io/github/forks/AftahBagas/Alpha_?label=Fork&style=social">
+  <a href="https://github.com/AftahBagas/Alpha-Userbot/fork">
+    <img src="https://img.shields.io/github/forks/AftahBagas/Alpha-Userbot?label=Fork&style=social">
     
   </a>
   <a href="https://github.com/AftahBagas/Alpha_">
-    <img src="https://img.shields.io/github/stars/AftahBagas/Alpha_?style=social">
+    <img src="https://img.shields.io/github/stars/AftahBagas/Alpha-Userbot?style=social">
   </a>
 </p>  
 
 # Alpha
-![Alpha Logo](https://telegra.ph/file/544752d0017cb5f5810b6.jpg)
+![Alpha Logo](https://telegra.ph/file/47d78f16b499eb3bbd8a4.jpg)
 
 
 
