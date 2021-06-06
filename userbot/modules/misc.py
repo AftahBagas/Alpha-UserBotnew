@@ -122,7 +122,7 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "╭‒─‒──────────‒─‒╮\n"
         "│    ʀᴇᴘᴏ ᴜsᴇʀʙᴏᴛ\n"
-        "│      [Alpha](https://github.com/AftahBagas/alpha-userbot)\n"
+        "│      [Alpha Userbot](https://github.com/AftahBagas/alpha-userbot)\n"
         "╰‒─‒──────────‒─‒╯\n"
         "🤵 **ᴏᴡɴᴇʀ :** [Alfareza](t.me/kanjengingsun)"
     )
