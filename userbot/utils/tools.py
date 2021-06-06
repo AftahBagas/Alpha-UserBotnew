@@ -151,8 +151,8 @@ async def run_cmd(cmd: List) -> (bytes, bytes):
 
 def post_to_telegraph(title, html_format_content):
     post_client = TelegraphPoster(use_api=True)
-    auth_name = "Alpha_"
-    auth_url = "https://github.com/AftahBagas/Alpha_"
+    auth_name = "Alpha-Userbot"
+    auth_url = "https://github.com/AftahBagas/Alpha-Userbot"
     post_client.create_api_token(auth_name)
     post_page = post_client.post(
         title=title,
