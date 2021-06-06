@@ -40,6 +40,7 @@ async def _(event):
     await tap[0].click(event.chat_id)
     await event.delete()
 
+
 @register(outgoing=True, pattern=r"^\.game(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
