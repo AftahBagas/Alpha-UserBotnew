@@ -228,7 +228,7 @@ async def amireallyalive(alive):
         f"**╭── ─ ─ ─ ─ ─ ** \n"
         f"**__The Alpha Userbot...__  ** \n"
         f"**╰── ─ ─ ─ ─ ─ ** \n"
-        f"**{ALPHA_KUSTOM_TEKS}** \n"
+        f"**{ALIVE_TEKS_KUSTOM}** \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
         f"┣ Owner    = `{DEFAULTUSER}` \n"
         f"┣ Telethon = `v. {version.__version__}` \n"
