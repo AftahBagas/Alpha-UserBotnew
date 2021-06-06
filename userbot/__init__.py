@@ -151,6 +151,9 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 # Untuk Perintah .alpha
 ALIVE_TEKS_KUSTOM = os.environ.get("ALIVE_TEKS_KUSTOM", "Hey I am Alive.")
 
+# Untuk Perintah .salken
+USER_AGE = os.environ.get("USER_AGE", None)
+
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 
