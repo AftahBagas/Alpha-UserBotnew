@@ -1,7 +1,7 @@
 import asyncio
 from time import sleep
 from userbot.events import register
-from userbot import CMD_HELP
+from userbot import CMD_HELP ALIVE_NAME USER_AGE COUNTRY
 
 
 @ register(outgoing=True, pattern=r"^\.(?:salken)\s?(.)?")
