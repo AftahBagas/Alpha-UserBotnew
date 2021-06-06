@@ -53,10 +53,6 @@
       "value": "Isi id grup mu",
       "required": true
     },
-    "USER_ID": {
-      "description": "buat Group Publik/Private tambahkan bot rose jadikan admin lalu kirim pesan dan reply pesanmu dengan /id.",
-      "wajib": true
-    },
     "QUOTES_API_TOKEN": {
       "description": "Dapatkan Token Dari http://antiddos.systems",
       "value": "33273f18-4a0d-4a76-8d78-a16faa002375",
