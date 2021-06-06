@@ -1,7 +1,5 @@
-import asyncio
-import time
 
-from userbot import USER_AGE, ALIVE_NAME, CMD_HELP, StartTime, COUNTRY
+from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
 
 
