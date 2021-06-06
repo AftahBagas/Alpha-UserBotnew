@@ -151,6 +151,9 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 # Untuk Perintah .alpha
 ALIVE_TEKS_KUSTOM = os.environ.get("ALIVE_TEKS_KUSTOM", "Hey I am Alive.")
 
+# Untuk Perintah .alpha
+PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", "🚫")
+
 # Untuk Perintah .salken
 USER_AGE = os.environ.get("USER_AGE", None)
 
@@ -184,6 +187,10 @@ ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
 
 # Sticker Custom Pack Name
 S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
+
+# Default .pmpermit logo
+PMPERMIT_LOGO = os.environ.get(
+    "PMPERMIT_LOGO") or "https://t.me/AlphaZPlugins/9"
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
