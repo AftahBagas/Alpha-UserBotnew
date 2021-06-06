@@ -1,12 +1,12 @@
 import asyncio
-from platform import uname
 import time
+from datetime import datetime
 
-from userbot import ALIVE_NAME, CMD_HELP, StartTime, bot
+from userbot import USER_AGE, ALIVE_NAME, CMD_HELP, StartTime, COUNTRY 
 from userbot.events import register
 
 
-# ================= CONSTANT =================
+# ============== ALPHA USERBOT ===============
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
@@ -16,7 +16,7 @@ modules = CMD_HELP
 
 @ register(outgoing=True, pattern=r"^\.(?:salken)\s?(.)?")
 async def amireallysalken(salken):
-    await bot.get_me()
+    user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     await salken.edit("Halo Semuanya :)")
     await asyncio.sleep(2)
