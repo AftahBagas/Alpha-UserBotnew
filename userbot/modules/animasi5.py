@@ -17,7 +17,7 @@ async def sayhi(e):
 
 
 CMD_HELP.update({
-    "gabut":
+    "hii":
     "📚 **Cmd** : `.hii`\
     \n📄 **Descriptions** : pesan untuk hiiiiiiii."
 })
