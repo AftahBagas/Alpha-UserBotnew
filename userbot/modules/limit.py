@@ -5,15 +5,15 @@ from userbot.events import register
 
 @register(outgoing=True, pattern='^.limit(?: |$)(.*)')
 async def demn(ult):
-    chat="@SpamBot"
-    msg=await event.edit("Checking If You Are Limited...")
+    chat = "@SpamBot"
+    msg = await event.edit("Checking If You Are Limited...")
     async with bot.conversation(chat) as conv:
         try:
-            response=conv.wait_event(
+            response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users={USER_ID})
             )
             await conv.send_message("/start")
-            response=await response
+            response = await response
             await bot.send_read_acknowledge(chat)
         except YouBlockedUserError:
             await steal.reply("Alpha User! Please Unblock @SpamBot ")
