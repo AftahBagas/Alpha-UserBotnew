@@ -1,6 +1,6 @@
 {
-  "name": "Alpha",
-  "description": "[Alpha] Alpha Userbot.",
+  "name": "Alpha Userbot",
+  "description": "[Alpha] Alpha Userbot 😈",
   "logo": "https://telegra.ph/file/47d78f16b499eb3bbd8a4.jpg",
   "keywords": [
     "telegram",
@@ -26,7 +26,7 @@
       "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya @Kanjengingsun di telegram",
       "required": true
     },
-    "ALPHA_KUSTOM_TEKS": {
+    "ALIVE_TEKS_KUSTOM": {
       "description": "Kustom Pesan Alive Mu Untuk Perintah .alpha (Isi Terserah)",
       "required": false
     },
