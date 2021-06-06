@@ -330,7 +330,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```😈 Alpha Berhasil Diaktifkan 😈```")
+    await bot.send_message(BOTLOG_CHATID, "```(Alpha Berhasil Diaktifkan)```")
     return
 
 with bot:
@@ -415,7 +415,7 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n**Alpha Userbot 😈**\n\n**📚  `{}` **Plugins**\n".format(
+                    text="{}\n**Alpha Userbot 😈**\n\n**Plugins** `{}` 📚\n".format(
                         "**❕HELP INLINE MENU❕**",
                         len(dugmeler),
                     ),
