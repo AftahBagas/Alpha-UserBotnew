@@ -1,5 +1,7 @@
 """ Userbot module salken for deafult user"""
 
+import asyncio
+
 from userbot import ALIVE_NAME, CMD_HELP, COUNTRY, USER_AGE
 from userbot.events import register
 
