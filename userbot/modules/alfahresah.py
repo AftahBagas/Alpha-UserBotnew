@@ -1,8 +1,7 @@
 import asyncio
 import time
-from datetime import datetime
 
-from userbot import USER_AGE, ALIVE_NAME, CMD_HELP, StartTime, COUNTRY 
+from userbot import USER_AGE, ALIVE_NAME, CMD_HELP, StartTime, COUNTRY
 from userbot.events import register
 
 
@@ -16,7 +15,7 @@ modules = CMD_HELP
 
 @ register(outgoing=True, pattern=r"^\.(?:salken)\s?(.)?")
 async def amireallysalken(salken):
-    user = await bot.get_me()
+    await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     await salken.edit("Halo Semuanya :)")
     await asyncio.sleep(2)
