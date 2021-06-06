@@ -376,16 +376,18 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {}".format("{HELP_EMOJI}",x),data="ub_modul_{}".format(x))
-        for x in helpable_modules
-    ]
-    pairs=list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
+        custom.Button.inline(
+            "{} {}".format(
+                "{HELP_EMOJI}",
+                x),
+            data="ub_modul_{}".format(x)) for x in helpable_modules]
+    pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
     if len(modules) % number_of_cols == 1:
         pairs.append((modules[-1],))
-    max_num_pages=ceil(len(pairs) / number_of_rows)
-    modulo_page=page_number % max_num_pages
+    max_num_pages = ceil(len(pairs) / number_of_rows)
+    modulo_page = page_number % max_num_pages
     if len(pairs) > number_of_rows:
-        pairs=pairs[
+        pairs = pairs[
             modulo_page * number_of_rows: number_of_rows * (modulo_page + 1)
         ] + [
             (
@@ -405,15 +407,15 @@ def paginate_help(page_number, loaded_modules, prefix):
 
 with bot:
     try:
-        tgbot=TelegramClient(
+        tgbot = TelegramClient(
             "TG_BOT_TOKEN",
             api_id=API_KEY,
             api_hash=API_HASH).start(
             bot_token=BOT_TOKEN)
 
-        dugmeler=CMD_HELP
-        me=bot.get_me()
-        uid=me.id
+        dugmeler = CMD_HELP
+        me = bot.get_me()
+        uid = me.id
 
         @ tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
@@ -424,12 +426,12 @@ with bot:
 
         @ tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
-            builder=event.builder
-            result=None
-            query=event.text
+            builder = event.builder
+            result = None
+            query = event.text
             if event.query.user_id == uid and query.startswith("@UserButt"):
-                buttons=paginate_help(0, dugmeler, "helpme")
-                result=builder.article(
+                buttons = paginate_help(0, dugmeler, "helpme")
+                result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
                     text="{}\n**Alpha Userbot 😈**\n\n**Plugins** `{}` 📚\n".format(
                         "**❕HELP INLINE MENU❕**",
@@ -439,13 +441,13 @@ with bot:
                     link_preview=False,
                 )
             elif query.startswith("tb_btn"):
-                result=builder.article(
+                result = builder.article(
                     "Bantuan 🎗️Alpha🎗️ ",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
-                result=builder.article(
+                result = builder.article(
                     "**Alpha**",
                     text="""**Siapkan Userbotmu Sendiri Dengan Cara:** [Tekan Disini](t.me/teamsquaduserbotsupport)""",
                     buttons=[
@@ -471,14 +473,14 @@ with bot:
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:  # pylint:disable=E0602
-                current_page_number=int(
+                current_page_number = int(
                     event.data_match.group(1).decode("UTF-8"))
-                buttons=paginate_help(
+                buttons = paginate_help(
                     current_page_number + 1, dugmeler, "helpme")
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert=f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
@@ -486,7 +488,7 @@ with bot:
             if event.query.user_id == uid:
                 await event.edit("Menu Closed.")
             else:
-                reply_pop_up_alert=f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -496,15 +498,15 @@ with bot:
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:  # pylint:disable=E0602
-                current_page_number=int(
+                current_page_number = int(
                     event.data_match.group(1).decode("UTF-8"))
-                buttons=paginate_help(
+                buttons = paginate_help(
                     current_page_number - 1, dugmeler, "helpme"  # pylint:disable=E0602
                 )
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert=f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -514,11 +516,11 @@ with bot:
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:  # pylint:disable=E0602
-                modul_name=event.data_match.group(1).decode("UTF-8")
+                modul_name = event.data_match.group(1).decode("UTF-8")
 
-                cmdhel=str(CMD_HELP[modul_name])
+                cmdhel = str(CMD_HELP[modul_name])
                 if len(cmdhel) > 150:
-                    help_string=(
+                    help_string = (
                         str(CMD_HELP[modul_name]).replace(
                             '`', '')[:150] + "..."
                         + "\n\nBaca Teks Berikutnya Ketik .help "
@@ -526,9 +528,9 @@ with bot:
                         + " "
                     )
                 else:
-                    help_string=str(CMD_HELP[modul_name]).replace('`', '')
+                    help_string = str(CMD_HELP[modul_name]).replace('`', '')
 
-                reply_pop_up_alert=(
+                reply_pop_up_alert = (
                     help_string
                     if help_string is not None
                     else "{} No document has been written for module.".format(
@@ -536,7 +538,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert=f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
