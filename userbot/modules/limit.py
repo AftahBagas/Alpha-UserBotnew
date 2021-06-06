@@ -24,5 +24,5 @@ async def demn(ult):
 CMD_HELP.update({
     "limited":
     "📚 **Cmd** : `.limit`\
-\n📄 **Descriptions**: Mengecek limit
+\n📄 **Descriptions** : Memeriksa Keadaan Akun
 })
