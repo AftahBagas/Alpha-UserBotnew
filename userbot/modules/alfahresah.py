@@ -22,11 +22,11 @@ from telethon.utils import pack_bot_file_id
 
 
 
-@register(outgoing=True, pattern="^.kickme$")
-async def kickme(leave):
+@register(outgoing=True, pattern="^.salken$")
+async def salken(salken):
     """ Basically it's .kickme command """
-    await leave.edit(f"`❗ {ALIVE_NAME} Telah Meninggalkan Group...`")
-    await leave.client.kick_participant(leave.chat_id, 'me')
+    await salken.edit(f"` {ALIVE_NAME} Telah Meninggalkan Group...`")
+    await salken.client.kick_participant(leave.chat_id, 'me')
 
 
 @register(outgoing=True, pattern="^.unmutechat$")
