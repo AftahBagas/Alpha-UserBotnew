@@ -16,7 +16,7 @@ modules = CMD_HELP
 @register(outgoing=True, pattern="^.kickme$")
 async def kickme(leave):
     """ Basically it's .kickme command """
-    await leave.edit("`Alpha Telah Keluar Grup ツ`")
+    await leave.edit("` {ALIVE_NAME}  Telah Keluar Grup ツ`")
     await leave.client.kick_participant(leave.chat_id, 'me')
 
 CMD_HELP.update({
