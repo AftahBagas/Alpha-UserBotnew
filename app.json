@@ -32,7 +32,8 @@
     },
     "USER_AGE": {
       "description": "Kustom Perkenalan Untuk Perintah .salken (isi umurmu)",
-      "required": false
+      "value": "isi umurmu dengan benar"
+      "required": true
     },
     "HEROKU_APP_NAME": {
       "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
