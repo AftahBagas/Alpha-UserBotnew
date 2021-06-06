@@ -31,8 +31,7 @@
       "required": false
     },
     "USER_AGE": {
-      "description": "Kustom Perkenalan Untuk Perintah .salken (isi umurmu)",
-      "value": "isi umurmu dengan benar"
+      "description": "Isi Umurmu Dengan Benar Untuk Perintah .salken",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -60,8 +59,7 @@
       "required": true
     },
     "COUNTRY": {
-      "description": "isi tempat tinggalmu untuk perintah .salken",
-      "value": "isi tempat tinggalmu dengan benar",
+      "description": "isi tempat tinggalmu dengan benar untuk perintah .salken",
       "required": true
     },
     "PM_AUTO_BAN": {
@@ -106,12 +104,12 @@
       "required": true
     },
     "DEFAULT_BIO": {
-      "description": "Default Bio Mu.",
+      "description": "nama untuk bio akunmu kalo mau ganti ganti saja :)",
       "value": "A l P H A",
       "required": false
     },
     "ALIVE_NAME": {
-      "description": "Isi sesuai namamu untuk menunjukkan identitasmu",
+      "description": "Isi sesuai namamu untuk menunjukkan identitas .salken",
       "required": true
     },
     "S_PACK_NAME": {
