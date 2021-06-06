@@ -102,7 +102,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/AftahBagas/Alpha_.git")
+    "https://github.com/AftahBagas/Alpha-Userbot.git")
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "Alpha")
 
@@ -330,7 +330,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```〘ALPHA TELAH AKTIF〙```")
+    await bot.send_message(BOTLOG_CHATID, "```😈 Alpha Berhasil Diaktifkan 😈```")
     return
 
 with bot:
@@ -436,7 +436,7 @@ with bot:
                         [
                             custom.Button.url(
                                 "Repo",
-                                "https://github.com/AftahBagas/Alpha_.git"),
+                                "https://github.com/AftahBagas/Alpha-Userbot.git"),
                             custom.Button.url(
                                 "Pemilik",
                                 "t.me/kanjengingsun"),
