@@ -25,7 +25,7 @@ from telethon.utils import pack_bot_file_id
 @register(outgoing=True, pattern="^.salken$")
 async def salken(salken):
     """ Basically it's .kickme command """
-    await salken.edit(f"` {ALIVE_NAME} Telah Meninggalkan Group...`")
+    await salken.edit(f"`Halo Namaku {ALIVE_NAME}`")
     await asyncio.sleep(3)
     await salken.client.kick_participant(leave.chat_id, 'me')
 
