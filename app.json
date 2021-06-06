@@ -27,7 +27,7 @@
       "required": true
     },
     "ALPHA_KUSTOM_TEKS": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .gezza (Isi Terserah)",
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .alpha (Isi Terserah)",
       "required": false
     },
     "HEROKU_APP_NAME": {
