@@ -1,18 +1,8 @@
 import asyncio
-from asyncio import create_subprocess_exec as asyncrunapp
-from asyncio.subprocess import PIPE as asyncPIPE
-from platform import python_version, uname
-from shutil import which
-from os import remove
-from telethon import version
-from telethon import __version__, version
-import platform
-import sys
+from platform import uname
 import time
-from datetime import datetime
-import psutil
 
-from userbot import ALIVE_LOGO, ALIVE_TEKS_KUSTOM, ALIVE_NAME, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, bot
+from userbot import ALIVE_NAME, CMD_HELP, StartTime, bot
 from userbot.events import register
 
 
@@ -26,7 +16,7 @@ modules = CMD_HELP
 
 @ register(outgoing=True, pattern=r"^\.(?:salken)\s?(.)?")
 async def amireallysalken(salken):
-    user = await bot.get_me()
+    await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     await salken.edit("Halo Semuanya :)")
     await asyncio.sleep(2)
