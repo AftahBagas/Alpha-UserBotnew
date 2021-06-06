@@ -39,7 +39,7 @@ async def pingme(pong):
     start = datetime.now()
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**Pong!!**\n"
+    await pong.edit(f"**Pong😈!!**\n"
                     f"➥ **Ping:** "
                     f"`%sms` \n"
                     f"➥ **Uptime:** "
@@ -62,17 +62,16 @@ async def pingme(pong):
     await pong.edit("**⚡**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"┍《 **𝘼 𝙇 𝙋 𝙃 𝘼** 》━─\n"
-                    f"┟➠  __Ping:__ "
+    await pong.edit(f"**Alpha😈**\n"
+                    f"**Ping** • "
                     f"`%sms` \n"
-                    f"┞➠ __Uptime:__ "
-                    f"`{uptime}` \n"
-                    f"╰━─━───────" % (duration))
+                    f"**Uptime** • "
+                    f"`{uptime}` \n" % (duration))
 
 
 CMD_HELP.update(
     {"www": "📚 **Cmd** : `.aping`\
     \n📄 **Descriptions** : Untuk menunjukkan ping bot.\
-    \n\n📚 **Cmd** : `.sping`\
+    \n\n📚 **Cmd** : `.bping`\
     \n📄 **Descriptions** : Untuk menunjukkan ping bot."
      })
