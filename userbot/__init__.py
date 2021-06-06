@@ -402,7 +402,7 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("👋🏻 Halo Kamu Yang disana Saya adalah bot assistant dari {ALIVE_NAME} Buat Alphamu Sendiri Dengan  [Tekan Disini](https://github.com/AftahBagas/Alpha_.git)")
+                await event.reply("👋🏻 Halo Kamu Yang disana Saya adalah bot assistant dari {ALIVE_NAME} Buat Alphamu Sendiri Dengan  [Tekan Disini](https://github.com/AftahBagas/Alpha-Userbot.git)")
             else:
                 await event.reply(f"`Hai {ALIVE_NAME}\n\nApa Kabarmu?`")
 
