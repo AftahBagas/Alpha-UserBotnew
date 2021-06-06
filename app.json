@@ -59,8 +59,8 @@
       "required": true
     },
     "COUNTRY": {
-      "description": "Set your Country to be used in the .time and .date commands.",
-      "value": "ID",
+      "description": "isi tempat tinggalmu untuk perintah .salken",
+      "value": "tempat tinggalmu",
       "required": true
     },
     "PM_AUTO_BAN": {
@@ -110,7 +110,7 @@
       "required": false
     },
     "ALIVE_NAME": {
-      "description": "Nama untuk menunjukan pesan .alive",
+      "description": "Isi sesuai namamu untuk menunjukkan identitasmu",
       "required": true
     },
     "S_PACK_NAME": {
