@@ -38,7 +38,7 @@ DEF_UNAPPROVED_MSG = (
     "◄┈─╼━━━━━━━━━━━━━━━━━╾─┈╮\n"
     "ㅤ“**Selamat Datang Di Private Message.**”\n"
     "╭┈─╼━━━━━━━━━━━━━━━━━╾─┈╯\n"
-    "│__DILARANG MELAKUKAN SPAM ROOM CHAT {ALIVE_NAME}❗\n│\n"
+    "│**NO SPAM 😈❗\n│\n"
     f"{TEXT_PMPERMIT}│\n"
     "╰┈────────────────────┈─➤\n"
     "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▰▱\n"
