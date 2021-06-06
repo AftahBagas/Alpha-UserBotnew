@@ -33,8 +33,8 @@ async def amireallysalken(salken):
     await salken.edit("Cuma Mau Bilang")
     await asyncio.sleep(2)
     output = (
-        f"`Namaku {DEFAULTUSER} Tinggal Di {USER_AGE}`\n"
-        f"`Salam Kenal :)`")
+        f"`Namaku {DEFAULTUSER} Umur {USER_AGE}`\n"
+        f"     `Tunggal Di {COUNTRY} Salam Kenal :)`")
 
 CMD_HELP.update({
     "salken":
