@@ -13,17 +13,11 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 modules = CMD_HELP
 
 
-@ register(outgoing=True, pattern=r"^\.(?:salken)\s?(.)?")
-async def amireallysalken(salken):
-    await bot.get_me()
-    await get_readable_time((time.time() - StartTime))
-    await salken.edit("Halo Semuanya :)")
-    await asyncio.sleep(2)
-    await salken.edit("Cuma Mau Bilang")
-    await asyncio.sleep(2)
-    output = (
-        f"`Namaku {DEFAULTUSER} Umur {USER_AGE}`\n"
-        f"     `Tunggal Di {COUNTRY} Salam Kenal :)`")
+@register(outgoing=True, pattern="^.kickme$")
+async def kickme(leave):
+    """ Basically it's .kickme command """
+    await leave.edit("`Alpha Telah Keluar Grup ツ`")
+    await leave.client.kick_participant(leave.chat_id, 'me')
 
 CMD_HELP.update({
     "salken":
