@@ -152,7 +152,7 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 ALIVE_TEKS_KUSTOM = os.environ.get("ALIVE_TEKS_KUSTOM", "Hey I am Alive.")
 
 # Untuk Perintah .alpha
-PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", "🚫")
+PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", None)
 
 # Untuk Perintah .salken
 USER_AGE = os.environ.get("USER_AGE", None)
