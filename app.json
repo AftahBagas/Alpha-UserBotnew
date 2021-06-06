@@ -61,7 +61,7 @@
     },
     "COUNTRY": {
       "description": "isi tempat tinggalmu untuk perintah .salken",
-      "value": "tempat tinggalmu",
+      "value": "isi tempat tinggalmu dengan benar",
       "required": true
     },
     "PM_AUTO_BAN": {
