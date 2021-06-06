@@ -1,6 +1,5 @@
 from time import sleep
 from userbot.events import register
-from userbot import CMD_HELP, USER_AGE, ALIVE_NAME, COUNTRY
 
 
 @register(outgoing=True, pattern='^.alfareza(?: |$)(.*)')
