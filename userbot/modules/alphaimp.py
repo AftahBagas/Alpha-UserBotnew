@@ -1,9 +1,4 @@
-# Alvin Gans
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-#
+# Alfareza
 
 from io import BytesIO
 from random import choice, randint
@@ -93,7 +88,7 @@ async def bruh(message, user):
 
 CMD_HELP.update(
     {
-        "amongus": "`.imp`\
-    \nUsage: Kirimkan gambar seorang impostor Among US dengan kalimat dari Anda."
+        "amongus": "📚 **Cmd** : `.imp`\
+    \n📄 **Descriptions** : Kirimkan gambar seorang impostor Among US dengan kalimat dari Anda."
     }
 )
