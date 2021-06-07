@@ -88,12 +88,12 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "animasi3":
-    "🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.alfa`\
-    \n↳ : owner repo\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.slm` dan `.ikut`\
-    \n↳ : Coba aja hehehe.\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.idiot`\
-    \n↳ : u're ediot xixixi.\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `kosong`\
-    \n↳ : Tunggu update selanjutnya kawan."
+    "📚 **Cmd** : `.alfa`\
+    \n📄 **Descriptions** : owner repo\
+    \n\n📚 **Cmd** : `.slm` dan `.ikut`\
+    \n📄 **Descriptions** : Coba aja hehehe.\
+    \n\n📚 **Cmd** : `.idiot`\
+    \n📄 **Descriptions** : u're ediot xixixi.\
+    \n\n📚 **Cmd** : `kosong`\
+    \n📄 **Descriptions** : Tunggu update selanjutnya kawan."
 })
