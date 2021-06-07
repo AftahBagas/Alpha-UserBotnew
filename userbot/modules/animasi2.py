@@ -267,7 +267,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern='^!yang(?: |$)(.*)')
+@register(outgoing=True, pattern='^.yang(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -499,26 +499,26 @@ async def koc(e):
 
 CMD_HELP.update({
     "alphakata-kata":
-    "`.yang`\
-    \nUsage: apa kabarmu sayang.\
-    \n\n`.sayang`\
-    \nUsage: untuk jadi buaya.\
-    \n\n`buaya`\
-    \nUsage:contoh inisial buaya.\
-    \n\n`melamar`\
-    \nUsage:kata kata dilan.\
-    \n\n`wkwk`\
-    \nUsage:Tertawa emot.\
-    \n\n`razia`\
-    \nUsage:ada razia😂.\
-    \n\n`.sad`\
-    \nUsage:sedihnya oalah.\
-    \n\n`.galau`\
-    \nUsage:galau lah situ.\
-    \n\n`.mantan`\
-    \nUsage:teringat mantan.\
-    \n\n`.raziamasker.`\
-    \nUsage:Razia masker.\
-    \n\n`.ngabuburit`.\
-    \nUsage:Ngabuburit."
+    "📚 **Cmd** : `.yang`\
+    \n📄 **Descriptions** : apa kabarmu sayang.\
+    \n\n📚 **Cmd** : `.sayang`\
+    \n📄 **Descriptions** : untuk jadi buaya.\
+    \n\n📚 **Cmd** : .`buaya`\
+    \n📄 **Descriptions** : contoh inisial buaya.\
+    \n\n📚 **Cmd** : .`melamar`\
+    \n📄 **Descriptions** : kata kata dilan.\
+    \n\n📚 **Cmd** : .`wkwk`\
+    \n📄 **Descriptions** : Tertawa emot.\
+    \n\n📚 **Cmd** : .`razia`\
+    \n📄 **Descriptions** :bada razia😂.\
+    \n\n📚 **Cmd** : `.sad`\
+    \n📄 **Descriptions** : sedihnya oalah.\
+    \n\n📚 **Cmd** : `.galau`\
+    \n📄 **Descriptions** : galau lah situ.\
+    \n\n📚 **Cmd** : `.mantan`\
+    \n📄 **Descriptions** : teringat mantan.\
+    \n\n📚 **Cmd** : `.raziamasker.`\
+    \n📄 **Descriptions** : Razia masker.\
+    \n\n📚 **Cmd** : `.ngabuburit`.\
+    \n📄 **Descriptions** : Ngabuburit."
 })
