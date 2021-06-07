@@ -92,6 +92,5 @@ async def _(event):
         return await event.edit(str(e))
 
 
-CMD_HELP.update(
-    {"wordcloud": "📚 **Cmd** : `.wc`\n" "📄 **Descriptions** : membuat seni wordcloud dari media\n\n"}
-)
+CMD_HELP.update({"wordcloud": "📚 **Cmd** : `.wc`\n"
+                 "📄 **Descriptions** : membuat seni wordcloud dari media\n\n"})
