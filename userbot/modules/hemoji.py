@@ -1,3 +1,5 @@
+from userbot import CMD_HELP
+
 
 CMD_HELP.update({
     "hemoji":
