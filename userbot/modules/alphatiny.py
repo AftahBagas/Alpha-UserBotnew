@@ -82,5 +82,5 @@ async def _(event):
 # Yang Baca Hode
 # P o c o n g - U s e r b o t
 
-CMD_HELP.update({"tiny": "cmd: `.tiny`\
-    \nUsage: Untuk Memperkecil Sticker."})
+CMD_HELP.update({"tiny": "📚 **Cmd** : `.tiny`\
+    \n📄 **Descriptions** : Untuk Memperkecil Sticker."})
