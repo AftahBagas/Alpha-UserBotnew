@@ -1,4 +1,4 @@
-""" Userbot module salken for deafult user"""
+""" Userbot module Memes stikers for deafult user"""
 
 import asyncio
 
