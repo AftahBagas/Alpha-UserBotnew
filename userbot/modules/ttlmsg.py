@@ -4,8 +4,8 @@ from userbot.events import register
 from userbot import CMD_HELP, bot
 
 
-@register(outgoing=True, pattern=r"^\.tmsg (.*)")
-async def _(event):
+@register(outgoing=True, pattern='^.ttlmsg(?: |$)(.*)')
+async def eventriter(event):
     k = await event.get_reply_message()
     if k:
         a = await bot.get_messages(event.chat_id, 0, from_user=k.sender_id)
