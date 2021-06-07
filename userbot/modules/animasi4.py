@@ -9,11 +9,11 @@ from userbot.events import register
 # Enjoy
 
 
-@register(outgoing=True, pattern='^.masuk(?: |$)(.*)')
+@register(outgoing=True, pattern='^.masok(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
-    await typew.edit("**masuk**")
+    await typew.edit("**masok**")
     sleep(1)
     await typew.edit("pak")
     sleep(1)
@@ -141,28 +141,28 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("⚡")
     sleep(2)
-    await typew.edit("**⚡𝘼𝙡𝙥𝙝𝙖 𝙐𝙨𝙚𝙧𝙗𝙤𝙩⚡**\n\n [Tekan sini](https://github.com/AftahBagas/Alpha_)")
+    await typew.edit("**😈Alpha Userbot😈**\n\n [Tekan sini](https://github.com/AftahBagas/Alpha_)")
 
 # Ini Tercipta Hasil Gabut Doang
 
 CMD_HELP.update({
     "animasi4":
-    "🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .masuk\
-    \nUsage: **cek aja males jelasin**\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .tele\
-    \nUsage: **siklus player tele\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .bacot\
-    \nUsage: **cek aja**\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .alfabot\
-    \nUsage: **cek aja sendiri**\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .pesawat\
-    \nUsage: **pesawat oleng**\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .emot\
-    \nUsage: **jenis jenis emot**\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .kabar\
-    \nUsage: **Cek Aja dh sndri**\
-    \n\n🍁𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .linkk\
-    \nUsage: **kshsjwkhsgshsj.**"
+    "📚 **Cmd** : .masok\
+    \n📄 **Descriptions** : cek aja males jelasin\
+    \n\n📚 **Cmd** : .tele\
+    \n📄 **Descriptions** : siklus player tele\
+    \n\n📚 **Cmd** : .bacot\
+    \n📄 **Descriptions** : cek aja\
+    \n\n📚 **Cmd** : .alfabot\
+    \n📄 **Descriptions** : cek aja sendiri\
+    \n\n📚 **Cmd** : .pesawat\
+    \n📄 **Descriptions** : pesawat oleng\
+    \n\n📚 **Cmd** : .emot\
+    \n📄 **Descriptions** : jenis jenis emot\
+    \n\n📚 **Cmd** : .kabar\
+    \n📄 **Descriptions** : Cek Aja dh sndri\
+    \n\n📚 **Cmd** : .linkk\
+    \n📄 **Descriptions** : kshsjwkhsgshsj."
 
 
 })
