@@ -4,7 +4,6 @@ from userbot.events import register
 from userbot import bot, CMD_HELP
 
 
-
 @register(outgoing=True, pattern="^.ig ?(.*)")
 async def insta(event):
     if event.fwd_from:
