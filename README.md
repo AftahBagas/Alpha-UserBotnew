@@ -25,22 +25,22 @@
 
 
 ### Repo Alpha
-Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/kanjengIngsun) Dari Berbagai Repo Userbot Github 
+Repo Yang Dibuat Oleh [Kanjeng Ingsun](https://t.me/kanjengIngsun) 
 
 ## Bagaimana Cara Deploy?
 
 ```
 * **CARA DEPLOY** 🔧
 
-➠ Pertama Dapatkan API_KE & API_HASH Di My.Telegram.org (Wajib)
+➦ Pertama Dapatkan API_KE & API_HASH Di My.Telegram.org (Wajib)
 
-➠ Dapatkan String Session Klik Tombol Dibawah
+➦ Dapatkan String Session Klik Tombol Dibawah
 
-➠ Next Tekan Tombol Deploy Dibawah
+➦ Next Tekan Tombol Deploy Dibawah
 
-➠ Isi Datanya Lalu Tekan Deploy Lagi
+➦ Isi Datanya Lalu Tekan Deploy Lagi
 
-➠ Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy 
+➦ Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy 
 ```
 
 
