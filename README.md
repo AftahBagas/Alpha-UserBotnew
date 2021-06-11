@@ -61,6 +61,6 @@ Deploy to Heroku
 
 ## Groups Support
 
-Join [Userbot Support](https://t.me/petercord) Untuk Mengetahui Update Selanjutnya.
+Join [Userbot Support](https://t.me/TeamSquadUserbotSupport) Untuk Mengetahui Update Selanjutnya.
 
 
