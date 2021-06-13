@@ -107,7 +107,7 @@ async def pingme(pong):
                     f"├🏓 Ping "
                     f"• `%sms` \n"
                     f"├⏱️ Uptime "
-                    f"• `{uptime}` \n" 
+                    f"• `{uptime}` \n"
                     f"╰──────────── " % (duration))
 
 
