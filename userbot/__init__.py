@@ -393,7 +393,7 @@ def paginate_help(page_number, loaded_modules, prefix):
                     "<<", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    '-Cʟᴏsᴇ-', data="{}_close({})".format(prefix, modulo_page)
+                    '-Cʟᴏsᴇ-', b'close
                 ),
                 custom.Button.inline(
                     ">>", data="{}_next({})".format(prefix, modulo_page)
