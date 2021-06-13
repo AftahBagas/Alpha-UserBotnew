@@ -486,8 +486,7 @@ with bot:
                 await event.edit(
                     link_preview=True,
                     buttons=[
-                        custom.Button.inline(
-    "Menu Telah Ditutup ", data="open")
+                        custom.Button.inline("Menu Telah Ditutup ", data="open")
                     ]
                 )
             else:
