@@ -416,7 +416,6 @@ with bot:
         uid = me.id
         logo = "https://t.me/AlphaZPlugins/11"
 
-        
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             sender = await event.message.get_sender()
@@ -492,7 +491,6 @@ with bot:
                 reply_pop_up_alert = f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:  # pylint:disable=E0602
