@@ -1,6 +1,8 @@
 wheel
 aiohttp
+aiohttp[speedups]>=3.5.4
 aiofiles
+moviepy
 aria2p
 async_generator
 cowpy
