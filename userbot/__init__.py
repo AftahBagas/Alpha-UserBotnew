@@ -487,7 +487,7 @@ with bot:
             )
         )
         async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid:  
+            if event.query.user_id == uid:
                 # Alfareza
                 await event.edit(
                     link_preview=True,
