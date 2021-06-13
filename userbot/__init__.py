@@ -490,8 +490,8 @@ with bot:
             if event.query.user_id == uid:
                 # Alfareza
                 await event.edit(
-                    link_preview=True,
-                    buttons=[
+                    link_preview = True,
+                    buttons = [
                         Button.inline("Open Menu Again ", data="open")
                     ]
                 )
