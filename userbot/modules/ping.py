@@ -54,11 +54,24 @@ async def pingme(pong):
     await pong.edit("**Pong!!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**Alpha😈**\n"
-                    f"**➦ Ping** • "
+    await pong.editstart = datetime.now()
+    await pong.edit("**.➠**")
+    await pong.edit("**..➠**")
+    await pong.edit("**...➠**")
+    await pong.edit("**....➠**")
+    await pong.edit("**.....➠**")
+    await pong.edit("**......➠**")
+    await pong.edit("**.......➠**")
+    await pong.edit("**PING**")
+    await pong.edit("**⚡**")
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    await pong.edit(f"┍《 **𝘼 𝙇 𝙋 𝙃 𝘼** 》━─\n"
+                    f"┟➠  __Ping:__ "
                     f"`%sms` \n"
-                    f"**➦ Uptime** • "
-                    f"`{uptime}` \n" % (duration))
+                    f"┞➠ __Uptime:__ "
+                    f"`{uptime}` \n"
+                    f"╰━─━───────" % (duration))
 
 
 CMD_HELP.update(
