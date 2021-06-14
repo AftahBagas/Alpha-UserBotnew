@@ -4,10 +4,10 @@ from userbot.events import register
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern=".yt(au|vi|src|sv) (.*)", disable_errors=True)
+@register(outgoing=True, pattern=".yt(a|v|sa|sv) (.*)", disable_errors=True)
 async def download_from_youtube_(event):
     opt = event.pattern_match.group(1).lower()
-    if opt == "au":
+    if opt == "a":
         ytd = YoutubeDL(
             {
                 "format": "bestaudio",
@@ -26,7 +26,7 @@ async def download_from_youtube_(event):
         except BaseException:
             return await event.edit("`Give A Direct Audio Link To Download`")
         xx = await event.edit(get_string("com_1"))
-    elif opt == "vi":
+    elif opt == "v":
         ytd = YoutubeDL(
             {
                 "format": "best",
@@ -45,7 +45,7 @@ async def download_from_youtube_(event):
         except BaseException:
             return await event.edit("`Give A Direct Video Link To Download`")
         xx = await event.edit(get_string("com_1"))
-    elif opt == "src":
+    elif opt == "sa":
         ytd = YoutubeDL(
             {
                 "format": "bestaudio",
