@@ -112,13 +112,10 @@ async def on_snip_delete(event):
 
 
 CMD_HELP.update(
-    {
-        "costum": "**📚Cmd** : `.costum` <nama> <data> atau membalas pesan dengan .costum <nama>\
+    {"costum": "**📚Cmd** : `.costum` <nama> <data> atau membalas pesan dengan .costum <nama>\
         \n📄 **Descriptions** : Menyimpan pesan costum (catatan global) dengan nama. (bisa dengan gambar, docs, dan stickers!)\
         \n\n📚 **Cmd** : `.costums`\
         \n📄 **Descriptions** : Mendapat semua costums yang disimpan.\
         \n\n📚 **Cmd** : `.delcostum` <nama_costum>\
         \n📄 **Descriptions** : Menghapus costum yang ditentukan.\
-    "
-    }
-)
+    "})
