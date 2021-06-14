@@ -90,11 +90,11 @@ async def download_from_youtube_(event):
 
 CMD_HELP.update({
     "youtube":
-    "📚 **Cmd** : `.ytau` <(youtube) link>\
+    "📚 **Cmd** : `.yta` <(youtube) link>\
    \n📄 **Descriptions** : Download audio from the link.\
-   \n\n📚 **Cmd** : `.ytvi <(youtube) link>`\
+   \n\n📚 **Cmd** : `.ytv <(youtube) link>`\
    \n📄 **Descriptions** : Download video  from the link.\
-   \n\n📚 **Cmd** : `.ytsrc <(youtube) search query>`\
+   \n\n📚 **Cmd** : `.ytsa <(youtube) search query>`\
    \n📄 **Descriptions** : Search and download audio from youtube.\
    \n\n📚 **Cmd** : `.ytsv <(youtube) search query>`\
    \n📄 **Descriptions** : Search and download video from youtube."
