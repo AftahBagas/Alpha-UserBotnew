@@ -414,23 +414,13 @@ with bot:
         dugmeler = CMD_HELP
         me = bot.get_me()
         uid = me.id
-        logo = "https://t.me/AlphaZPlugins/11"
 
-        @tgbot.on(events.NewMessage(pattern="/start"))
+        @ tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
-            sender = await event.message.get_sender()
-            text = (
-                f"Halo {sender.first_name}\nSaya Adalah Assistant Bot {ALIVE_NAME}\n\n [REPO](https://github.com/AftahBagas/Alpha-Userbot) ...")
-            await tgbot.send_file(event.chat_id, logo, caption=text,
-                                  buttons=[
-                                      [
-                                          custom.Button.url(
-                                              text=" GROUP SUPPORT ",
-                                              url="https://t.me/TeamSquadUserbotSupport"
-                                          )
-                                      ]
-                                  ]
-                                  )
+            if event.message.from_id != uid:
+                await event.reply(f"👋🏻 Halo Kamu Yang disana Saya adalah bot assistant dari {ALIVE_NAME} Buat Alphamu Sendiri Dengan  [Tekan Disini](https://github.com/AftahBagas/Alpha-Userbot.git)")
+            else:
+                await event.reply(f"`Hai {ALIVE_NAME}\n\nApa Kabarmu?`")
 
         @ tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
