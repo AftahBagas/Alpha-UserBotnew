@@ -38,6 +38,6 @@ async def _(e):
 CMD_HELP.update(
     {
         "vcplugin": "📚 **Cmd** : `.vcinvite`"
-        "\n•📄 **Descriptions** : Mengundang Seseorang Kedalam VCG"
+        "\n📄 **Descriptions** : Mengundang Seseorang Kedalam VCG"
     }
 )
