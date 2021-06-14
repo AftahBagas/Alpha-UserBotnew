@@ -1,6 +1,5 @@
 """Userbot module for keeping control who PM you."""
 
-import os
 from sqlalchemy.exc import IntegrityError
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
@@ -15,36 +14,23 @@ from userbot import (
     LOGS,
     PM_AUTO_BAN,
     ALIVE_NAME,
-    PMPERMIT_TEXT,
 )
+
 from userbot.events import register
 
-
-PMPERMIT_LOGO = os.environ.get("PMPERMIT_LOGO", None)
-if PMPERMIT_LOGO is None:
-    WARN_PIC = "https://t.me/AlphaZPlugins/9"
-else:
-    WARN_PIC = PMPERMIT_LOGO
-
-COUNT_PM = {}
-LASTMSG = {}
-
 # ========================= CONSTANTS ============================
-
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-TEXT_PMPERMIT = str(
-    PMPERMIT_TEXT) if PMPERMIT_TEXT else f"│Karena Saya Akan Otomatis Memblokir\n│Anda, Tunggu Sampai {DEFAULTUSER}\n│Menerima Pesan Anda, Terimakasih.\n"
+
 DEF_UNAPPROVED_MSG = (
-    "◄┈─╼━━━━━━━━━━━━━━━━━╾─┈╮\n"
-    "ㅤ“**Selamat Datang Di Private Message.**”\n"
-    "╭┈─╼━━━━━━━━━━━━━━━━━╾─┈╯\n"
-    "│**NO SPAM 😈❗\n│\n"
-    f"{TEXT_PMPERMIT}│\n"
-    "╰┈────────────────────┈─➤\n"
-    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▰▱\n"
-    "┣[○› **PESAN OTOMATIS**\n"
-    f"┣[○› **BY ALPHA USERBOT 😈**\n"
-    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▱")
+    "╭┈──────────────────────\n"
+    "│“𝙎𝙚𝙡𝙖𝙢𝙖𝙩 𝘿𝙖𝙩𝙖𝙣𝙜 𝘿𝙞 𝙋𝙧𝙞𝙫𝙖𝙩𝙚 𝙈𝙚𝙨𝙨𝙖𝙜𝙚 {DEAFULTUSER}”\n"
+    "├┈────────────────────\n"
+    "│❗𝗗𝗜𝗟𝗔𝗥𝗔𝗡𝗚 𝗠𝗘𝗟𝗔𝗞𝗨𝗞𝗔𝗡 𝗦𝗣𝗔𝗠❗\n│\n"
+    f"│𝘒𝘢𝘳𝘦𝘯𝘢 𝘚𝘢𝘺𝘢 𝘈𝘬𝘢𝘯 𝘖𝘵𝘰𝘮𝘢𝘵𝘪𝘴 𝘔𝘦𝘮𝘣𝘭𝘰𝘬𝘪𝘳\n│𝘈𝘯𝘥𝘢, 𝘛𝘶𝘯𝘨𝘨𝘶 𝘚𝘢𝘮𝘱𝘢𝘪 {DEFAULTUSER}\n│𝘔𝘦𝘯𝘦𝘳𝘪𝘮𝘢 𝘗𝘦𝘴𝘢𝘯 𝘈𝘯𝘥𝘢, 𝘛𝘦𝘳𝘪𝘮𝘢𝘬𝘢𝘴𝘪𝘩.\n"
+    "├┈──────────────────────\n"
+    "│ ➥ `PESAN OTOMATIS`\n"
+    f"│ ➥ `BY` Alpha UserBot\n"
+    "╰┈────────────────")
 
 # =================================================================
 
@@ -408,11 +394,11 @@ CMD_HELP.update(
         \n  📄 **Descriptions : **Menghidupkan notifikasi pesan yang belum diterima.\
         \n\n  📚 **Cmd :** `.notifon`\
         \n  📄 **Descriptions : **Menghidupkan notifikasi pesan yang belum diterima.\
-        \n\n  📚 **Cmd :** `.set pmpermit` <balas ke pesan>\
+        \n\n  📚 **Cmd :** `.set pm_msg` <balas ke pesan>\
         \n  📄 **Descriptions : **Menyetel Pesan Pribadimu untuk orang yang pesannya belum diterima.\
-        \n\n  📚 **Cmd :** `.get pmpermit`\
+        \n\n  📚 **Cmd :** `.get pm_msg`\
         \n  📄 **Descriptions : **Mendapatkan Custom pesan PM mu.\
-        \n\n  📚 **Cmd :** `.reset pmpermit`\
+        \n\n  📚 **Cmd :** `.reset pm_msg`\
         \n  📄 **Descriptions : **Menghapus pesan PM ke default.\
         \n\n  ❕ **Pesan Pribadi yang belum diterima saat ini tidak dapat disetel ke teks format kaya bold, underline, link, dll. Pesan akan terkirim normal saja**\
     "
