@@ -1,5 +1,5 @@
 # Alpha
-FROM biansepang/weebproject:buster
+FROM AftahBagas/Alpha-Userbot:buster
 
 # Dockerfile
 # Alpha
