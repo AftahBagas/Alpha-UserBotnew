@@ -13,7 +13,7 @@ async def usit(e):
     await e.edit(
         f"**Hai Pengguna {DEFAULTUSER} Kalau Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
         "\n[Telegram](t.me/Kanjengingsun)"
-        "\n[Repo](https://github.com/Aftahbagas/Alpha_)"
+        "\n[Repo](https://github.com/Aftahbagas/Alpha-Userbot)"
         "\n[Instagram](Instagram.com/Aftahbagas)")
 
 
@@ -21,13 +21,13 @@ async def usit(e):
 async def var(m):
     await m.edit(
         f"**Disini Daftar Vars Dari {DEFAULTUSER}:**\n"
-        "\n[DAFTAR VARS](https://raw.githubusercontent.com/Aftahbagas/Alpha_/Alpha/varshelper.txt)")
+        "\n[DAFTAR VARS](https://raw.githubusercontent.com/Aftahbagas/Alpha-Userbot/Alpha/varshelper.txt)")
 
 
 CMD_HELP.update({
     "Alphahelper":
-    "`.alphahelp`\
+    "`.lhelp`\
 \nPenjelasan: Bantuan Untuk Alpha.\
-\n`.lordvar`\
+\n`.vars`\
 \nPenjelasan: Untuk Melihat Beberapa Daftar Vars."
 })
