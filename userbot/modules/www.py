@@ -94,7 +94,7 @@ async def pingme(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@ register(outgoing=True, pattern="^.ping$")
+@ register(outgoing=True, pattern="^.aping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
