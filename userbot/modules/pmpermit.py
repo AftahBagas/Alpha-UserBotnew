@@ -23,7 +23,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
     f"__No Spam !!__\n"
-    f"__Dilarang Melakukan Spam Karena Bot Akan Otomatis Memblokir Anda, Tunggu Sampai {DEAFULTUSER} Membaca Pesan Anda__\n\n"
+    f"__Dilarang Melakukan Spam Karena Bot Akan Otomatis Memblokir Anda, Tunggu Sampai {DEFAULTUSER} Membaca Pesan Anda__\n\n"
     f"__Antispam By Alpha Userbot__")
 
 # =================================================================
