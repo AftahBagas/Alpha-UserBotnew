@@ -81,7 +81,6 @@ async def pingme(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-
 @alpha.on(admin_cmd("xping ?(.*)"))
 @alpha.on(sudo_cmd(pattern="xping ?(.*)", allow_sudo=True))
 async def pingme(pong):
