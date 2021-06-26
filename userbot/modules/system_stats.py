@@ -53,7 +53,7 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(outgoing=True, pattern=f"^\{CMD_TRIGGER}spc")
+@register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}spc")
 async def psu(event):
     uname = platform.uname()
     softw = "**Informasi Sistem**\n"
@@ -111,7 +111,7 @@ def get_size(bytes, suffix="B"):
         bytes /= factor
 
 
-@register(outgoing=True, pattern=f"^\{CMD_TRIGGER}sysd$")
+@register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}sysd$")
 async def sysdetails(sysd):
     if not sysd.text[0].isalpha() and sysd.text[0] not in ("/", "#", "@", "!"):
         try:
@@ -170,7 +170,7 @@ async def bot_ver(event):
         )
 
 
-@register(outgoing=True, pattern=f"^\{CMD_TRIGGER}pip(?: |$)(.*)")
+@register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}pip(?: |$)(.*)")
 async def pipcheck(pip):
     if pip.text[0].isalpha() or pip.text[0] in ("/", "#", "@", "!"):
         return
@@ -218,7 +218,7 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=f"^\{CMD_TRIGGSR}(?:alpha|alphaon)\s?(.)?")
+@register(outgoing=True, pattern=f"^\\{CMD_TRIGGSR}(?:alpha|alphaon)\\s?(.)?")
 async def amireallyalive(alive):
     await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -257,7 +257,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@ register(outgoing=True, pattern=f"^\{CMD_TRIGGER}(?:xalive|xon)\s?(.)?")
+@ register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}(?:xalive|xon)\\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -294,7 +294,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@ register(outgoing=True, pattern=f"^\{CMD_TRIGGER}(?:alive|on)\s?(.)?")
+@ register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}(?:alive|on)\\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -347,7 +347,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@ register(outgoing=True, pattern=f"^\{CMD_TRIGGER}aliveu")
+@ register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}aliveu")
 async def amireallyaliveuser(username):
     message = username.text
     output = ".aliveu [new user without brackets] nor can it be empty"
@@ -359,7 +359,7 @@ async def amireallyaliveuser(username):
     await username.edit("`" f"{output}" "`")
 
 
-@ register(outgoing=True, pattern=f"^\{CMD_TRIGGER}resetalive$")
+@ register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}resetalive$")
 async def amireallyalivereset(ureset):
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
