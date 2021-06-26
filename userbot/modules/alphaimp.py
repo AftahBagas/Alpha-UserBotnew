@@ -88,7 +88,7 @@ async def bruh(message, user):
 
 CMD_HELP.update(
     {
-        "amongus": "📚 **Cmd** : `.imp`\
+        "s amongus": "📚 **Cmd** : `.imp`\
     \n📄 **Descriptions** : Kirimkan gambar seorang impostor Among US dengan kalimat dari Anda."
     }
 )
