@@ -3,7 +3,7 @@ from userbot.cmdhelp import CmdHelp
 
 from userbot import register
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Hell User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Alpha User"
 
 
 @register(outgoing=True, pattern="^.imp$")
