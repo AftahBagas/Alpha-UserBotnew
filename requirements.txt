@@ -102,3 +102,13 @@ pendulum
 scikit-image
 pendulum
 lyrics_extractor
+datetime
+importlib
+inspect
+logging
+math
+time
+sys
+os
+re
+pathlib
