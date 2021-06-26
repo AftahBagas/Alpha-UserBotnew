@@ -130,8 +130,8 @@ async def _(event):
         )
 
 
-CmdHelp("amongus").add_command(
-  'imp', 'Name/username', 'Finds the imposter with sticker. Imposter-True'
-).add_command(
-  'timp', 'name/username', 'Finds imposter without sticker(Text only). Imposter - True'
-).add()
+CmdHelp("amongus").add_command('imp',
+                               'Name/username',
+                               'Finds the imposter with sticker. Imposter-True').add_command('timp',
+                                                                                             'name/username',
+                                                                                             'Finds imposter without sticker(Text only). Imposter - True').add()
