@@ -11,7 +11,6 @@ from datetime import datetime
 from speedtest import Speedtest
 from userbot import CMD_HELP, StartTime, ALIVE_NAME
 from userbot.events import register
-from userbot.utils import admin_cmd edit_or_reply, sudo_cmd
 import time
 
 
@@ -81,8 +80,7 @@ async def pingme(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@alpha.on(admin_cmd("xping ?(.*)"))
-@alpha.on(sudo_cmd(pattern="xping ?(.*)", allow_sudo=True))
+@ register(outgoing=True, pattern="^.xping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
