@@ -58,6 +58,11 @@
       "value": "33273f18-4a0d-4a76-8d78-a16faa002375",
       "required": true
     },
+    "CMD_TRIGGER": {
+      "description": "Perintah Untuk Commandmu",
+      "value": ".",
+      "required": true
+    },
     "COUNTRY": {
       "description": "isi tempat tinggalmu dengan benar untuk perintah .salken",
       "required": true
