@@ -103,7 +103,6 @@ scikit-image
 pendulum
 lyrics_extractor
 datetime
-logging
 math
 time
 sys
