@@ -18,7 +18,9 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
             buttons = paginate_help(0, CMD_HELP, "helpme")
             result = builder.article(
                 "© Userbot Help",
-                text="{}\nDATA IN MY MASTER'S SERVER: {}".format(query, len(CMD_HELP)),
+                text="{}\nDATA IN MY MASTER'S SERVER: {}".format(
+                    query,
+                    len(CMD_HELP)),
                 buttons=buttons,
                 link_preview=False,
             )
@@ -26,13 +28,15 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-            data=re.compile(b"helpme_next\((.+?)\)")
+            data=re.compile(b"helpme_next\\((.+?)\\)")
         )
     )
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:  # pylint:disable=E0602
-            current_page_number = int(event.data_match.group(1).decode("UTF-8"))
-            buttons = paginate_help(current_page_number + 1, CMD_HELP, "helpme")
+            current_page_number = int(
+                event.data_match.group(1).decode("UTF-8"))
+            buttons = paginate_help(
+                current_page_number + 1, CMD_HELP, "helpme")
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
@@ -41,12 +45,13 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-            data=re.compile(b"helpme_prev\((.+?)\)")
+            data=re.compile(b"helpme_prev\\((.+?)\\)")
         )
     )
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:  # pylint:disable=E0602
-            current_page_number = int(event.data_match.group(1).decode("UTF-8"))
+            current_page_number = int(
+                event.data_match.group(1).decode("UTF-8"))
             buttons = paginate_help(
                 current_page_number - 1, CMD_HELP, "helpme"  # pylint:disable=E0602
             )
@@ -75,7 +80,7 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
             for i in CMD_HELP[plugin_name]:
                 help_string += i
                 help_string += "\n"
-        except:
+        except BaseException:
             pass
         if help_string is "":
             reply_pop_up_alert = "{} is useless".format(plugin_name)
@@ -87,8 +92,9 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
         )
         try:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-        except:
-            halps = "Do .help {} to get the list of commands.".format(plugin_name)
+        except BaseException:
+            halps = "Do .help {} to get the list of commands.".format(
+                plugin_name)
             await event.answer(halps, cache_time=0, alert=True)
 
 
@@ -115,7 +121,7 @@ def paginate_help(page_number, loaded_plugins, prefix):
     modulo_page = page_number % max_num_pages
     if len(pairs) > number_of_rows:
         pairs = pairs[
-            modulo_page * number_of_rows : number_of_rows * (modulo_page + 1)
+            modulo_page * number_of_rows: number_of_rows * (modulo_page + 1)
         ] + [
             (
                 custom.Button.inline(
