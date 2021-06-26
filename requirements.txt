@@ -104,7 +104,6 @@ pendulum
 lyrics_extractor
 datetime
 importlib
-inspect
 logging
 math
 time
