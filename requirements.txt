@@ -4,7 +4,6 @@ aiohttp[speedups]>=3.5.4
 aiofiles
 moviepy
 aria2p
-random
 async_generator
 cowpy
 psutil
