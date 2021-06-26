@@ -166,6 +166,9 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "😈")
 
+# Untuk Commandmu
+CMD_TRIGGER = os.environ.get("CMD_TRIGGER", ".")
+
 # Custom Emoji Cmd .helpme
 HELP_EMOJI = os.environ.get("HELP_EMOJI", "🔸")
 
@@ -346,7 +349,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```(Alpha Berhasil Diaktifkan)```")
+    await bot.send_message(BOTLOG_CHATID, "```Process exited with status 1 😈```")
     return
 
 with bot:
