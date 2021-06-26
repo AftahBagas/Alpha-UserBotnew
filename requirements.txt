@@ -103,9 +103,3 @@ scikit-image
 pendulum
 lyrics_extractor
 datetime
-math
-time
-sys
-os
-re
-pathlib
