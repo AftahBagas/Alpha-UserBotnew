@@ -149,7 +149,9 @@ ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "False"))
 ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 
 # Youtube API key
-YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "AIzaSyAUR8sXyLqfmG_LQm1jz3jp97mN-cqtGzo")
+YOUTUBE_API_KEY = os.environ.get(
+    "YOUTUBE_API_KEY",
+    "AIzaSyAUR8sXyLqfmG_LQm1jz3jp97mN-cqtGzo")
 
 # Untuk Perintah .alpha
 ALIVE_TEKS_KUSTOM = os.environ.get("ALIVE_TEKS_KUSTOM", "Hey I am Alive.")
@@ -238,7 +240,9 @@ if G_PHOTOS_AUTH_TOKEN_ID:
     G_PHOTOS_AUTH_TOKEN_ID = int(G_PHOTOS_AUTH_TOKEN_ID)
 
 # Genius lyrics  API
-GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", "qHXXZn7DOfVocotMFgTSpMnh-aUOQpoJdhLJ4-VreXHp-xvmxlmLpq5v45cyC71T")
+GENIUS = os.environ.get(
+    "GENIUS_ACCESS_TOKEN",
+    "qHXXZn7DOfVocotMFgTSpMnh-aUOQpoJdhLJ4-VreXHp-xvmxlmLpq5v45cyC71T")
 
 # IMG Stuff
 IMG_LIMIT = os.environ.get("IMG_LIMIT") or None
@@ -246,7 +250,9 @@ CMD_HELP = {}
 CMD_HELP_BOT = {}
 
 # Quotes API Token
-QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", "33273f18-4a0d-4a76-8d78-a16faa002375")
+QUOTES_API_TOKEN = os.environ.get(
+    "QUOTES_API_TOKEN",
+    "33273f18-4a0d-4a76-8d78-a16faa002375")
 
 # Wolfram Alpha API
 WOLFRAM_ID = os.environ.get("WOLFRAM_ID") or None
