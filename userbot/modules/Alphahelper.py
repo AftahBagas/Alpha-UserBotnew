@@ -1,5 +1,5 @@
 """ Userbot module for other small commands. """
-from userbot import CMD_HELP, ALIVE_NAME
+from userbot import ALIVE_NAME
 from userbot.events import alphabot
 
 from userbot.cmdhelp import CmdHelp
