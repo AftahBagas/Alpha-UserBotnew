@@ -1,9 +1,9 @@
 from time import sleep
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot.cmdhelp import CmdHelp
+from userbot.events import alphabot
 
 
-@register(outgoing=True, pattern='^.sadboy(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.sadboy(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
@@ -15,7 +15,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern='^.punten(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.punten(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n┻┳|―-∩`"
@@ -28,7 +28,7 @@ async def typewriter(typew):
                      "\n**Punten**")
 
 
-@register(outgoing=True, pattern='^.pantau(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.pantau(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n┻┳|―-∩`"
@@ -43,12 +43,12 @@ async def typewriter(typew):
 
 # Create by myself @localheart
 
-CMD_HELP.update({
-    "alpha":
-    "📚 **Cmd** : `.alpha`\
-    \n📄 **Descriptions** : alive bot.\
-    \n\n📚 **Cmd** : `.sadboy`\
-    \n📄 **Descriptions** : hiks\
-    \n\n📚 **Cmd** : `.punten` ; `.pantau`\
-    \n📄 **Descriptions** : coba aja."
-})
+CmdHelp('alpha').add_command(
+    'alpha', None, 'Logo Alive Alpha Userbot.'
+).add_command(
+    'sadboy', None, 'Curhatan Hati Sadboy.'
+).add_command(
+    'punten', None, 'Animasi Punten.'
+).add_command(
+    'pantau', None, 'Animasi Pantau.'
+).add()
