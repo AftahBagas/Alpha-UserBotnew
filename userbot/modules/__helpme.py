@@ -1,9 +1,9 @@
 
 from userbot import BOT_USERNAME
-from userbot.events import alphabot
+from userbot.events import register
 
 
-@alphabot(outgoing=True, pattern="^.helpme")
+@register(outgoing=True, pattern="^.helpme")
 async def yardim(event):
     bangreza = BOT_USERNAME
     if bangreza is not None:
