@@ -4,7 +4,6 @@ from userbot import PATTERNS, CMD_HELP, CMD_HELP_BOT
 
 class CmdHelp:
     """
-
     """
 
     FILE = ""
