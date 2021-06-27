@@ -16,7 +16,6 @@ import psutil
 
 from userbot import ALIVE_LOGO, ALIVE_TEKS_KUSTOM, ALIVE_NAME, CMD_TRIGGER, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, bot
 from userbot.events import alphabot
-from userbot.cmdhelp import CmdHelp
 
 
 # ================= CONSTANT =================
