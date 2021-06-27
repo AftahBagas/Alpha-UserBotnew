@@ -261,6 +261,5 @@ async def afk_on_pm(sender):
                     COUNT_MSG = COUNT_MSG + 1
 
 
-
 CmdHelp('afk').add_command('afk', '<alasan>',
                            'Menunjukan Kalo Anda Sedang Afk.').add()
