@@ -18,4 +18,4 @@ async def yardim(event):
         )
         await event.delete()
     else:
-        await event.edit(BOT["NO_BOT"])
+        await event.edit(["NO_BOT"])
