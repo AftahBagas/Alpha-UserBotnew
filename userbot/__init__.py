@@ -424,7 +424,7 @@ with bot:
             if not event.message.from_id == uid:
                 await event.reply(f"`👋🏻 Halo Kamu Yang disana Saya adalah bot assistant dari {ALIVE_NAME} Buat Userbotmu Sendiri Dengan` [Tekan Disini](https: // github.com / AftahBagas / Alpha - Userbot.git))
             else:
-                await event.reply(f"`Hai {ALIVE_NAME}\n\nApa Kabarmu?` )
+                await event.reply(f"`Hai {ALIVE_NAME}\n\nApa Kabarmu?`)
 
         @tgbot.on(InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
