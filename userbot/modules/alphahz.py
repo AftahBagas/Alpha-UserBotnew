@@ -1,14 +1,12 @@
-# Based Code by @adekmaulana
-# Improve by @aidilaryanto
-#
-#
+# Alfareza
 import os
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot.events import register
+from userbot.events import alphabot
 from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP
+from userbot.cmdhelp CmdHelp
 
 
-@register(outgoing=True, pattern=r"^.hz(:? |$)(.*)?")
+@alphabot(outgoing=True, pattern=r"^.hz(:? |$)(.*)?")
 async def _(hazmat):
     await hazmat.edit("`Lord Ingin Mengaktifkan Perintah Hazmat ヅ`")
     level = hazmat.pattern_match.group(2)
@@ -69,9 +67,6 @@ async def _(hazmat):
     return os.remove(downloaded_file_name)
 
 
-CMD_HELP.update(
-    {
-        "hazmat": ">`.hz` atau >`.hz [flip, x2, rotate (level), background (nomer), black]`"
-        "\nUsage: Balas ke gambar/sticker untuk menyesuaikan!"
-    }
-)
+CmdHelp('hazmat').add_command(
+    'hz', <file, ×2 rotate (level), blackground (nomor), black>, 'Balas ke gambar/stiker untuk menyesuaikan.'
+).add()
