@@ -1,9 +1,8 @@
-# Based Plugins
-# Ported for Lord-Userbot By liualvinas/Alvin
+# Alpha By Alfareza
 
 from telethon import events
-from userbot.events import register
-from userbot import CMD_HELP
+from userbot.events import alphabot
+from userbot.cmdhelp import CmdHelp
 
 PRINTABLE_ASCII = range(0x21, 0x7F)
 
@@ -18,7 +17,7 @@ def aesthetify(string):
         yield chr(c)
 
 
-@register(outgoing=True, pattern=r"^\.ae(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.ae(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -28,8 +27,6 @@ async def _(event):
     raise events.StopPropagation
 
 
-CMD_HELP.update({
-    "aeshtetic":
-    "`.ae <teks>`\
-    \nUsage: mengubah font teks"
-})
+CmdHelp('aestetik').add_command(
+    'ae', None, 'Mengubah Fonts text.'
+).add()
