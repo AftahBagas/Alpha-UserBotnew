@@ -51,7 +51,7 @@ async def _(event):
 CmdHelp('alphafun').add_command(
     '.xogame', None, 'Memainkan Game XO bersama temanmu .'
 ).add_command(
-    'mod', <nama app>, 'Dapatkan Aplikasi mod.'
+    'mod', < nama app >, 'Dapatkan Aplikasi mod.'
 ).add_command(
-    'wp', <texs><username/id>, 'Berikan pesan rahasia.'
+    'wp', < texs > <username/id >, 'Berikan pesan rahasia.'
 ).add()
