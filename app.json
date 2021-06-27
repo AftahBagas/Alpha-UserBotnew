@@ -53,14 +53,9 @@
       "value": "Isi id grup mu",
       "required": true
     },
-    "QUOTES_API_TOKEN": {
-      "description": "Dapatkan Token Dari http://antiddos.systems",
-      "value": "33273f18-4a0d-4a76-8d78-a16faa002375",
-      "required": true
-    },
     "CMD_TRIGGER": {
       "description": "Perintah Untuk Commandmu",
-      "value": ".",
+      "value": "!!",
       "required": true
     },
     "COUNTRY": {
@@ -70,21 +65,6 @@
     "PM_AUTO_BAN": {
       "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
       "value": "False",
-      "required": true
-    },
-    "YOUTUBE_API_KEY": {
-      "description": "YouTube Data API Key for .yt command. Get from https://console.cloud.google.com",
-      "value": "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg",
-      "required": true
-    },
-    "OCR_SPACE_API_KEY": {
-      "description": "OCR API Key for .ocr command. Get from https://ocr.space/ocrapi",
-      "value": "0c2078b99188957",
-      "required": true
-    },
-    "REM_BG_API_KEY": {
-      "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
-      "value": "GPLyodhzj3uY2fnJbSsnKek8",
       "required": true
     },
     "CLEAN_WELCOME": {
