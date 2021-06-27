@@ -10,14 +10,14 @@ from userbot import (  # noqa pylint: disable=unused-import isort:skip
     ALIVE_NAME,
     BOTLOG,
     BOTLOG_CHATID,
-    CMD_HELP,
     COUNT_MSG,
     ISAFK,
     PM_AUTO_BAN,
     USERS,
     bot,
 )
-from userbot.events import register
+from userbot.events import alphabot
+from userbot.cmdhelp import CmdHelp
 
 global USER_AFK
 global afk_time
@@ -131,7 +131,7 @@ async def on_afk(event):
             pass
 
 
-@register(outgoing=True, pattern="^.off(?: |$)(.*)",
+@alphabot(outgoing=True, pattern="^.off(?: |$)(.*)",
           disable_errors=True)  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
@@ -220,10 +220,6 @@ async def _(event):
             BOTLOG_CHATIDger.warn(str(e))
 
 
-CMD_HELP.update({
-    "off":
-    "📚 **Cmd** : `.off` [Alasan]\
-\n📄 **Descriptions** : Sama Seperti AFK, Lakukan ketika ingin OFF.\nSiapapun Yang Balas, Tag, Atau Chat Kamu \
-Mereka Akan Tau Alasan Kamu OFF.\n\nOFF Bisa Dilakukan Dan Dibatalkan Dimanapun.\
-"
-})
+
+CmdHelp('off').add_command('off', '<alasan>',
+                           'Sama Seperti Afk Ini Untuk Menunjukkan Anda Offline.').add()
