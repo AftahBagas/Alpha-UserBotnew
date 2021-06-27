@@ -18,6 +18,6 @@ async def salken(salken):
     await salken.edit(f"`Tinggal Di {COUNTRY} Salam Kenal :)`")
 
 
-CmdHelp('animasi2').add_command(
+CmdHelp('salken').add_command(
     'salken', None, 'Kata Kata Untuk Salken Dirimu.'
 ).add()
