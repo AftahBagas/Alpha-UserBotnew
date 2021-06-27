@@ -10,12 +10,12 @@ LANG = get_value("__helpme")
 # ████████████████████████████████ #
 
 
-@register(outgoing=True, pattern="^.helpmy")
+@register(outgoing=True, pattern="^.helpme")
 async def yardim(event):
-    tgbotusername = BOT_USERNAME
-    if tgbotusername is not None:
+    bangreza = BOT_USERNAME
+    if bangreza is not None:
         results = await event.client.inline_query(
-            tgbotusername,
+            bangreza,
             f"{BOT_USERNAME}"
         )
         await results[0].click(
