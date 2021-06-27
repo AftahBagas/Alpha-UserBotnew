@@ -30,7 +30,7 @@ Repo Yang Dibuat Oleh [Kanjeng Ingsun](https://t.me/kanjengIngsun)
 ## Bagaimana Cara Deploy?
 
 ```
-* **CARA DEPLOY** 🔧
+  🛠️ CARA DEPLOY 🛠️
 
 ➦ Pertama Dapatkan API_KE & API_HASH Di My.Telegram.org (Wajib)
 
