@@ -61,7 +61,7 @@ from userbot import (
 from userbot.events import alphabot
 from userbot.utils import chrome, googleimagesdownload, progress, options
 
-from userbot.cmdhelp import Cmdhelp
+from userbot.cmdhelp import CmdHelp
 
 CARBONLANG = "auto"
 TTS_LANG = "id"
