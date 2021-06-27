@@ -1,11 +1,10 @@
-# Based Plugins
-# Ported For Lord-Userbot By liualvinas/Alvin
-# If You Kang It Don't Delete / Warning!! Jangan Hapus Ini!!!
-from userbot import CMD_HELP, bot
-from userbot.events import register
+# Alfareza
+from userbot import bot
+from userbot.events import alphabot
+from userbot.cmdhelp import CmdHelp
 
 
-@register(outgoing=True, pattern=r"^\.xogame(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.xogame(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -17,10 +16,10 @@ async def _(event):
     await tap[0].click(event.chat_id)
     await event.delete()
 
-# Alvin Gans
+# Alfareza
 
 
-@register(outgoing=True, pattern=r"^\.wp(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.wp(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -32,10 +31,10 @@ async def _(event):
     await tap[0].click(event.chat_id)
     await event.delete()
 
-# Alvin Gans
+# Alfareza
 
 
-@register(outgoing=True, pattern=r"^\.mod(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.mod(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -47,13 +46,12 @@ async def _(event):
     await tap[0].click(event.chat_id)
     await event.delete()
 
-# Ported For Lord-Userbot By liualvinas/Alvin
+# Alfareza
 
-CMD_HELP.update({
-    "alphafun": "\
-`.xogame`\
-\nUsage: Mainkan game XO bersama temanmu.\
-\n\n`.mod <nama app>`\
-\nUsage: Dapatkan applikasi mod\
-\n\n`.wp <teks> <username/ID>`\
-\nUsage: Berikan pesan rahasia"})
+CmdHelp('alphafun').add_command(
+    '.xogame', None, 'Memainkan Game XO bersama temanmu .'
+).add_command(
+    'mod', <nama app>, 'Dapatkan Aplikasi mod.'
+).add_command(
+    'wp', <texs><username/id>, 'Berikan pesan rahasia.'
+).add()
