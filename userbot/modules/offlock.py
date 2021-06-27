@@ -268,8 +268,9 @@ async def type_afk_is_not_true(notafk):
         USERS = {}
         AFKREASON = None
 
-CMD_HELP.update({"offlock": "\n\n📚 **Cmd** :` .offlock`"
-                 "\n📄 **Descriptions** : Menetapkan Anda sebagai afk. Balas kepada siapa saja yang memberi tag/PM's "
-                 "Anda, memberi tahu mereka bahwa Anda AFK(karena)."
-                 "\n\n📚 **Cmd** :` .unoff`"
-                 "\n📄 **Descriptions** : Mematikan mode AFK anda"})
+
+CmdHelp('offlock').add_command('offlock', '<alasan>',
+                           'untuk mengunci off anda.'
+).add_command(
+    'unoff', None, 'untuk membuka offlock anda.'
+).add()
