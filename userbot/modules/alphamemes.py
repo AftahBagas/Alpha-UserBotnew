@@ -5,11 +5,13 @@ from telethon import events
 
 import asyncio
 
-from userbot.events import register
+from userbot.events import alphabot
 from userbot import CMD_HELP, bot, ALIVE_NAME
 from collections import deque
 from telethon.errors.rpcerrorlist import MessageIdInvalidError
 import random
+
+from userbot.cmdhelp import CmdHelp
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -54,7 +56,7 @@ async def _(event):
             await event.edit(animation_chars[i % 103])
 
 
-@register(outgoing=True, pattern="^.earth(?: |$)(.*)")
+@alphabot(outgoing=True, pattern="^.earth(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -458,7 +460,7 @@ async def _(event):
             await event.edit(animation_chars[i % 24])
 
 
-@register(outgoing=True, pattern="^.gangstar(?: |$)(.*)")
+@alphbaot(outgoing=True, pattern="^.gangstar(?: |$)(.*)")
 async def _(event):
     if not event.text[0].isalpha() and event.text[0] not in (
             "/", "#", "@", "!"):
@@ -870,7 +872,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@register(outgoing=True, pattern="^.plane(?: |$)(.*)")
+@alphabot(outgoing=True, pattern="^.plane(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -941,7 +943,7 @@ async def _(event):
             await event.edit(animation_chars[i % 19])
 
 
-@register(outgoing=True, pattern="^.dump(?: |$)(.*)")
+@alphabot(outgoing=True, pattern="^.dump(?: |$)(.*)")
 async def _(message):
     try:
         obj = message.pattern_match.group(1)
@@ -2492,7 +2494,7 @@ async def _(event):
             await event.edit(animation_chars[i % 103])
 
 
-@register(outgoing=True, pattern="^.gotm(?: |$)(.*)")
+@alphabot(outgoing=True, pattern="^.gotm(?: |$)(.*)")
 async def _(event):
 
     if event.fwd_from:
@@ -2715,7 +2717,7 @@ async def _(event):
         await event.edit("`\"I wish I was the monster you think I am!\"`")
 
 
-@register(outgoing=True, pattern="^.hp(?: |$)(.*)")
+@alphabot(outgoing=True, pattern="^.hp(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -2874,7 +2876,7 @@ async def _(event):
         await event.edit("**Accio**")
 
 
-@register(outgoing=True, pattern="^.suits(?: |$)(.*)")
+@alphabot(outgoing=True, pattern="^.suits(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -2967,7 +2969,7 @@ async def _(event):
         await event.edit("`\"Love is a terrifying thing\nIt’s not safe. Because when you love someone, you have to face the fact that you can lose them.\nSometimes life throws an unexpected wrench in your way. It might be that you’re in jeopardy of losing your career, your freedom, or worst of all, you might even find out that a loved one has died\nThese things make you realize how precious life is, how important every second we have on this earth is, and how important the people we care about are to us.\"`")
 
 
-@register(outgoing=True, pattern="^.kiss(?: |$)(.*)")
+@alphabot(outgoing=True, pattern="^.kiss(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
