@@ -243,12 +243,16 @@ GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", None)
 # IMG Stuff
 IMG_LIMIT = os.environ.get("IMG_LIMIT") or None
 CMD_HELP = {}
+CMD_HELP_BOT = {}
 
 # Quotes API Token
 QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
 
 # Wolfram Alpha API
 WOLFRAM_ID = os.environ.get("WOLFRAM_ID") or None
+
+# Otomatis
+OTOMATIS_JOIN = sb(os.environ.get("OTOMATIS_JOIN", "True"))
 
 # Deezloader
 DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", None)
@@ -418,7 +422,7 @@ with bot:
         @tgbot.on(NewMessage(pattern='/start'))
         async def start_bot_handler(event):
             if not event.message.from_id == uid:
-                await event.reply(f"**👋🏻 Halo Kamu Yang disana Saya adalah bot assistant dari {ALIVE_NAME} Buat Userbotmu Sendiri Dengan ** [Tekan Disini](https: // github.com / AftahBagas / Alpha - Userbot.git))
+                await event.reply(f"**👋🏻 Halo Kamu Yang disana Saya adalah bot assistant dari {ALIVE_NAME} Buat Userbotmu Sendiri Dengan ** [Tekan Disini](https://github.com/AftahBagas/Alpha-Userbot.git))
             else:
                 await event.reply(f"** Hai {ALIVE_NAME}\n\nApa Kabarmu?** )
 
