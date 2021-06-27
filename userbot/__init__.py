@@ -414,7 +414,7 @@ with bot:
     if OTOMATIS_JOIN:
         try:
             bot(JoinChannelRequest("@TheAlphaSupport"))
-            bot(JoinChannelRequest("@TheAlphaSupport"))
+            bot(JoinChannelRequest("@TeamSquadUserbotSupport"))
         except BaseException:
             pass
 
