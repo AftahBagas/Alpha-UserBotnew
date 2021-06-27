@@ -32,4 +32,4 @@ async def get_admin(show):
 
 
 CmdHelp('adminwk').add_command(
-     'admin', 'none', 'mengejek admin di group wkwk.').add()
+     'admin', None, 'mengejek admin di group wkwk.').add()
