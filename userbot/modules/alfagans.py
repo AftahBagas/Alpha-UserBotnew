@@ -1,7 +1,8 @@
 # Lord-Userbot
 from time import sleep
 from userbot import CMD_HELP, bot
-from userbot.events import register
+from userbot.events import alphabot
+from userbot.cmdhelp import CmdHelp
 from telethon import events
 import asyncio
 
@@ -64,7 +65,7 @@ async def _(event):
             await event.edit(animation_chars[i % 32])
 
 
-@register(outgoing=True, pattern='^.helikopter(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.helikopter(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("▬▬▬.◙.▬▬▬ \n"
@@ -85,7 +86,7 @@ async def typewriter(typew):
                      "╬═╬/ \\ \n")
 
 
-@register(outgoing=True, pattern='^.tembak(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.tembak(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("_/﹋\\_\n"
@@ -95,7 +96,7 @@ async def typewriter(typew):
                      "\n**Mau Jadi Pacarku Gak?!**")
 
 
-@register(outgoing=True, pattern='^.bundir(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.bundir(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Dadah Semuanya...`          \n　　　　　|"
@@ -114,7 +115,7 @@ async def typewriter(typew):
                      "　　　　　 Ｕ Ｕ\n")
 
 
-@register(outgoing=True, pattern='^.awkwok(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.awkwok(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("────██──────▀▀▀██\n"
@@ -124,7 +125,7 @@ async def typewriter(typew):
                      "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok..`")
 
 
-@register(outgoing=True, pattern='^.ular(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.ular(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("░░░░▓\n"
@@ -214,7 +215,7 @@ async def typewriter(typew):
                      "░░░░░░░░░░░░░░░░░░░\n")
 
 
-@register(outgoing=True, pattern='^.sip(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.sip(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("...........▄▄▄▄\n"
@@ -232,7 +233,7 @@ async def typewriter(typew):
                      "█████.......██████████\n")
 
 
-@register(outgoing=True, pattern='^.tank(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.tank(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("█۞███████]▄▄▄▄▄▄▄▄▄▄▃ \n"
@@ -241,7 +242,7 @@ async def typewriter(typew):
                      "◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙◤\n")
 
 
-@register(outgoing=True, pattern='^.babi(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.babi(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("┈┈┏━╮╭━┓┈╭━━━━╮\n"
@@ -254,7 +255,7 @@ async def typewriter(typew):
                      "┈┈┈┈┈┗┻┛┗┻┛┈┈┈┈\n")
 
 
-@register(outgoing=True, pattern='^.ajg(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.ajg(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("╥━━━━━━━━╭━━╮━━┳\n"
@@ -265,7 +266,7 @@ async def typewriter(typew):
                      "╨━━┗┛┗┛━━┗┛┗┛━━┻\n")
 
 
-@register(outgoing=True, pattern='^.bernyanyi(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.bernyanyi(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Ganteng Doang Gak Bernyanyi (ง˙o˙)ว**")
@@ -301,7 +302,7 @@ async def typewriter(typew):
     await typew.edit("**♪┗ ( ･o･) ┓♪┏ (・o･) ┛♪**")
 
 
-@register(outgoing=True, pattern='^.foff(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.foff(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(".                       /¯ )")
@@ -315,16 +316,28 @@ async def typewriter(typew):
     await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (")
     await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (\n              \\  ")
 
-CMD_HELP.update({
-    "vip":
-    "📚 **Cmd** : `.bulan` ; `.hati` ; `.bernyanyi`\
-    \n📄 **Descriptions** : liat aja.\
-    \n\n📚 **Cmd** : `.helikopter` ; `.tank` ; `.tembak`\n`.bundir`\
-    \n📄 **Descriptions** : liat sendiri\
-    \n\n📚 **Cmd** : `.sip`\
-    \n📄 **Descriptions** : jempol\
-    \n\n📚 **Cmd** : `.awkwok`\
-    \n📄 **Descriptions** : ketawa lari.\
-    \n\n📚 **Cmd** : `.ular` ; `.babi` ; `.foff` ; `.foto` ; `.ajg`\
-    \n📄 **Descriptions** : liat sendiri."
-})
+CmdHelp('animasi2').add_command(
+    'bulan', None, 'Animasi Bulan.'
+).add_command(
+    'helikopter', None, 'Animasi Helikopter.'
+).add_command(
+    'tembak', None, 'Animasi Tembak Cewek.'
+).add_command(
+    'bundir', None, 'Animasi Bunuh Diri.'
+).add_command(
+    'awkwok', None, 'Animasi Tolol Gajelas Wkwk.'
+).add_command(
+    'ular', None, 'Animasi Ular.'
+).add_command(
+    'sip', None, 'Animasi Jempol.'
+).add_command(
+    'tank', None, 'Animasi Tank.'
+).add_command(
+    'babi', None, 'Animasi Babi Kayak Kamu Wkwk.'
+).add_command(
+    'ajg', None, 'Animasi Anjing.'
+).add_command(
+    'bernyanyi', None, 'Animasi Bernyanyi.'
+).add_command(
+    'foff', None, 'Animasi Fuck.'
+).add()
