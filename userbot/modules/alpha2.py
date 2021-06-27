@@ -1,11 +1,11 @@
 # alfareza
 
 from time import sleep
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot.cmdhelp import CmdHelp
+from userbot.events import alphabot
 
 
-@register(outgoing=True, pattern="^.pe$")
+@alphabot(outgoing=True, pattern="^.pe$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("p")
@@ -40,7 +40,7 @@ async def koc(e):
         await e.edit("p")
 
 
-@register(outgoing=True, pattern='^.hoh(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.hoh(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n(\\_/)`"
@@ -56,7 +56,7 @@ async def typewriter(typew):
                      "`\n💔<\\  *aku ambil lagi deh`")
 
 
-@register(outgoing=True, pattern='^.noh(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.noh(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n(\\_/)`"
@@ -70,10 +70,10 @@ async def typewriter(typew):
 # alfareza
 
 
-CMD_HELP.update({
-    "animasialpha":
-    "`.noh` ; `.hoh`\
-    \nUsage: cobain.\
-    \n\n`.pe`\
-    \nUsage: spam gajelas."
-})
+CmdHelp('animasi4').add_command(
+    'pe', None, 'Animasi Gaje wkw.'
+).add_command(
+    'hoh', None, 'Animasi Kasih Hati Tapi Gajadi.'
+).add_command(
+    'noh', None, 'Animasi Kasih Bunga Tapi Gajadi.'
+).add()
