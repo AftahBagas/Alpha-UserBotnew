@@ -6,7 +6,6 @@ from telethon.tl.types import (
     ChannelParticipantsAdmins,
 )
 
-from userbot import CMD_HELP
 from userbot.events import alphabot
 
 
@@ -29,7 +28,5 @@ async def get_admin(show):
     await show.edit(mentions, parse_mode="html")
 
 
-
-
 CmdHelp('adminwk').add_command(
-     'admin', None, 'mengejek admin di group wkwk.').add()
+    'admin', None, 'mengejek admin di group wkwk.').add()
