@@ -4,8 +4,9 @@
 from telethon.events import ChatAction
 from userbot import ALIVE_NAME, CMD_HELP, bot
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
-from userbot.events import register
+from userbot.events import alphabot
 from telethon.tl.types import MessageEntityMentionName
+from userbot.cmdhelp import CmdHelp
 
 
 async def get_full_user(event):
@@ -80,7 +81,7 @@ async def handler(tele):
                             return
 
 
-@register(outgoing=True, pattern="^.gban(?: |$)(.*)")
+@alphabot(outgoing=True, pattern="^.gban(?: |$)(.*)")
 async def gben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -146,7 +147,7 @@ async def gben(userbot):
     )
 
 
-@register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
+@alphabot(outgoing=True, pattern="^.ungban(?: |$)(.*)")
 async def gunben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -210,9 +211,8 @@ async def gunben(userbot):
     )
 
 
-CMD_HELP.update({
-    "gban": "\
-📚**Plugins:** __Global Banned__\n\n📚 **Cmd** : `.gban`\
-\n📄 ** Descriptions** : Melakukan Banned Secara Global Ke Semua Grup Dimana Lord Sebagai Admin.\
-\n\n📚 **Cmd** : `.ungban`\
-\n📄 **Descriptions** : Membatalkan Global Banned"})
+CmdHelp('gban').add_command(
+    'gban', None, 'Melakukan Global Banned Dimana User Menjadi Admin Disana.'
+).add_command(
+    'ungban', None, 'Membatalkan Global Banned.'
+).add()
