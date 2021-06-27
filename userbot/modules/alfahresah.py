@@ -3,10 +3,12 @@
 import asyncio
 
 from userbot import ALIVE_NAME, CMD_HELP, COUNTRY, USER_AGE
-from userbot.events import register
+from userbot.events import alphabot
+
+from userbot.cmdhelp import CmdHelp
 
 
-@register(outgoing=True, pattern="^.salken$")
+@alphabot(outgoing=True, pattern="^.salken$")
 async def salken(salken):
     """ Basically it's .salken command """
     await salken.edit(f"`Halo Namaku {ALIVE_NAME}`")
@@ -16,8 +18,6 @@ async def salken(salken):
     await salken.edit(f"`Tinggal Di {COUNTRY} Salam Kenal :)`")
 
 
-CMD_HELP.update({
-    "salken":
-    "📚 **Cmd** : `.salken`\
-    \n📄 **Descriptions** : Command Salken Untuk Dirimu :)."
-})
+CmdHelp('animasi2').add_command(
+    'salken', None, 'Kata Kata Untuk Salken Dirimu.'
+).add()
