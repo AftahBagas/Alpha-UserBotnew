@@ -30,7 +30,7 @@ from telethon.tl.types import (
     PeerChat,
 )
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from userbot import BOTLOG, BOTLOG_CHATID
 from userbot.events import alphabot
 
 from userbot.cmdhelp import CmdHelp
@@ -905,25 +905,67 @@ async def get_bots(show):
         remove("botlist.txt")
 
 
-CmdHelp ('admin').add_command( 'promote', '<nama pengguna / balasan> <nama khusus (opsional)>', 'Memberikan hak admin kepada orang dalam obrolan.' 
-    ).add_command( 'demote', '<username / reply>', 'Cabut izin admin orang dalam obrolan.' 
-    ).add_command( 'ban', '<username / reply> <reason (opsional)>', 'Membungkam orang dalam obrolan, juga berfungsi dengan admin.' 
-    ).add_command( 'unban', '<username / reply>', 'Unblock person in chat.' 
-    ).add_command( 'kick', '<username / reply> <reason (opsional)>', 'Tendang orang yang Anda tentukan dari grup.'
-    ).add_command( 'gmute', '<username / reply> <reason (opsional)>', 'Matikan suara orang di semua grup di mana Anda adalah administratornya.' 
-    ).add_command( 'ungmute', '<username / reply>', 'Menghapus kontak dari daftar yang dibisukan secara global.' 
-    ).add_command( 'zombies', None, 'Mencari akun yang dihapus dalam grup. Gunakan perintah .zombies clean untuk menghapus akun yang dihapus dari grup. ' 
-    ).add_command( 'admin', None, 'Mendapat daftar master obrolan.' 
-    ).add_command( 'bot', None, 'Mencari akun yang dihapus dalam grup. Gunakan perintah .zombies clean untuk menghapus akun yang dihapus dari grup. ' 
-    ).add_command( 'users or .users', '<username> <username / reply>', 'Mengambil semua (atau menanyakan) pengguna dalam obrolan.' 
-    ).add_command( 'setgppic', '<reply picture>', 'Mengubah gambar grup.' 
-    ).add_command( 'warn', '<username / no reply> <reason (opsional>', 'Peringatkan pengguna yang Anda tentukan.' 
-    ).add_command( 'unwarn', '<username / no reply> <reason (opsional>', 'Menghapus peringatan pengguna yang Anda tentukan.' 
-    ).add_command( 'warn', '<username / no reply> <reason (opsional>', 'Peringatkan pengguna yang Anda tentukan.' 
-    ).add_command( 'usersdel', None, 'Menampilkan akun yang dihapus dalam grup.' 
-    ).add_command( 'menambahkan', '<username (s)>', 'Add members to the group.' 
-    ).add_command( 'gban', '<username / reply>', 'Cekal pengguna secara global.' 
-    ).add_command( 'ungban', '<username / reply>', 'Menghapus larangan global pada pengguna.' 
-    ).add_command( 'pin', '<reply>', 'Memperbaiki pesan yang Anda balas sebelumnya.' 
-    ).add_command( 'setgpic', '<response>', 'Mengubah foto grup.' 
-    ).add()
+CmdHelp('admin').add_command(
+    'promote',
+    '<nama pengguna / balasan> <nama khusus (opsional)>',
+    'Memberikan hak admin kepada orang dalam obrolan.').add_command(
+        'demote',
+        '<username / reply>',
+        'Cabut izin admin orang dalam obrolan.').add_command(
+            'ban',
+            '<username / reply> <reason (opsional)>',
+            'Membungkam orang dalam obrolan, juga berfungsi dengan admin.').add_command(
+                'unban',
+                '<username / reply>',
+                'Unblock person in chat.').add_command(
+                    'kick',
+                    '<username / reply> <reason (opsional)>',
+                    'Tendang orang yang Anda tentukan dari grup.').add_command(
+                        'gmute',
+                        '<username / reply> <reason (opsional)>',
+                        'Matikan suara orang di semua grup di mana Anda adalah administratornya.').add_command(
+                            'ungmute',
+                            '<username / reply>',
+                            'Menghapus kontak dari daftar yang dibisukan secara global.').add_command(
+                                'zombies',
+                                None,
+                                'Mencari akun yang dihapus dalam grup. Gunakan perintah .zombies clean untuk menghapus akun yang dihapus dari grup. ').add_command(
+                                    'admin',
+                                    None,
+                                    'Mendapat daftar master obrolan.').add_command(
+                                        'bot',
+                                        None,
+                                        'Mencari akun yang dihapus dalam grup. Gunakan perintah .zombies clean untuk menghapus akun yang dihapus dari grup. ').add_command(
+                                            'users or .users',
+                                            '<username> <username / reply>',
+                                            'Mengambil semua (atau menanyakan) pengguna dalam obrolan.').add_command(
+                                                'setgppic',
+                                                '<reply picture>',
+                                                'Mengubah gambar grup.').add_command(
+                                                    'warn',
+                                                    '<username / no reply> <reason (opsional>',
+                                                    'Peringatkan pengguna yang Anda tentukan.').add_command(
+                                                        'unwarn',
+                                                        '<username / no reply> <reason (opsional>',
+                                                        'Menghapus peringatan pengguna yang Anda tentukan.').add_command(
+                                                            'warn',
+                                                            '<username / no reply> <reason (opsional>',
+                                                            'Peringatkan pengguna yang Anda tentukan.').add_command(
+                                                                'usersdel',
+                                                                None,
+                                                                'Menampilkan akun yang dihapus dalam grup.').add_command(
+                                                                    'menambahkan',
+                                                                    '<username (s)>',
+                                                                    'Add members to the group.').add_command(
+                                                                        'gban',
+                                                                        '<username / reply>',
+                                                                        'Cekal pengguna secara global.').add_command(
+                                                                            'ungban',
+                                                                            '<username / reply>',
+                                                                            'Menghapus larangan global pada pengguna.').add_command(
+                                                                                'pin',
+                                                                                '<reply>',
+                                                                                'Memperbaiki pesan yang Anda balas sebelumnya.').add_command(
+                                                                                    'setgpic',
+                                                                                    '<response>',
+    'Mengubah foto grup.').add()
