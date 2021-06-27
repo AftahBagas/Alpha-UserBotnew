@@ -349,7 +349,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```Process exited with status 1 😈```")
+    await bot.send_message(BOTLOG_CHATID, "```[Alpha Userbot ⚙️ 0.5.0 Berhasil Diaktifkan]```")
     return
 
 with bot:
@@ -361,191 +361,195 @@ with bot:
             "valid entity. Check your environment variables/config.env file.")
         quit(1)
 
-# Global Variables
-COUNT_MSG = 0
-USERS = {}
-COUNT_PM = {}
-ENABLE_KILLME = True
-LASTMSG = {}
-CMD_HELP = {}
-ISAFK = False
-AFKREASON = None
-ZALG_LIST = {}
+
+if BOT_TOKEN is not None:
+    tgbot = TelegramClient(
+        "TG_BOT_TOKEN",
+        api_id=API_KEY,
+        api_hash=API_HASH
+    ).start(bot_token=BOT_TOKEN)
+else:
+    tgbot = None
 
 
-def paginate_help(page_number, loaded_modules, prefix):
-    number_of_rows = 5
-    number_of_cols = 3
-    helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
-    helpable_modules = sorted(helpable_modules)
-    modules = [
-        custom.Button.inline(
-            "{} {}".format(f"{HELP_EMOJI}", x), data="ub_modul_{}".format(x))
-        for x in helpable_modules]
-    pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
-    if len(modules) % number_of_cols == 1:
-        pairs.append((modules[-1],))
-    max_num_pages = ceil(len(pairs) / number_of_rows)
-    modulo_page = page_number % max_num_pages
-    if len(pairs) > number_of_rows:
-        pairs = pairs[
-            modulo_page * number_of_rows: number_of_rows * (modulo_page + 1)
-        ] + [
-            (
-                custom.Button.inline(
-                    "<<", data="{}_prev({})".format(prefix, modulo_page)
-                ),
-                custom.Button.inline(
-                    '-Close-', b'close'
-                ),
-                custom.Button.inline(
-                    ">>", data="{}_next({})".format(prefix, modulo_page)
-                ),
-            )
-        ]
-    return pairs
+def button(page, modules):
+    Row = 5
+    Column = 2
+
+    modules = sorted(
+        [modul for modul in moduller if not modul.startswith("_")])
+    pairs = list(map(list, zip(modules[::2], modules[1::2])))
+    if len(moduller) % 2 == 1:
+        pairs.append([moduller[-1]])
+    max_pages = ceil(len(pairs) / Row)
+    pairs = [pairs[i:i + Row] for i in range(0, len(pairs), Row)]
+    buttons = []
+    for pairs in pairs[page]:
+        buttons.append([custom.Button.inline(
+            f"{HELP_EMOJI} " + pair, data=f"Information[{page}]({pair})") for pair in pairs])
+
+    buttons.append(
+        [
+            custom.Button.inline(
+                "<<",
+                data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"),
+            custom.Button.inline(
+                "Close",
+                b'close'),
+            custom.Button.inline(
+                ">>",
+                data=f"page({0 if page == (max_pages - 1) else page + 1})")])
+    return [max_pages, buttons, pairs]
 
 
 with bot:
+    if OTOMATIS_JOIN:
+        try:
+            bot(JoinChannelRequest("@TheAlphaSupport"))
+            bot(JoinChannelRequest("@TheAlphaSupport"))
+        except BaseException:
+            pass
+
+    modules = CMD_HELP
+    me = bot.get_me()
+    uid = me.id
+
     try:
-        tgbot = TelegramClient(
-            "TG_BOT_TOKEN",
-            api_id=API_KEY,
-            api_hash=API_HASH).start(
-            bot_token=BOT_TOKEN)
-
-        dugmeler = CMD_HELP
-        me = bot.get_me()
-        uid = me.id
-
-        @ tgbot.on(events.NewMessage(pattern="/start"))
-        async def handler(event):
-            if event.message.from_id != uid:
-                await event.reply(f"👋🏻 Halo Kamu Yang disana Saya adalah bot assistant dari {ALIVE_NAME} Buat Alphamu Sendiri Dengan  [Tekan Disini](https://github.com/AftahBagas/Alpha-Userbot.git)")
+        @tgbot.on(NewMessage(pattern='/start'))
+        async def start_bot_handler(event):
+            if not event.message.from_id == uid:
+                await event.reply(f"**👋🏻 Halo Kamu Yang disana Saya adalah bot assistant dari {ALIVE_NAME} Buat Userbotmu Sendiri Dengan ** [Tekan Disini](https://github.com/AftahBagas/Alpha-Userbot.git))
             else:
-                await event.reply(f"`Hai {ALIVE_NAME}\n\nApa Kabarmu?`")
+                await event.reply(f"** Hai {ALIVE_NAME}\n\nApa Kabarmu?** )
 
-        @ tgbot.on(events.InlineQuery)  # pylint:disable=E0602
+        @tgbot.on(InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@UserButt"):
-                buttons = paginate_help(0, dugmeler, "helpme")
-                result = builder.article(
-                    "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n**Alpha Userbot 😈**\n\n**Plugins** `{}` 📚\n".format(
-                        "**❕HELP INLINE MENU❕**",
-                        len(dugmeler),
-                    ),
-                    buttons=buttons,
-                    link_preview=False,
+            if event.query.user_id == uid and query == "@KanjengIngsun":
+                rev_text = query[::-1]
+                veriler = (button(0, sorted(CMD_HELP)))
+                result = await builder.article(
+                    f"Perintah .helpme",
+                    text=f"**HELP INLINE MODE**/n[Alpha UserBot](https://t.me/TeamSquadUserbotSupport) __Plugins__\n**• Jumlah Plugins :** `{len(CMD_HELP)}`\n• **Halaman :** 1/{veriler[0]}",
+                    buttons=veriler[1],
+                    link_preview=False
                 )
-            elif query.startswith("tb_btn"):
+            elif query.startswith("http"):
+                parca = query.split(" ")
                 result = builder.article(
-                    "Bantuan 🎗️Alpha🎗️ ",
-                    text="Daftar Modul",
-                    buttons=[],
-                    link_preview=True)
+                    "Alpha UserBot",
+                    text=f"**Alpha UserBot {parca[2]} Lanjutan**\n\n{parca[1][:3]}\n[‏‏‎ ‎]({parca[0]})",
+                    buttons=[
+                        [custom.Button.url('URL', parca[0])]
+                    ],
+                    link_preview=True
+                )
             else:
                 result = builder.article(
-                    "**Alpha**",
-                    text="""**Siapkan Userbotmu Sendiri Dengan Cara:** [Tekan Disini](t.me/teamsquaduserbotsupport)""",
+                    "@TesmSquadUserbotSupport",
+                    text="""@TeamSquadUserbotSupport.""",
                     buttons=[
-                        [
-                            custom.Button.url(
-                                "Repo",
-                                "https://github.com/AftahBagas/Alpha-Userbot.git"),
-                            custom.Button.url(
-                                "Pemilik",
-                                "t.me/kanjengingsun"),
-                            custom.Button.url(
-                                "Group",
-                                "t.me/teamsquaduserbotsupport")],
+                        [custom.Button.url("Group Support", "@TeamSquadUserbotSupport"), custom.Button.url(
+                            "Owners", "https://t.me/kanjengingsun")],
+                        [custom.Button.url(
+                            "GitHub", "https://github.com/AftahBagas/Alpha-UserBot")]
                     ],
-                    link_preview=False,
+                    link_preview=False
                 )
             await event.answer([result] if result else None)
 
-        @ tgbot.on(
-            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"helpme_next\((.+?)\)")
+        @tgbot.on(callbackquery.CallbackQuery(data=compile(b"page\\((.+?)\\)")))
+        async def page(event):
+            if not event.query.user_id == uid:
+                return await event.answer(f"Buat Alpha UserBot Mu Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} Ini.", cache_time=0, alert=True)
+            page = int(event.data_match.group(1).decode("UTF-8"))
+            veriler = button(page, CMD_HELP)
+            await event.edit(
+                f"**HELP MODE INLINE**\n[Alpha UserBot](https://t.me/TeamSquadUserbotSupport) __Plugins__\n**• Jumlah Plugins :** `{len(CMD_HELP)}`\n**• Halaman :** {page + 1}/{veriler[0]}",
+                buttons=veriler[1],
+                link_preview=False
             )
-        )
-        async def on_plug_in_callback_query_handler(event):
+
+        @tgbot.on(callbackquery.CallbackQuery(data=compile(b"close")))
+        async def close(event):
             if event.query.user_id == uid:  # pylint:disable=E0602
-                current_page_number = int(
-                    event.data_match.group(1).decode("UTF-8"))
-                buttons = paginate_help(
-                    current_page_number + 1, dugmeler, "helpme")
-                # https://t.me/TelethonChat/115200
-                await event.edit(buttons=buttons)
+                await event.edit("**Button Inline Closed**")
             else:
-                reply_pop_up_alert = f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Buat Alpha UserBot Mu Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
-        async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid:  # pylint:disable=E0602
-                await event.edit("Button closed!")
-            else:
-                reply_pop_up_alert = f"Lu deploy sendiri lah ajg, Jangan pakai punya gw {ALIVE_NAME} "
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        @tgbot.on(
+            callbackquery.CallbackQuery(
+                data=compile(b"bilgi\\[(\\d*)\\]\\((.*)\\)")))
+        async def bilgi(event):
+            if not event.query.user_id == uid:
+                return await event.answer(f"Buat Alpha UserBot Mu Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} Ini.", cache_time=0, alert=True)
 
-        @ tgbot.on(
-            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"helpme_prev\((.+?)\)")
+            page = int(event.data_match.group(1).decode("UTF-8"))
+            alfareza = event.data_match.group(2).decode("UTF-8")
+            try:
+                buttons = [
+                    custom.Button.inline(
+                        f"{HELP_EMOJI} " + cmd[0],
+                        data=f"alfareza[{alfareza}[{page}]]({cmd[0]})") for cmd in CMD_HELP_BOT[alfareza]['commands'].items()]
+            except KeyError:
+                return await event.answer(f"Buat Alpha UserBot Mu Sendiri Jangan Menggunakan Milik {ALIVE_NAME} Ini.", cache_time=0, alert=True)
+
+            buttons = [buttons[i:i + 2] for i in range(0, len(butonlar), 2)]
+            buttons.append([custom.Button.inline(
+                "Back", data=f"sayfa({sayfa})")])
+            await event.edit(
+                f"**Daftar Plugins:** `{alfareza}`\n**• Jumlah Command : ** `{len(CMD_HELP_BOT[alfareza]['commands'])}`",
+                buttons=buttons,
+                link_preview=False
             )
-        )
-        async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid:  # pylint:disable=E0602
-                current_page_number = int(
-                    event.data_match.group(1).decode("UTF-8"))
-                buttons = paginate_help(
-                    current_page_number - 1, dugmeler, "helpme"  # pylint:disable=E0602
-                )
-                # https://t.me/TelethonChat/115200
-                await event.edit(buttons=buttons)
-            else:
-                reply_pop_up_alert = f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        @ tgbot.on(
-            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(b"ub_modul_(.*)")
-            )
-        )
-        async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid:  # pylint:disable=E0602
-                modul_name = event.data_match.group(1).decode("UTF-8")
+        @tgbot.on(callbackquery.CallbackQuery(data=compile(
+            b"alfareza\\[(.*)\\[(\\d*)\\]\\]\\((.*)\\)")))
+        async def alfareza(event):
+            if not event.query.user_id == uid:
+                return await event.answer(f"Buat Alpha UserBot Mu Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} Ini.", cache_time=0, alert=True)
 
-                cmdhel = str(CMD_HELP[modul_name])
-                if len(cmdhel) > 150:
-                    help_string = (
-                        str(CMD_HELP[modul_name]).replace(
-                            '`', '')[:150] + "..."
-                        + "\n\nBaca Teks Berikutnya Ketik .help "
-                        + modul_name
-                        + " "
-                    )
+            cmd = event.data_match.group(1).decode("UTF-8")
+            page = int(event.data_match.group(2).decode("UTF-8"))
+            alfareza = event.data_match.group(3).decode("UTF-8")
+
+            result = f"**Daftar Plugins :** `{cmd}`\n"
+            if CMD_HELP_BOT[cmd]['info']['info'] == '':
+                if not CMD_HELP_BOT[cmd]['info']['warning'] == '':
+                    result += f"**Command :** {'' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
+                    result += f"**❌ Berbahaya :** {CMD_HELP_BOT[cmd]['info']['warning']}\n\n"
                 else:
-                    help_string = str(CMD_HELP[modul_name]).replace('`', '')
-
-                reply_pop_up_alert = (
-                    help_string
-                    if help_string is not None
-                    else "{} No document has been written for module.".format(
-                        modul_name
-                    )
-                )
+                    result += f"**Command :** {'' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n\n"
             else:
-                reply_pop_up_alert = f"Harap Deploy Alpha Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
+                result += f"**Command :** {'' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
+                if not CMD_HELP_BOT[cmd]['info']['warning'] == '':
+                    result += f"**❌ Berbahaya :** {CMD_HELP_BOT[cmd]['info']['warning']}\n"
+                result += f"**• Informasi :** {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
 
-            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+            command = CMD_HELP_BOT[cmd]['commands'][alfareza]
+            if command['params'] is None:
+                result += f"**Plugins Alpha UserBot :** `{PATTERNS[:1]}{command['command']}`\n"
+            else:
+                result += f"**• Command :** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
 
-    except BaseException:
+            if command['example'] is None:
+                result += f"**• Pesan :** `{command['usage']}`\n\n"
+            else:
+                result += f"**• Command :** `{command['usage']}`\n"
+                result += f"**• Sampel Modules :** `{PATTERNS[:1]}{command['example']}`\n\n"
+
+            await event.edit(
+                result,
+                buttons=[custom.Button.inline("Back", data=f"bilgi[{page}]({cmd})")],
+                link_preview=False
+            )
+    except Exception as e:
+        print(e)
         LOGS.info(
-            "Mode Inline Bot Mu Nonaktif. "
+            "Mode Inline Bot Mu Belom Di Aktifkan. "
             "Untuk Mengaktifkan Pergi Ke @BotFather, lalu settings bot > pilih mode inline > Turn On. ")
     try:
         bot.loop.run_until_complete(check_botlog_chatid())
@@ -555,3 +559,87 @@ with bot:
             "valid entity. Check your environment variables/config.env file."
         )
         quit(1)
+
+
+# Variabel Global
+SON_GORULME = 0
+COUNT_MSG = 0
+USERS = {}
+BRAIN_CHECKER = []
+COUNT_PM = {}
+LASTMSG = {}
+ENABLE_KILLME = True
+ISAFK = False
+AFKREASON = None
+ZALG_LIST = [[
+    "̖",
+    " ̗",
+    " ̘",
+    " ̙",
+    " ̜",
+    " ̝",
+    " ̞",
+    " ̟",
+    " ̠",
+    " ̤",
+    " ̥",
+    " ̦",
+    " ̩",
+    " ̪",
+    " ̫",
+    " ̬",
+    " ̭",
+    " ̮",
+    " ̯",
+    " ̰",
+    " ̱",
+    " ̲",
+    " ̳",
+    " ̹",
+    " ̺",
+    " ̻",
+    " ̼",
+    " ͅ",
+    " ͇",
+    " ͈",
+    " ͉",
+    " ͍",
+    " ͎",
+    " ͓",
+    " ͔",
+    " ͕",
+    " ͖",
+    " ͙",
+    " ͚",
+    " ",
+],
+    [
+    " ̍", " ̎", " ̄", " ̅", " ̿", " ̑", " ̆", " ̐", " ͒", " ͗",
+    " ͑", " ̇", " ̈", " ̊", " ͂", " ̓", " ̈́", " ͊", " ͋", " ͌",
+    " ̃", " ̂", " ̌", " ͐", " ́", " ̋", " ̏", " ̽", " ̉", " ͣ",
+    " ͤ", " ͥ", " ͦ", " ͧ", " ͨ", " ͩ", " ͪ", " ͫ", " ͬ", " ͭ",
+    " ͮ", " ͯ", " ̾", " ͛", " ͆", " ̚"
+],
+    [
+    " ̕",
+    " ̛",
+    " ̀",
+    " ́",
+    " ͘",
+    " ̡",
+    " ̢",
+    " ̧",
+    " ̨",
+    " ̴",
+    " ̵",
+    " ̶",
+    " ͜",
+    " ͝",
+    " ͞",
+    " ͟",
+    " ͠",
+    " ͢",
+    " ̸",
+    " ̷",
+    " ͡",
+]]
