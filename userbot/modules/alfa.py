@@ -1,11 +1,11 @@
 from time import sleep
 from userbot import CMD_HELP, bot
-from userbot.events import register
+from userbot.events import alphabot
 from telethon import events
 import asyncio
 
 
-@register(outgoing=True, pattern="^.sayang$")
+@alphabot(outgoing=True, pattern="^.sayang$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("I LOVEE YOUUU 💕")
@@ -34,7 +34,7 @@ async def koc(e):
         await e.edit("SAYANG KAMU💞")
 
 
-@register(outgoing=True, pattern='^.tiger(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.tiger(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`HA HAAA.....`")
@@ -92,7 +92,7 @@ async def typewriter(typew):
     await typew.edit("`-TAMAT-`")
 
 
-@register(outgoing=True, pattern='^.dino(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.dino(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`DIN DINNN.....`")
@@ -150,7 +150,7 @@ async def typewriter(typew):
     await typew.edit("`-TAMAT-`")
 
 
-@register(outgoing=True, pattern="^.gabut$")
+@alphabot(outgoing=True, pattern="^.gabut$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`PERNAAHHHHH KAHHH KAUUU MENGIRA`")
@@ -407,7 +407,7 @@ async def koc(e):
         await e.edit("`GABUT`")
 
 
-@register(outgoing=True, pattern='^.terkadang(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.terkadang(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Terkadang`")
@@ -424,7 +424,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern="^.mf$")
+@alphabot(outgoing=True, pattern="^.mf$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`mf g dl` **ミ(ノ;_ _)ノ=3** ")
@@ -467,7 +467,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@register(outgoing=True, pattern='^.gombal(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.gombal(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -492,16 +492,18 @@ async def typewriter(typew):
     await typew.edit("`Tapi Bo'ong`")
 # Create by myself @localheart
 
-CMD_HELP.update({
-    "gabut":
-    "`.gabut` ; `.dino`.tiger`\
-    \nUsage: ntahlah gabut doang.\
-    \n\n`.gombal`\
-    \nUsage: buat bercanda\
-    \n\n`.cinta`\
-    \nUsage: mengirim cintamu ke seseorang.\
-    \n\n`.sayang`\
-    \nUsage: untuk jadi buaya.\
-    \n\n`.terkadang`\
-    \nUsage: Auk dah iseng doang."
-})
+CmdHelp('animasi').add_command(
+    'gabut', None, 'Animasi Gajelas wkwk.'
+).add_command(
+    'dyno', None, 'Animasi Dikejar Dyno.'
+).add_command(
+    'tiger', None, 'Animasi Dikejar Tiger.'
+).add_command(
+    'gombal', None, 'Animasi Buat Candaan.'
+).add_command(
+    'cinta', None, 'Animasi Mengirim Cinta Kepada Seseorang.'
+).add_command(
+    'sayang', None, 'Animasi Untuk Menjadi Buaya Darat Wkwk.'
+).add_command(
+    'terkadang', None, 'Animasi Dibuat Karena Gabut Dan Gajelas.'
+).add()
