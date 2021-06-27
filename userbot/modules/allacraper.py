@@ -1468,81 +1468,81 @@ async def make_qr(makeqr):
 
 
 CmdHelp('img').add_command(
-    'img', <search_query>, 'Does an image search on Google and shows 5 images.'
+    'img', < search_query >, 'Does an image search on Google and shows 5 images.'
 ).add()
 
 CmdHelp('currency').add_command(
-    'currency', <amount><from><to>, 'Converts various currencies for you.'
+    'currency', < amount > <from > <to >, 'Converts various currencies for you.'
 ).add()
 
 CmdHelp('carbon').add_command(
-    'karbon', <text/reply>, 'Beautify your code using carbon.now.sh.'
+    'karbon', < text/reply >, 'Beautify your code using carbon.now.sh.'
 ).add()
 
 CmdHelp('google').add_command(
-    'google', <query>, 'Does a search on Google.'
+    'google', < query >, 'Does a search on Google.'
 ).add()
 
 CmdHelp('wiki').add_command(
-    'wiki', <query>, 'Does a search on Wikipedia.'
+    'wiki', < query >, 'Does a search on Wikipedia.'
 ).add()
 
 CmdHelp('ud').add_command(
-    'ud', <query>, 'Does a search on Urban Dictionary.'
+    'ud', < query >, 'Does a search on Urban Dictionary.'
 ).add()
 
 CmdHelp('tts').add_command(
-    'tts', <text/reply>, 'Translates text to the language which is set, .lang tts <language code> to set language for tr. (Default is English).'
+    'tts', < text/reply >, 'Translates text to the language which is set, .lang tts <language code> to set language for tr. (Default is English).'
 ).add()
 
 CmdHelp('translate').add_command(
-    'tr', <text/reply>, 'Translates text to the language which is set, .lang tr <language code> to set language for tr. (Default is English).'
+    'tr', < text/reply >, 'Translates text to the language which is set, .lang tr <language code> to set language for tr. (Default is English).'
 ).add()
 
 CmdHelp('imdb').add_command(
-    'imdb', <movie/name>, 'Shows movie info and other stuff.'
+    'imdb', < movie/name >, 'Shows movie info and other stuff.'
 ).add()
 
 CmdHelp('wolfram').add_command(
-    'wolfram', <query>, 'Get answers to questions using WolframAlpha Spoken Results API.'
+    'wolfram', < query >, 'Get answers to questions using WolframAlpha Spoken Results API.'
 ).add()
 
 CmdHelp('screenshot').add_command(
-    'ss', <url>, 'takes a screenshot of a website and sends the screenshot.'
+    'ss', < url >, 'takes a screenshot of a website and sends the screenshot.'
 ).add()
 
 CmdHelp('nekobin').add_command(
-    'neko', <text/reply>, 'Reply to an image or sticker to extract text from it.'
+    'neko', < text/reply >, 'Reply to an image or sticker to extract text from it.'
 ).add()
 
 CmdHelp('getpaste').add_command(
-    'getpaste', <text/reply>, 'create a paste or a shortened url using dogbin.'
+    'getpaste', < text/reply >, 'create a paste or a shortened url using dogbin.'
 ).add()
 
 CmdHelp('removebg').add_command(
-    'rbg', <link to image>, 'Menghapus latar belakang gambar.'
+    'rbg', < link to image >, 'Menghapus latar belakang gambar.'
 ).add()
 
 CmdHelp('ocr').add_command(
-    'ocr', <language/bahasa>, 'Reply to an image or sticker to extract text from it.'
+    'ocr', < language/bahasa >, 'Reply to an image or sticker to extract text from it.'
 ).add()
 
 CmdHelp('direct').add_command(
-    'direct', <url>, 'Reply to a link or paste a URL to generate a direct download link.'
+    'direct', < url >, 'Reply to a link or paste a URL to generate a direct download link.'
 ).add()
 
 CmdHelp('rcode').add_command(
-    'makeqr', <content>, 'Make a QR code from the given content.'
+    'makeqr', < content >, 'Make a QR code from the given content.'
 ).add()
 
 CmdHelp('barcode').add_command(
-    'barcode', <content>, '
+    'barcode', < content >, '
 ).add()
 
 CmdHelp('youtube').add_command(
-    'aud', <link yt>, 'Mendwonload Audio Dari Link.'
+    'aud', < link yt >, 'Mendwonload Audio Dari Link.'
 ).add_command(
-    'vid', <link yt>, 'Mendwonload Vidio Dari Link.'
+    'vid', < link yt >, 'Mendwonload Vidio Dari Link.'
 ).add_command(
-    'ytsearch', <search>, 'Mencari Dari Youtube.'
+    'ytsearch', < search >, 'Mencari Dari Youtube.'
 ).add()
