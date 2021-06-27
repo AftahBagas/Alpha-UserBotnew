@@ -2,12 +2,13 @@ import json
 
 import requests
 
-from userbot.events import register
+from userbot.events import alphabot
+from userbot.cmdhelp import CmdHelp
 
 PLACE = ""
 
 
-@register(pattern=r"^\.adzan(?: |$)(.*)")
+@alphabot(pattern=r"^\.adzan(?: |$)(.*)")
 async def get_adzan(adzan):
     if not adzan.pattern_match.group(1):
         LOCATION = PLACE
