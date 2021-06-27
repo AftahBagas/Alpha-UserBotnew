@@ -68,5 +68,5 @@ async def _(hazmat):
 
 
 CmdHelp('hazmat').add_command(
-    'hz', <file, ×2 rotate (level), blackground (nomor), black>, 'Balas ke gambar/stiker untuk menyesuaikan.'
+    'hz', None, 'Balas ke gambar/stiker untuk menyesuaikan.'
 ).add()
