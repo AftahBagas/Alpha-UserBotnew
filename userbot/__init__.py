@@ -387,6 +387,8 @@ else:
 def button(page, modules):
     Row = 5
 
+    Column = 2
+
     modules = sorted(
         [modul for modul in moduller if not modul.startswith("_")])
     pairs = list(map(list, zip(modules[::2], modules[1::2])))
