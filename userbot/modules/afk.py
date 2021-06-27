@@ -21,7 +21,8 @@ from userbot import (  # noqa pylint: disable=unused-import isort:skip
     CMD_TRIGGER
     bot,
 )
-from userbot.events import register
+from userbot.events import alphabot
+from userbot.cmdhelp import CmdHelp
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
@@ -43,7 +44,7 @@ afk_start = {}
 # =================================================================
 
 
-@register(outgoing=True,
+@alphabot(outgoing=True,
           pattern=f"^.afk(?: |$)(.*)",
           disable_errors=True)
 async def set_afk(afk_e):
@@ -79,7 +80,7 @@ async def set_afk(afk_e):
     raise StopPropagation
 
 
-@register(outgoing=True)
+@alphabot(outgoing=True)
 async def type_afk_is_not_true(notafk):
     """ This sets your status as not afk automatically when you write something while being afk """
     global ISAFK
@@ -123,7 +124,7 @@ async def type_afk_is_not_true(notafk):
         AFKREASON = None
 
 
-@register(incoming=True, disable_edited=True)
+@alphabot(incoming=True, disable_edited=True)
 async def mention_afk(mention):
     """ This function takes care of notifying the people who mention you that you are AFK."""
     global COUNT_MSG
@@ -186,7 +187,7 @@ async def mention_afk(mention):
                     COUNT_MSG = COUNT_MSG + 1
 
 
-@register(incoming=True, disable_errors=True)
+@alphabot(incoming=True, disable_errors=True)
 async def afk_on_pm(sender):
     """ Function which informs people that you are AFK in PM """
     global ISAFK
