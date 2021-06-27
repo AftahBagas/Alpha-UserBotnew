@@ -87,5 +87,5 @@ async def bruh(message, user):
 
 
 CmdHelp('imp').add_command(
-    'imp', imp red <kata kata> ,warna <red lime green blue cyan bronw purple pink orange yellow white black>, 'Untuk Membuat Stickers amongus.'
+    'imp', imp red < kata kata > , warna < red lime green blue cyan bronw purple pink orange yellow white black > , 'Untuk Membuat Stickers amongus.'
 ).add()
