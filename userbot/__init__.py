@@ -254,6 +254,8 @@ WOLFRAM_ID = os.environ.get("WOLFRAM_ID") or None
 # Otomatis
 OTOMATIS_JOIN = sb(os.environ.get("OTOMATIS_JOIN", "True"))
 
+PATTERNS = os.environ.get("PATTERNS", ".;!,")
+
 # Deezloader
 DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", None)
 
