@@ -1,16 +1,9 @@
 
 from userbot import BOT_USERNAME
-from userbot.events import register
-
-# ██████ LANGUAGE CONSTANTS ██████ #
-
-from userbot.language import get_value
-LANG = get_value("__helpme")
-
-# ████████████████████████████████ #
+from userbot.events import alphabot
 
 
-@register(outgoing=True, pattern="^.helpme")
+@alphabot(outgoing=True, pattern="^.helpme")
 async def yardim(event):
     bangreza = BOT_USERNAME
     if bangreza is not None:
@@ -25,4 +18,4 @@ async def yardim(event):
         )
         await event.delete()
     else:
-        await event.edit(LANG["NO_BOT"])
+        await event.edit(BOT["NO_BOT"])
