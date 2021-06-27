@@ -15,7 +15,8 @@ from datetime import datetime
 import psutil
 
 from userbot import ALIVE_LOGO, ALIVE_TEKS_KUSTOM, ALIVE_NAME, CMD_TRIGGER, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, bot
-from userbot.events import register
+from userbot.events import alphabot
+from userbot.cmdhelp import CmdHelp
 
 
 # ================= CONSTANT =================
@@ -53,7 +54,7 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}spc")
+@alphabot(outgoing=True, pattern=f"^\\{CMD_TRIGGER}spc")
 async def psu(event):
     uname = platform.uname()
     softw = "**Informasi Sistem**\n"
@@ -111,7 +112,7 @@ def get_size(bytes, suffix="B"):
         bytes /= factor
 
 
-@register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}sysd$")
+@alphabot(outgoing=True, pattern=f"^\\{CMD_TRIGGER}sysd$")
 async def sysdetails(sysd):
     if not sysd.text[0].isalpha() and sysd.text[0] not in ("/", "#", "@", "!"):
         try:
@@ -131,7 +132,7 @@ async def sysdetails(sysd):
             await sysd.edit("`Install neofetch first !!`")
 
 
-@register(outgoing=True, pattern=r"^\.botver$")
+@alphabot(outgoing=True, pattern=r"^\.botver$")
 async def bot_ver(event):
     if event.text[0].isalpha() or event.text[0] in ("/", "#", "@", "!"):
         return
@@ -159,9 +160,9 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**🧃**Alpha Versi:** \n "
+            "**⚙️**Alpha Versi:** \n "
             f"{verout}"
-            "\n**🧃**Revisi:**\n "
+            "\n**⚙️**Revisi:**\n "
             f"{revout}"
         )
     else:
@@ -170,7 +171,7 @@ async def bot_ver(event):
         )
 
 
-@register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}pip(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=f"^\\{CMD_TRIGGER}pip(?: |$)(.*)")
 async def pipcheck(pip):
     if pip.text[0].isalpha() or pip.text[0] in ("/", "#", "@", "!"):
         return
