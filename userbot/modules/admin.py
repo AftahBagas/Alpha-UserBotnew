@@ -31,7 +31,9 @@ from telethon.tl.types import (
 )
 
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
-from userbot.events import register
+from userbot.events import alphabot
+
+from userbot.cmdhelp import CmdHelp
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`Gambaenya Kekecilan`"
@@ -77,7 +79,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ================================================
 
 
-@register(outgoing=True, pattern=r"^\.setgpic$")
+@alphabot(outgoing=True, pattern=r"^\.setgpic$")
 async def set_group_photo(gpic):
     if not gpic.is_group:
         await gpic.edit("`Alpha Mohon Jalankan Perintah Ini Di Grup.`")
@@ -113,7 +115,7 @@ async def set_group_photo(gpic):
             await gpic.edit(PP_ERROR)
 
 
-@register(outgoing=True, pattern=r"^\.promote(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.promote(?: |$)(.*)")
 async def promote(promt):
     # Get targeted chat
     chat = await promt.get_chat()
@@ -163,7 +165,7 @@ async def promote(promt):
         )
 
 
-@register(outgoing=True, pattern=r"^\.demote(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.demote(?: |$)(.*)")
 async def demote(dmod):
     # Admin right check
     chat = await dmod.get_chat()
@@ -212,7 +214,7 @@ async def demote(dmod):
         )
 
 
-@register(outgoing=True, pattern=r"^\.ban(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.ban(?: |$)(.*)")
 async def ban(bon):
     # Here laying the sanity check
     chat = await bon.get_chat()
@@ -265,7 +267,7 @@ async def ban(bon):
         )
 
 
-@register(outgoing=True, pattern=r"^\.unban(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.unban(?: |$)(.*)")
 async def nothanos(unbon):
     # Here laying the sanity check
     chat = await unbon.get_chat()
@@ -301,7 +303,7 @@ async def nothanos(unbon):
         await unbon.edit("`Sepertinya Terjadi Keeroran!`")
 
 
-@register(outgoing=True, pattern=r"^\.mute(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.mute(?: |$)(.*)")
 async def spider(spdr):
     # Check if the function running under SQL mode
     try:
@@ -355,7 +357,7 @@ async def spider(spdr):
             return await spdr.edit("`Terjadi Kesalahan!`")
 
 
-@register(outgoing=True, pattern=r"^\.unmute(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.unmute(?: |$)(.*)")
 async def unmoot(unmot):
     # Admin or creator check
     chat = await unmot.get_chat()
@@ -400,7 +402,7 @@ async def unmoot(unmot):
             )
 
 
-@register(incoming=True)
+@alphabot(incoming=True)
 async def muter(moot):
     try:
         from userbot.modules.sql_helper.gmute_sql import is_gmuted
@@ -431,7 +433,7 @@ async def muter(moot):
             await moot.delete()
 
 
-@register(outgoing=True, pattern=r"^\.ungmute(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.ungmute(?: |$)(.*)")
 async def ungmoot(un_gmute):
     # Admin or creator check
     chat = await un_gmute.get_chat()
@@ -473,7 +475,7 @@ async def ungmoot(un_gmute):
             )
 
 
-@register(outgoing=True, pattern=r"^\.gmute(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.gmute(?: |$)(.*)")
 async def gspider(gspdr):
     # Admin or creator check
     chat = await gspdr.get_chat()
@@ -513,7 +515,7 @@ async def gspider(gspdr):
             )
 
 
-@register(outgoing=True, pattern=r"^\.zombies(?: |$)(.*)", groups_only=False)
+@alphabot(outgoing=True, pattern=r"^\.zombies(?: |$)(.*)", groups_only=False)
 async def rm_deletedacc(show):
 
     con = show.pattern_match.group(1).lower()
@@ -581,7 +583,7 @@ async def rm_deletedacc(show):
         )
 
 
-@register(outgoing=True, pattern=r"^\.admins$")
+@alphabot(outgoing=True, pattern=r"^\.admins$")
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -600,7 +602,7 @@ async def get_admin(show):
     await show.edit(mentions, parse_mode="html")
 
 
-@register(outgoing=True, pattern=r"^\.pin(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.pin(?: |$)(.*)")
 async def pin(msg):
     # Admin or creator check
     chat = await msg.get_chat()
@@ -644,7 +646,7 @@ async def pin(msg):
         )
 
 
-@register(outgoing=True, pattern=r"^\.kick(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.kick(?: |$)(.*)")
 async def kick(usr):
     # Admin or creator check
     chat = await usr.get_chat()
@@ -685,7 +687,7 @@ async def kick(usr):
         )
 
 
-@register(outgoing=True, pattern=r"^\.users ?(.*)")
+@alphabot(outgoing=True, pattern=r"^\.users ?(.*)")
 async def get_users(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -775,7 +777,7 @@ async def get_user_from_id(user, event):
     return user_obj
 
 
-@register(outgoing=True, pattern=r"^\.usersdel ?(.*)")
+@alphabot(outgoing=True, pattern=r"^\.usersdel ?(.*)")
 async def get_usersdel(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -867,7 +869,7 @@ async def get_userdel_from_id(user, event):
     return user_obj
 
 
-@register(outgoing=True, pattern=r"^\.bots$", groups_only=True)
+@alphabot(outgoing=True, pattern=r"^\.bots$", groups_only=True)
 async def get_bots(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -903,34 +905,25 @@ async def get_bots(show):
         remove("botlist.txt")
 
 
-CMD_HELP.update(
-    {
-        "admin": "📚 **Cmd** `.promote <username/balas ke pesan> <nama title (optional)>`"
-        "\n📄 **Descriptions**: Mempromosikan member sebagai admin."
-        "\n\n📚 **Cmd** `.demote <username/balas ke pesan>`"
-        "\n📄 **Descriptions** : Menurunkan admin sebagai member."
-        "\n\n📚 **Cmd** `.ban <username/balas ke pesan> <alasan (optional)>`"
-        "\n📄 **Descriptions** : Memblokir Seseorang."
-        "\n\n📚 **Cmd** `.unban <username/reply>`"
-        "\n📄 **Descriptions** : Menghapus Blokir."
-        "\n\n📚 **Cmd** `.mute <username/balas ke pesan> <alasan (optional)>`"
-        "\n📄 **Descriptions** : Membisukan Seseorang Di Grup, Bisa Ke Admin Juga."
-        "\n\n📚 **Cmd** `.unmute <username/balas ke pesan>`"
-        "\n📄 **Descriptions** : Membuka bisu orang yang dibisukan."
-        "\n\n📚 **Cmd** `.gmute <username/balas ke pesan> <alasan (optional)>`"
-        "\n📄 **Descriptions** : Membisukan ke semua grup yang kamu punya sebagai admin."
-        "\n\n📚 **Cmd** `.ungmute <username/reply>`"
-        "\n📄 **Descriptions** : Reply someone's message with .ungmute to remove them from the gmuted list."
-        "\n\n📚 **Cmd** `.zombies`"
-        "\n📄 **Descriptions** : Untuk mencari akun terhapus dalam grup. "
-        "Gunakan `.zombies clean` untuk menghapus Akun Terhapus dari grup."
-        "\n\n📚 **Cmd** `.all`"
-        "\n📄 **Descriptions** : Tag semua member dalam grup."
-        "\n\n📚 **Cmd** `.admins`"
-        "\n📄 **Descriptions** : Melihat daftar admin di grup."
-        "\n\n📚 **Cmd** `.bots`"
-        "\n📄 **Descriptions** : Melihat daftar bot dalam grup."
-        "\n\n📚 **Cmd** `.users` Atau >`.users <nama member>`"
-        "\n📄 **Descriptions** : Mendapatkan daftar pengguna daam grup."
-        "\n\n📚 **Cmd** `.setgpic <balas ke gambar>`"
-        "\n📄 **Descriptions** : Mengganti foto profil grup."})
+CmdHelp ('admin').add_command( 'promote', '<nama pengguna / balasan> <nama khusus (opsional)>', 'Memberikan hak admin kepada orang dalam obrolan.' 
+    ).add_command( 'demote', '<username / reply>', 'Cabut izin admin orang dalam obrolan.' 
+    ).add_command( 'ban', '<username / reply> <reason (opsional)>', 'Membungkam orang dalam obrolan, juga berfungsi dengan admin.' 
+    ).add_command( 'unban', '<username / reply>', 'Unblock person in chat.' 
+    ).add_command( 'kick', '<username / reply> <reason (opsional)>', 'Tendang orang yang Anda tentukan dari grup.'
+    ).add_command( 'gmute', '<username / reply> <reason (opsional)>', 'Matikan suara orang di semua grup di mana Anda adalah administratornya.' 
+    ).add_command( 'ungmute', '<username / reply>', 'Menghapus kontak dari daftar yang dibisukan secara global.' 
+    ).add_command( 'zombies', None, 'Mencari akun yang dihapus dalam grup. Gunakan perintah .zombies clean untuk menghapus akun yang dihapus dari grup. ' 
+    ).add_command( 'admin', None, 'Mendapat daftar master obrolan.' 
+    ).add_command( 'bot', None, 'Mencari akun yang dihapus dalam grup. Gunakan perintah .zombies clean untuk menghapus akun yang dihapus dari grup. ' 
+    ).add_command( 'users or .users', '<username> <username / reply>', 'Mengambil semua (atau menanyakan) pengguna dalam obrolan.' 
+    ).add_command( 'setgppic', '<reply picture>', 'Mengubah gambar grup.' 
+    ).add_command( 'warn', '<username / no reply> <reason (opsional>', 'Peringatkan pengguna yang Anda tentukan.' 
+    ).add_command( 'unwarn', '<username / no reply> <reason (opsional>', 'Menghapus peringatan pengguna yang Anda tentukan.' 
+    ).add_command( 'warn', '<username / no reply> <reason (opsional>', 'Peringatkan pengguna yang Anda tentukan.' 
+    ).add_command( 'usersdel', None, 'Menampilkan akun yang dihapus dalam grup.' 
+    ).add_command( 'menambahkan', '<username (s)>', 'Add members to the group.' 
+    ).add_command( 'gban', '<username / reply>', 'Cekal pengguna secara global.' 
+    ).add_command( 'ungban', '<username / reply>', 'Menghapus larangan global pada pengguna.' 
+    ).add_command( 'pin', '<reply>', 'Memperbaiki pesan yang Anda balas sebelumnya.' 
+    ).add_command( 'setgpic', '<response>', 'Mengubah foto grup.' 
+    ).add()
