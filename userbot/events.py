@@ -14,8 +14,8 @@ from telethon import events
 from userbot import LOGSPAMMER, bot
 
 
-def register(**args):
-    """ Register a new event. """
+def alphabot(**args):
+    """ Alphabot a new event. """
     pattern = args.get('pattern', None)
     disable_edited = args.get('disable_edited', False)
     ignore_unsafe = args.get('ignore_unsafe', False)
