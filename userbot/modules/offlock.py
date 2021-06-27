@@ -270,7 +270,7 @@ async def type_afk_is_not_true(notafk):
 
 
 CmdHelp('offlock').add_command('offlock', '<alasan>',
-                           'untuk mengunci off anda.'
-).add_command(
+                               'untuk mengunci off anda.'
+                               ).add_command(
     'unoff', None, 'untuk membuka offlock anda.'
 ).add()
