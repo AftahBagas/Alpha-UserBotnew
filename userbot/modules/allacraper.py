@@ -58,8 +58,10 @@ from userbot import (
     bot
 )
 
-from userbot.events import register
+from userbot.events import alphabot
 from userbot.utils import chrome, googleimagesdownload, progress, options
+
+from userbot.cmdhelp import Cmdhelp
 
 CARBONLANG = "auto"
 TTS_LANG = "id"
@@ -102,14 +104,14 @@ DOGBIN_URL = "https://del.dog/"
 NEKOBIN_URL = "https://nekobin.com/"
 
 
-@register(outgoing=True, pattern=r"^\.crblang (.*)")
+@alphabot(outgoing=True, pattern=r"^\.crblang (.*)")
 async def setlang(prog):
     global CARBONLANG
     CARBONLANG = prog.pattern_match.group(1)
     await prog.edit(f"Language for carbon.now.sh set to {CARBONLANG}")
 
 
-@register(outgoing=True, pattern=r"^\.karbon")
+@alphabot(outgoing=True, pattern=r"^\.karbon")
 async def carbon_api(e):
     await e.edit("`Processing...`")
     CARBON = "https://carbon.now.sh/?l={lang}&code={code}"
@@ -155,7 +157,7 @@ async def carbon_api(e):
     await e.delete()  # Deleting msg
 
 
-@register(outgoing=True, pattern=r"^\.img (.*)")
+@alphabot(outgoing=True, pattern=r"^\.img (.*)")
 async def img_sampler(event):
     await event.edit("`Processing...`")
     query = event.pattern_match.group(1)
@@ -186,7 +188,7 @@ async def img_sampler(event):
     await event.delete()
 
 
-@register(outgoing=True, pattern=r"^\.currency (.*)")
+@alphabot(outgoing=True, pattern=r"^\.currency (.*)")
 async def moni(event):
     input_str = event.pattern_match.group(1)
     input_sgra = input_str.split(" ")
@@ -214,7 +216,7 @@ async def moni(event):
         return await event.edit("`Invalid syntax.`")
 
 
-@register(outgoing=True, pattern=r"^\.google (.*)")
+@alphabot(outgoing=True, pattern=r"^\.google (.*)")
 async def gsearch(q_event):
     match = q_event.pattern_match.group(1)
     page = findall(r"page=\d+", match)
@@ -247,7 +249,7 @@ async def gsearch(q_event):
         )
 
 
-@register(outgoing=True, pattern=r"^\.wiki (.*)")
+@alphabot(outgoing=True, pattern=r"^\.wiki (.*)")
 async def wiki(wiki_q):
     match = wiki_q.pattern_match.group(1)
     try:
@@ -276,7 +278,7 @@ async def wiki(wiki_q):
         )
 
 
-@register(outgoing=True, pattern=r"^\.ud (.*)")
+@alphabot(outgoing=True, pattern=r"^\.ud (.*)")
 async def urban_dict(ud_e):
     await ud_e.edit("Processing...")
     query = ud_e.pattern_match.group(1)
@@ -328,7 +330,7 @@ async def urban_dict(ud_e):
         await ud_e.edit("No result found for **" + query + "**")
 
 
-@register(outgoing=True, pattern=r"^\.tts(?: |$)([\s\S]*)")
+@alphabot(outgoing=True, pattern=r"^\.tts(?: |$)([\s\S]*)")
 async def text_to_speech(query):
     textx = await query.get_reply_message()
     message = query.pattern_match.group(1)
@@ -371,7 +373,7 @@ async def text_to_speech(query):
 
 
 # kanged from Blank-x ;---;
-@register(outgoing=True, pattern=r"^\.imdb (.*)")
+@alphabot(outgoing=True, pattern=r"^\.imdb (.*)")
 async def imdb(e):
     try:
         movie_name = e.pattern_match.group(1)
@@ -466,7 +468,7 @@ async def imdb(e):
         await cs.edit("Plox enter **Valid movie name** kthx")
 
 
-@register(outgoing=True, pattern=r"^\.tr(?: |$)([\s\S]*)")
+@alphabot(outgoing=True, pattern=r"^\.tr(?: |$)([\s\S]*)")
 async def translateme(trans):
     translator = Translator()
     textx = await trans.get_reply_message()
@@ -495,7 +497,7 @@ async def translateme(trans):
         )
 
 
-@register(pattern=r"^\.lang (tr|tts) (.*)", outgoing=True)
+@alphabot(pattern=r"^\.lang (tr|tts) (.*)", outgoing=True)
 async def lang(value):
     util = value.pattern_match.group(1).lower()
     if util == "tr":
@@ -527,7 +529,7 @@ async def lang(value):
         )
 
 
-@register(outgoing=True, pattern=r"^\.wolfram (.*)")
+@alphabot(outgoing=True, pattern=r"^\.wolfram (.*)")
 async def wolfram(wvent):
     if WOLFRAM_ID is None:
         await wvent.edit(
@@ -548,7 +550,7 @@ async def wolfram(wvent):
         )
 
 
-@register(outgoing=True, pattern=r"^\.ytsearch (.*)")
+@alphabot(outgoing=True, pattern=r"^\.ytsearch (.*)")
 async def yt_search(video_q):
     query = video_q.pattern_match.group(1)
     if not query:
@@ -566,7 +568,7 @@ async def yt_search(video_q):
     await video_q.edit(output, link_preview=False)
 
 
-@register(outgoing=True, pattern=r"\.(aud|vid) (.*)")
+@alphabot(outgoing=True, pattern=r"\.(aud|vid) (.*)")
 async def download_video(v_url):
     url = v_url.pattern_match.group(2)
     url = v_url.pattern_match.group(1).lower()
@@ -678,7 +680,7 @@ def deEmojify(inputString):
     return get_emoji_regexp().sub("", inputString)
 
 
-@register(pattern=r".ocr (.*)", outgoing=True)
+@alphabot(pattern=r".ocr (.*)", outgoing=True)
 async def ocr(event):
     if not OCR_SPACE_API_KEY:
         return await event.edit(
@@ -702,7 +704,7 @@ async def ocr(event):
     os.remove(downloaded_file_name)
 
 
-@register(pattern="^.ss (.*)", outgoing=True)
+@alphabot(pattern="^.ss (.*)", outgoing=True)
 async def capture(url):
     """ For .ss command, capture a website's screenshot and send the photo. """
     await url.edit("`Processing...`")
@@ -751,7 +753,7 @@ async def capture(url):
         await url.delete()
 
 
-@register(outgoing=True, pattern=r"^\.nekko(?: |$)([\s\S]*)")
+@alphabot(outgoing=True, pattern=r"^\.nekko(?: |$)([\s\S]*)")
 async def neko(nekobin):
     """For .paste command, pastes the text directly to dogbin."""
     nekobin_final_url = ""
@@ -804,7 +806,7 @@ async def neko(nekobin):
         )
 
 
-@register(outgoing=True, pattern=r"^\.neko(?: |$)([\s\S]*)")
+@alphabot(outgoing=True, pattern=r"^\.neko(?: |$)([\s\S]*)")
 async def neko(nekobin):
     """For .paste command, pastes the text directly to dogbin."""
     nekobin_final_url = ""
@@ -852,7 +854,7 @@ async def neko(nekobin):
     await nekobin.edit(reply_text)
 
 
-@register(outgoing=True, pattern=r"^\.getpaste(?: |$)(.*)")
+@alphabot(outgoing=True, pattern=r"^\.getpaste(?: |$)(.*)")
 async def get_dogbin_content(dog_url):
     textx = await dog_url.get_reply_message()
     message = dog_url.pattern_match.group(1)
@@ -904,7 +906,7 @@ async def get_dogbin_content(dog_url):
         )
 
 
-@register(outgoing=True, pattern=r"^\.paste(?: |$)([\s\S]*)")
+@alphabot(outgoing=True, pattern=r"^\.paste(?: |$)([\s\S]*)")
 async def paste(pstl):
     dogbin_final_url = ""
     match = pstl.pattern_match.group(1).strip()
@@ -966,7 +968,7 @@ async def paste(pstl):
         )
 
 
-@register(outgoing=True, pattern="^.rbg(?: |$)(.*)")
+@alphabot(outgoing=True, pattern="^.rbg(?: |$)(.*)")
 async def kbg(remob):
     """ For .rbg command, Remove Image Background. """
     if REM_BG_API_KEY is None:
@@ -1049,7 +1051,7 @@ async def ReTrieveURL(input_url):
     return r
 
 
-@register(outgoing=True, pattern=r"^.direct(?: |$)([\s\S]*)")
+@alphabot(outgoing=True, pattern=r"^.direct(?: |$)([\s\S]*)")
 async def direct_link_generator(request):
     """ direct links generator """
     await request.edit("`Processing...`")
@@ -1352,7 +1354,7 @@ def useragent():
     return user_agent.text
 
 
-@register(pattern=r"^.decode$", outgoing=True)
+@alphabot(pattern=r"^.decode$", outgoing=True)
 async def parseqr(qr_e):
     """ For .decode command, get QR Code/BarCode content from the replied photo. """
     downloaded_file_name = await qr_e.client.download_media(
@@ -1382,7 +1384,7 @@ async def parseqr(qr_e):
     await qr_e.edit(qr_contents)
 
 
-@register(pattern=r".barcode(?: |$)([\s\S]*)", outgoing=True)
+@alphabot(pattern=r".barcode(?: |$)([\s\S]*)", outgoing=True)
 async def bq(event):
     """ For .barcode command, genrate a barcode containing the given content. """
     await event.edit("`Processing..`")
@@ -1424,7 +1426,7 @@ async def bq(event):
     await event.delete()
 
 
-@register(pattern=r".makeqr(?: |$)([\s\S]*)", outgoing=True)
+@alphabot(pattern=r".makeqr(?: |$)([\s\S]*)", outgoing=True)
 async def make_qr(makeqr):
     """ For .makeqr command, make a QR Code containing the given content. """
     input_str = makeqr.pattern_match.group(1)
@@ -1465,126 +1467,82 @@ async def make_qr(makeqr):
     await makeqr.delete()
 
 
-CMD_HELP.update(
-    {
-        "img": "📚 **Cmd** : `.img <search_query>`\
-         \n📄 **Descriptions** : Does an image search on Google and shows 5 images."
-    }
-)
-CMD_HELP.update(
-    {
-        "currency": "📚 **Cmd** : `.currency <amount> <from> <to>`\
-         \n📄 **Descriptions** : Converts various currencies for you."
-    }
-)
-CMD_HELP.update(
-    {
-        "carbon": "📚 **Cmd** : `.karbon <text> [or reply messages]`\
-         \n📄 **Descriptions** : Beautify your code using carbon.now.sh\
-         \n**How to Use** > `.crblang` <text> to set language for your code."
-    }
-)
-CMD_HELP.update(
-    {
-        "google": "📚 **Cmd** : `.google <query>`\
-         \n📄 **Descriptions** : Does a search on Google."
-    }
-)
-CMD_HELP.update(
-    {
-        "wiki": "📚 **Cmd** : `.wiki <query>`\
-         \n📄 **Descriptions** : Does a search on Wikipedia."
-    }
-)
-CMD_HELP.update(
-    {
-        "ud": "📚 **Cmd** : `.ud <query>`\
-         \n📄 **Descriptions** : Does a search on Urban Dictionary."
-    }
-)
-CMD_HELP.update(
-    {
-        "tts": "📚 **Cmd** : `.tts <text> [or reply]`\
-         \n📄 **Descriptions** : Translates text to speech for the language which is set.\
-         \n**How to Use** > `.lang tts <language code>` to set language for tts. (Default is English.)"
-    }
-)
-CMD_HELP.update(
-    {
-        "translate": "📚 **Cmd** : `.tr` <text> [or reply]\
-         \n📄 **Descriptions** : Translates text to the language which is set.\
-         \n**How to Use** > `.lang tr` <language code> to set language for tr. (Default is English)"
-    }
-)
-CMD_HELP.update(
-    {
-        "imdb": "📚 **Cmd** : `.imdb <movie-name>`\
-         \n📄 **Descriptions** : Shows movie info and other stuff."
-    }
-)
-CMD_HELP.update(
-    {
-        "wolfram": "📚 **Cmd** : `.wolfram` <query>\
-         \n📄 **Descriptions** : Get answers to questions using WolframAlpha Spoken Results API."
-    }
-)
-CMD_HELP.update(
-    {
-        "screenshot": "📚 **Cmd** : `.ss <url>`\
-         \n📄 **Descriptions* : Takes a screenshot of a website and sends the screenshot.\
-         \n**Example of a valid URL** : `https://www.google.com`"
-    }
-)
-CMD_HELP.update(
-    {
-        "nekobin": "📚 **Cmd** : `.neko` <text/reply>\
-         \n📄 **Descriptions** : Create a paste or a shortened url using dogbin"
-    }
-)
-CMD_HELP.update(
-    {
-        "getpaste": "📚 **Cmd** : `.getpaste` <text/reply>\
-         \n📄 **Descriptions** : Create a paste or a shortened url using dogbin"
-    }
-)
-CMD_HELP.update(
-    {
-        "removebg": "📚 **Cmd** : `.rbg` <Link to Image> atau reply ke file gambar (Peringatan: ini tidak akan bekerja untuk sticker.)\
-         \n📄 **Descriptions** : Manghapus latar belakang gambar."
-    }
-)
-CMD_HELP.update(
-    {
-        "ocr": "📚 **Cmd** : `.ocr` <language/bahasa>\
-         \n📄 **Descriptions** : Reply to an image or sticker to extract text from it."
-    }
-)
-CMD_HELP.update(
-    {
-        "direct": "📚 **Cmd** : `.direct` <url>\
-         \n📄 **Descriptions** : Reply to a link or paste a URL to generate a direct download link.\n**Supported Urls** : `Google Drive` - `Cloud Mail` - `Yandex.Disk` - `AFH` - `ZippyShare` - `MediaFire` - `SourceForge` - `OSDN` - `GitHub`"
-    }
-)
-CMD_HELP.update(
-    {
-        "rcode": "📚 **Cmd** : `.makeqr <content>`\
-         \n📄 **Descriptions** : Make a QR Code from the given content.\nExample: .makeqr www.google.com\nNote: use .decode <reply to barcode/qrcode> to get decoded content."
-    }
-)
-CMD_HELP.update(
-    {
-        "barcode": "📚 **Cmd** : `.barcode` <content>"
-    }
-)
+CmdHelp('img').add_command(
+    'img', <search_query>, 'Does an image search on Google and shows 5 images.'
+).add()
 
-CMD_HELP.update(
-    {
-        "youtube":
-        "📚 **Cmd** : `.aud <link yt>`\
-    \n📄 **Descriptions** : Downloads the AUDIO from the given link\
-    \n\n📚 **Cmd** : `.vid <link yt>`\
-    \n📄 **Descriptions** : Downloads the VIDEO from the given link\
-    \n\n📚 **Cmd** : `.ytsearch <search>`\
-    \n📄 **Descriptions** : Does a Youtube Search."
-    }
-)
+CmdHelp('currency').add_command(
+    'currency', <amount><from><to>, 'Converts various currencies for you.'
+).add()
+
+CmdHelp('carbon').add_command(
+    'karbon', <text/reply>, 'Beautify your code using carbon.now.sh.'
+).add()
+
+CmdHelp('google').add_command(
+    'google', <query>, 'Does a search on Google.'
+).add()
+
+CmdHelp('wiki').add_command(
+    'wiki', <query>, 'Does a search on Wikipedia.'
+).add()
+
+CmdHelp('ud').add_command(
+    'ud', <query>, 'Does a search on Urban Dictionary.'
+).add()
+
+CmdHelp('tts').add_command(
+    'tts', <text/reply>, 'Translates text to the language which is set, .lang tts <language code> to set language for tr. (Default is English).'
+).add()
+
+CmdHelp('translate').add_command(
+    'tr', <text/reply>, 'Translates text to the language which is set, .lang tr <language code> to set language for tr. (Default is English).'
+).add()
+
+CmdHelp('imdb').add_command(
+    'imdb', <movie/name>, 'Shows movie info and other stuff.'
+).add()
+
+CmdHelp('wolfram').add_command(
+    'wolfram', <query>, 'Get answers to questions using WolframAlpha Spoken Results API.'
+).add()
+
+CmdHelp('screenshot').add_command(
+    'ss', <url>, 'takes a screenshot of a website and sends the screenshot.'
+).add()
+
+CmdHelp('nekobin').add_command(
+    'neko', <text/reply>, 'Reply to an image or sticker to extract text from it.'
+).add()
+
+CmdHelp('getpaste').add_command(
+    'getpaste', <text/reply>, 'create a paste or a shortened url using dogbin.'
+).add()
+
+CmdHelp('removebg').add_command(
+    'rbg', <link to image>, 'Menghapus latar belakang gambar.'
+).add()
+
+CmdHelp('ocr').add_command(
+    'ocr', <language/bahasa>, 'Reply to an image or sticker to extract text from it.'
+).add()
+
+CmdHelp('direct').add_command(
+    'direct', <url>, 'Reply to a link or paste a URL to generate a direct download link.'
+).add()
+
+CmdHelp('rcode').add_command(
+    'makeqr', <content>, 'Make a QR code from the given content.'
+).add()
+
+CmdHelp('barcode').add_command(
+    'barcode', <content>, '
+).add()
+
+CmdHelp('youtube').add_command(
+    'aud', <link yt>, 'Mendwonload Audio Dari Link.'
+).add_command(
+    'vid', <link yt>, 'Mendwonload Vidio Dari Link.'
+).add_command(
+    'ytsearch', <search>, 'Mencari Dari Youtube.'
+).add()
