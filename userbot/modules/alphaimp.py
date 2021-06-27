@@ -7,11 +7,11 @@ from textwrap import wrap
 from PIL import Image, ImageDraw, ImageFont
 from requests import get
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot.cmdhelp import CmdHelp
+from userbot.events import alphabot
 
 
-@register(outgoing=True, pattern="^.imp (.*)")
+@alphabot(outgoing=True, pattern="^.imp (.*)")
 async def f_load(message):
     clrs = {
         "red": 1,
@@ -86,9 +86,6 @@ async def bruh(message, user):
     await message.edit(name + choice([" ", " Tidak "]) + "Adalah Seorang Penipu! ***")
 
 
-CMD_HELP.update(
-    {
-        "s amongus": "📚 **Cmd** : `.imp`\
-    \n📄 **Descriptions** : Kirimkan gambar seorang impostor Among US dengan kalimat dari Anda."
-    }
-)
+CmdHelp('imp').add_command(
+    'imp', imp red <kata kata> ,warna <red lime green blue cyan bronw purple pink orange yellow white black>, 'Untuk Membuat Stickers amongus.'
+).add()
