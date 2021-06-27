@@ -53,5 +53,6 @@ async def get_adzan(adzan):
     await adzan.edit(result)
 
 
-CMD_HELP.update({"adzan": "\n\n`>.adzan <kota>`"
-                 "\nUsage: Memberikan Informasi Waktu Sholat."})
+CmdHelp('adzan').add_command(
+    'adzan', '<kota>', 'Menunjukkan waktu sholat untuk kota yang ditentukan.'
+).add()
