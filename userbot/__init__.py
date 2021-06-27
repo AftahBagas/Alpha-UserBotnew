@@ -113,13 +113,13 @@ CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 DB_URI = os.environ.get("DATABASE_URL", None)
 
 # OCR API key
-OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
+OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", "4a3571124d88957")
 
 # Id Untuk Deafult User
 USER_ID = os.environ.get("USER_ID", None)
 
 # remove.bg API key
-REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
+REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", "dxsh728mZMDmj4ijSZCNPZig")
 
 # Chrome Driver and Headless Google Chrome Binaries
 CHROME_DRIVER = os.environ.get("CHROME_DRIVER") or "/usr/bin/chromedriver"
@@ -149,7 +149,7 @@ ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "False"))
 ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 
 # Youtube API key
-YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
+YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "AIzaSyAUR8sXyLqfmG_LQm1jz3jp97mN-cqtGzo")
 
 # Untuk Perintah .alpha
 ALIVE_TEKS_KUSTOM = os.environ.get("ALIVE_TEKS_KUSTOM", "Hey I am Alive.")
@@ -238,7 +238,7 @@ if G_PHOTOS_AUTH_TOKEN_ID:
     G_PHOTOS_AUTH_TOKEN_ID = int(G_PHOTOS_AUTH_TOKEN_ID)
 
 # Genius lyrics  API
-GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", None)
+GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", "qHXXZn7DOfVocotMFgTSpMnh-aUOQpoJdhLJ4-VreXHp-xvmxlmLpq5v45cyC71T")
 
 # IMG Stuff
 IMG_LIMIT = os.environ.get("IMG_LIMIT") or None
@@ -246,7 +246,7 @@ CMD_HELP = {}
 CMD_HELP_BOT = {}
 
 # Quotes API Token
-QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
+QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", "33273f18-4a0d-4a76-8d78-a16faa002375")
 
 # Wolfram Alpha API
 WOLFRAM_ID = os.environ.get("WOLFRAM_ID") or None
