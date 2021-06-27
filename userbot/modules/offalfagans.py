@@ -220,5 +220,7 @@ async def _(event):
             BOTLOG_CHATIDger.warn(str(e))
 
 
-CmdHelp('off').add_command('off', '<alasan> /reply ke media untuk menambahkan reply afk',
-                           'Sama Seperti Afk Ini Untuk Menunjukkan Anda Offline.').add()
+CmdHelp('off').add_command(
+    'off',
+    '<alasan> /reply ke media untuk menambahkan reply afk',
+    'Sama Seperti Afk Ini Untuk Menunjukkan Anda Offline.').add()
