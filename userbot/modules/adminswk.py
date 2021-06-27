@@ -7,10 +7,10 @@ from telethon.tl.types import (
 )
 
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot.events import alphabot
 
 
-@register(outgoing=True, pattern=r"^\.admin$")
+@alphabot(outgoing=True, pattern=r"^\.admin$")
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -29,9 +29,7 @@ async def get_admin(show):
     await show.edit(mentions, parse_mode="html")
 
 
-CMD_HELP.update(
-    {
-        "adminwk": "📚 **Cmd** : `.admin`"
-        "\n📄 **Descriptions** : mengejek admin di group 🙈"
-    }
-)
+
+
+CmdHelp('adminwk').add_command(
+     'admin', 'None', 'mengejek admin di group wkwk.').add()
