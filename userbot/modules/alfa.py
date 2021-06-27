@@ -1,5 +1,5 @@
 from time import sleep
-from userbot import CMD_HELP, bot
+from userbot import bot
 from userbot.events import alphabot
 from telethon import events
 import asyncio
