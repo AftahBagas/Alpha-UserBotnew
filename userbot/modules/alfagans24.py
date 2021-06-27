@@ -2,12 +2,13 @@
 
 from time import sleep
 from userbot import CMD_HELP, bot
-from userbot.events import register
+from userbot.events import alphabot
+from userbot.cmdhelp import CmdHelp
 from telethon import events
 import asyncio
 
 
-@register(outgoing=True, pattern="^.hua$")
+@alphabot(outgoing=True, pattern="^.hua$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("أ‿أ")
@@ -42,7 +43,7 @@ async def koc(e):
         await e.edit("༼ ༎ຶ ෴ ༎ຶ༽")
 
 
-@register(outgoing=True, pattern='^.huh(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.huh(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n(\\_/)`"
@@ -130,7 +131,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@register(outgoing=True, pattern='^.nah(?: |$)(.*)')
+@alphabot(outgoing=True, pattern='^.nah(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n(\\_/)`"
@@ -173,19 +174,18 @@ async def _(event):
             await asyncio.sleep(animation_interval)
 
             await event.edit(animation_chars[i % 6])
-# Alvin Imut
-# Alvin Gans
-# Lord
-CMD_HELP.update({
-    "animasi":
-    "📚 **Cmd** : `.nah` ; `.huh` ; `.owner`\
-    \n📄 **Descriptions** : cobain.\
-    \n\n📚 **Cmd** : `.bunga` ; `.buah`\
-    \n📄 **Descriptions** : animasi.\
-    \n\n📚 **Cmd** : `.waktu`\
-    \n📄 **Descriptions** : animasi.\
-    \n\n📚 **Cmd** : `.hua`\
-    \n📄 **Descriptions** : nangis.\
-    \n\n📚 **Cmd** : `.ceritacinta` ; `.canda`\
-    \n📄 **Descriptions** : liat sendiri"
-})
+
+
+CmdHelp('animasi3').add_command(
+    'hua', None, 'Animasi nangis.'
+).add_command(
+    'huh', None, 'Animasi Kasih Hati Tapi Gajadi.'
+).add_command(
+    'ceritacinta', None, 'Animasi Cerita Cinta.'
+).add_command(
+    'canda', None, 'Animasi Canda.'
+).add_command(
+    'nah', None, 'Animasi Kasih Bunga Tapi Gajadi.'
+).add_command(
+    'owner', None, 'Animasi Owner.'
+).add()
