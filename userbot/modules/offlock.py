@@ -5,7 +5,8 @@ from random import randint
 
 from telethon.events import StopPropagation
 
-from userbot.events import register
+from userbot.events import alphabot
+from userbot.cmdhelp import CmdHelp
 
 from userbot import (  # noqa pylint: disable=unused-import isort:skip
     AFKREASON,
@@ -19,7 +20,7 @@ from userbot import (  # noqa pylint: disable=unused-import isort:skip
 )
 
 
-@register(incoming=True, disable_edited=True)
+@alphabot(incoming=True, disable_edited=True)
 async def mention_afk(mention):
     """ This function takes care of notifying the people who mention you that you are AFK."""
     global COUNT_MSG
@@ -70,12 +71,12 @@ async def mention_afk(mention):
         if mention.sender_id not in USERS or chat_title not in USERS:
             if AFKREASON:
                 await mention.reply(
-                    f"**Saya sedang offline! :)** \n**Sejak: {afk_str}**"
+                    f"**Saya sedang offline!** \n**Sejak: {afk_str}**"
                     f"\n**Alasan: `{AFKREASON}`.**"
                 )
             else:
                 await mention.reply(
-                    f"**Saya sedang offline! :) ** \n**Sejak: {afk_str}**"
+                    f"**Saya sedang offline!** \n**Sejak: {afk_str}**"
                     "\n**Silakan kembali lagi nanti.**"
                 )
             if mention.sender_id is not None:
@@ -86,12 +87,12 @@ async def mention_afk(mention):
             if USERS[mention.sender_id] % randint(2, 4) == 0:
                 if AFKREASON:
                     await mention.reply(
-                        f"**Saya sedang offline! :)** \n\n**Sejak: {afk_str}**"
+                        f"**Saya sedang offline!** \n\n**Sejak: {afk_str}**"
                         f"\n**Alasan: `{AFKREASON}`.**"
                     )
                 else:
                     await mention.reply(
-                        f"**Saya sedang offline sekarang! :)** \n\n**Sejak: {afk_str}**"
+                        f"**Saya sedang offline sekarang!** \n\n**Sejak: {afk_str}**"
                         "\n**Silakan kembali lagi nanti.**"
                     )
             if mention.sender_id is not None:
@@ -101,7 +102,7 @@ async def mention_afk(mention):
         COUNT_MSG += 1
 
 
-@register(incoming=True, disable_errors=True)
+@alphabot(incoming=True, disable_errors=True)
 async def afk_on_pm(sender):
     """ Function which informs people that you are AFK in PM """
     global ISAFK
@@ -157,12 +158,12 @@ async def afk_on_pm(sender):
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(
-                        f"**Saya sedang offline! :)** \n\nSejak: {afk_str}"
+                        f"**Saya sedang offline!** \n\nSejak: {afk_str}"
                         f"\nAlasan: `{AFKREASON}`."
                     )
                 else:
                     await sender.reply(
-                        f"**Saya sedang offline sekarang! :)** \n(Sejak: {afk_str})"
+                        f"**Saya sedang offline sekarang!** \n(Sejak: {afk_str})"
                         "\n**Silakan kembali lagi nanti.**"
                     )
                 USERS.update({sender.sender_id: 1})
@@ -171,12 +172,12 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await sender.reply(
-                            f"**Saya sedang offline! :)** \n\n**Sejak: {afk_str}**"
+                            f"**Saya sedang offline!** \n\n**Sejak: {afk_str}**"
                             f"\n**Alasan: `{AFKREASON}`.**"
                         )
                     else:
                         await sender.reply(
-                            f"**Saya sedang offline sekarang! :)** \n\n**Sejak: {afk_str}**"
+                            f"**Saya sedang offline sekarang!** \n\n**Sejak: {afk_str}**"
                             "\n**Silakan kembali lagi nanti.**"
                         )
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
@@ -186,7 +187,7 @@ async def afk_on_pm(sender):
                     COUNT_MSG = COUNT_MSG + 1
 
 
-@register(outgoing=True, pattern=r"^\.offlock(?: |$)(.*)", disable_errors=True)
+@alphabot(outgoing=True, pattern=r"^\.offlock(?: |$)(.*)", disable_errors=True)
 async def set_afk(afk_e):
     """ For .afk command, allows you to inform people that you are afk when they message you """
     afk_e.text
@@ -269,8 +270,8 @@ async def type_afk_is_not_true(notafk):
         AFKREASON = None
 
 
-CmdHelp('offlock').add_command('offlock', '<alasan>',
-                               'untuk mengunci off anda.'
-                               ).add_command(
+CmdHelp('offlock').add_command(
+    'offlock', '<alasan>', 'untuk mengunci off anda.'
+).add_command(
     'unoff', None, 'untuk membuka offlock anda.'
 ).add()
