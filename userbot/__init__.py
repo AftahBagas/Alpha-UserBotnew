@@ -378,7 +378,6 @@ else:
 
 def button(page, modules):
     Row = 5
-    Column = 2
 
     modules = sorted(
         [modul for modul in moduller if not modul.startswith("_")])
