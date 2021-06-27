@@ -16,6 +16,7 @@ import psutil
 
 from userbot import ALIVE_LOGO, ALIVE_TEKS_KUSTOM, ALIVE_NAME, CMD_TRIGGER, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, bot
 from userbot.events import alphabot
+from userbot.cmdhelp import CmdHelp
 
 
 # ================= CONSTANT =================
@@ -218,7 +219,7 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=f"^\\{CMD_TRIGGSR}(?:alpha|alphaon)\\s?(.)?")
+@alphabot(outgoing=True, pattern=f"^\\{CMD_TRIGGSR}(?:alpha|alphaon)\\s?(.)?")
 async def amireallyalive(alive):
     await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -257,7 +258,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@ register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}(?:xalive|xon)\\s?(.)?")
+@ alphabot(outgoing=True, pattern=f"^\\{CMD_TRIGGER}(?:xalive|xon)\\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -294,7 +295,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@ register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}(?:alive|on)\\s?(.)?")
+@ alphabot(outgoing=True, pattern=f"^\\{CMD_TRIGGER}(?:alive|on)\\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -347,7 +348,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@ register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}aliveu")
+@ alphabot(outgoing=True, pattern=f"^\\{CMD_TRIGGER}aliveu")
 async def amireallyaliveuser(username):
     message = username.text
     output = ".aliveu [new user without brackets] nor can it be empty"
@@ -359,29 +360,33 @@ async def amireallyaliveuser(username):
     await username.edit("`" f"{output}" "`")
 
 
-@ register(outgoing=True, pattern=f"^\\{CMD_TRIGGER}resetalive$")
+@ alphabot(outgoing=True, pattern=f"^\\{CMD_TRIGGER}resetalive$")
 async def amireallyalivereset(ureset):
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Successfully reset user for alive!" "`")
 
 
-CMD_HELP.update({
-    "system":
-    "📚 **Cmd** : `.sysd`\
-\n📄 **Descriptions** : Shows system information using neofetch.\
-\n\n📚 **Cmd** : `.botver`\
-\n📄 **Descriptions** : Shows the userbot version.\
-\n\n📚 **Cmd** : `.pip` <module(s)>\
-\n📄 **Descriptions** : Does a search of pip modules(s).\
-\n\n📚 **Cmd** : `.start`\
-\n📄 **Descriptions** : Type .start to see whether your bot is working or not.\
-\n\n📚 **Cmd** : `.aliveu` <text>\
-\n📄 **Descriptions** : Changes the 'user' in alive to the text you want.\
-\n\n📚 **Cmd** : `.resetalive`\
-\n📄 **Descriptions** : Resets the user to default.\
-\n\n📚 **Cmd** : `.db`\
-\n📄 **Descriptions** : Shows database related info.\
-\n\n📚 **Cmd** : `.spc`\
-\n📄 **Descriptions** : Show system specification."
-})
+CmdHelp('system_stats').add_command(
+    'syd', None, 'Shows system information using neofetch.'
+).add_command(
+    'botver', None, 'Shows the userbot version.'
+).add_command(
+    'pip', '<module(s)>', 'Does a search of pip modules(s).'
+).add_command(
+    'alive', None, 'Menunjukan Alive Alpha Userbot.'
+).add_command(
+    'xalive', None, 'Menunjukan Alive Alpha Userbot.'
+).add_command(
+    'alpha', None, 'Menunjukan Alive Alpha Userbot.'
+).add_command(
+    'start', None, 'start to see whether your bot is working or not.'
+).add_command(
+    'db', None, 'Shows database related info.'
+).add_command(
+    'aliveu', '<Text>', 'Changes the user in alive to the text you want.'
+).add_command(
+    'resetalive', None, 'Resets the user to default.'
+).add_command(
+    'spc', None, 'Show system specification.'
+).add()
