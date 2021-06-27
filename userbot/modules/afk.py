@@ -44,7 +44,7 @@ afk_start = {}
 
 
 @register(outgoing=True,
-          pattern=f"^{CMD_TRIGGER}afk(?: |$)(.*)",
+          pattern=f"^.afk(?: |$)(.*)",
           disable_errors=True)
 async def set_afk(afk_e):
     """ For .afk command, allows you to inform people that you are afk when they message you """
@@ -261,10 +261,6 @@ async def afk_on_pm(sender):
                     COUNT_MSG = COUNT_MSG + 1
 
 
-CMD_HELP.update({
-    "afk":
-    "📚 **Cmd** : `.afk` [Alasan]\
-\n📄 **Descriptions** : Lakukan ketika ingin OFF.\nSiapapun Yang Balas, Tag, Atau Chat Kamu \
-Mereka Akan Tau Alasan Kamu OFF.\n\nAFK Bisa Dilakukan Dan Dibatalkan Dimanapun.\
-"
-})
+
+CmdHelp('afk').add_command('afk', '<alasan>',
+                           'Menunjukan Kalo Anda Sedang Afk.').add()
